@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'flex';
+@import 'header';
+@import 'img';
+@import 'social-network';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}  
+
+body {
+    background-color: $white;
+}

@@ -1,0 +1,78 @@
+// BLOCK
+.header {
+    width: 100%;
+    height: 60px;
+
+}
+
+// ELEMENT
+.header__item {
+    padding: 12px 10px;
+    font: {
+        weight: bold;
+        size: 21px;
+    }
+}
+
+.header__menu {
+    font: {
+        size: 15px;
+        weight: bolder;
+    }
+    margin-right: 20px;
+    padding: 8px 15px;
+    @include responsive(l) {
+        display: none;
+    }
+}
+
+// MOD
+.header--theme {
+    background-color: $white;
+    box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3;
+}
+
+.header__menu--theme {
+    border: 1px solid rgba($color: $light-red, $alpha: 0.2);
+    color: $dark-red;
+}
+
+.header__item--theme {
+    text-decoration: none;
+    color: $black;
+}
+
+.header__item:hover {
+    transition: .2s ease;
+    background-color: $dark-red;
+    color: $white;
+}
+
+.--no-decoration {
+    text-decoration: none;
+}
+
+// RESPONSIVE
+.header {
+    justify-content: space-between;
+    @include responsive(l) {
+        justify-content: space-around;
+        position: sticky;
+        top: 0;
+    }
+}
+
+.big-header {
+    display: none;
+    @include responsive(l) {
+        display: block;
+        text-align: center;
+    }
+}
+
+.small-header {
+    display: block;
+    @include responsive(l) {
+        display: none;
+    }
+}

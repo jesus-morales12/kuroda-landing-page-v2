@@ -1,0 +1,43 @@
+/* PALETTE COLORS */
+
+$dark-red: #A11213;
+$red: #EE3233;
+$light-red: #FF4F50;
+$dark-green: #02A12E;
+$light-green: #32EE67;
+$black: #141414;
+$white: #FFFFFF;
+/* SOCIAL NETWORK ICON COLORS */
+
+$fb-icon-color: #3b5998;
+$twitter-icon-color: #0084b4;
+$youtube-icon-color: #FF0000;
+/* MEDIA QUERY BREAKPOINTS */
+
+$s: "screen and (min-width: 576px)";
+$m: "screen and (min-width: 768px)";
+$l: "screen and (min-width: 992px)";
+$xl: "screen and (min-width: 1400px)";
+
+@mixin responsive($device) {
+    @if $device==s {
+        @media only #{$s} {
+            @content;
+        }
+    }
+    @else if $device==m {
+        @media only #{$m} {
+            @content;
+        }
+    }
+    @else if $device==l {
+        @media only #{$l} {
+            @content;
+        }
+    }
+    @else if $device==xl {
+        @media only #{$xl} {
+            @content;
+        }
+    }
+}

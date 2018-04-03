@@ -1,0 +1,41 @@
+%flex-standard {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// DIRECTION
+.--flex {
+    @extend %flex-standard;
+}
+
+.--vflex {
+    @extend %flex-standard;
+    flex-direction: column;
+}
+
+// POSITION 
+.--space-between {
+    justify-content: space-between;
+}
+
+.--space-around {
+    justify-content: space-around;
+}
+
+.--fstart {
+    justify-content: flex-start;
+}
+
+.--fend {
+    justify-content: flex-end;
+}
+
+// ITEM
+
+.--vcentered {
+    align-self: center;
+}
+
+.--even-width {
+    flex: 1;
+}
