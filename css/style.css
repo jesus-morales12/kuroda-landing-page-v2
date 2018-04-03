@@ -64,10 +64,10 @@
 .--no-decoration {
   text-decoration: none; }
 
-.header {
+.responsive-header {
   justify-content: space-between; }
   @media only screen and (min-width: 992px) {
-    .header {
+    .responsive-header {
       justify-content: space-around;
       position: sticky;
       top: 0; } }

@@ -82,12 +82,12 @@
 .--no-decoration {
   text-decoration: none; }
 
-.header {
+.responsive-header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
   @media only screen and (min-width: 992px) {
-    .header {
+    .responsive-header {
       -ms-flex-pack: distribute;
           justify-content: space-around;
       position: -webkit-sticky;

@@ -2,7 +2,6 @@
 .header {
     width: 100%;
     height: 60px;
-
 }
 
 // ELEMENT
@@ -53,7 +52,7 @@
 }
 
 // RESPONSIVE
-.header {
+.responsive-header {
     justify-content: space-between;
     @include responsive(l) {
         justify-content: space-around;
