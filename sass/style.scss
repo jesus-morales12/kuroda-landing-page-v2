@@ -3,6 +3,8 @@
 @import 'header';
 @import 'img';
 @import 'social-network';
+@import 'swiper';
+@import 'content';
 
 * {
     padding: 0;
@@ -13,4 +15,8 @@
 
 body {
     background-color: $white;
+}
+
+p {
+    font-family: 'Merriweather', serif;
 }

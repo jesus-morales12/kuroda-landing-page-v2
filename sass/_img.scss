@@ -1,3 +1,16 @@
+%fade-swiper__img-height {
+    min-height: 350px;
+    @include responsive(s) {
+        min-height: 400px;
+    }
+    @include responsive(m) {
+        min-height: 450px;
+    }
+    @include responsive(l) {
+        min-height: 80vh;
+    }
+}
+
 // LOGO
 .logo {
     height: 42px;
@@ -6,6 +19,7 @@
 
 .logo--link {
     text-decoration: none;
+    text-align: center;
 }
 
 .marketplace__store--menu {
@@ -15,4 +29,25 @@
 }
 
 // BACKGROUNDS
+.fade-swiper__img {
+    &-one {
+        @extend %fade-swiper__img-height;
+        background-image: url('../img/modern-minimalist-bathroom-min.jpg');
+        background-position: bottom;
+    }
+    &-two {
+        @extend %fade-swiper__img-height;
+        background-image: url('../img/kitchen-bg-min.jpg');
+        background-position: bottom;
+    }
+    &-three {
+        @extend %fade-swiper__img-height;
+        background-image: url('../img/bathroom-min.jpg');
+        background-position: center;
+    }
+}
+
 // IMAGES
+.product-display__item {
+    width: 100%;
+}

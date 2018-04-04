@@ -1,0 +1,68 @@
+// BLOCK
+.product-display {
+    margin: 35px auto;
+    text-align: center;
+    width: 95%;
+    @include responsive(s) {
+        width: 80%;
+    }
+    @include responsive(m) {
+        width: 768px;
+    }
+    @include responsive(l) {
+        width: 980px;
+    }
+    @include responsive(xl) {
+        width: 1200px;
+    }
+}
+
+.button-buy {
+    display: block;
+    margin: 8px 0;
+    padding: 8px 0;
+    background-color: $light-green;
+    color: $white;
+    border-radius: 2px;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.button-buy:hover {
+    @include responsive(l) {
+        transition: 0.3s ease;
+        background-color: $dark-green;
+    }
+}
+
+// ELEMENT
+.product-display__title {
+    font: {
+        weight: 100;
+        size: 40px;
+    }
+    @include responsive(l) {
+        font: {
+            size: 60px;
+        }
+        padding-bottom: 30px;
+    }
+}
+
+.product-display__description {
+    font-size: 12px;
+    @include responsive(l) {
+        font-size: 16px;
+    }
+}
+
+.product-display__box {
+    flex: percentage($number: 1/2);
+    padding: 10px 15px;
+    @include responsive(s) {
+        flex: percentage($number: 1/3);
+    }
+}
+
+// MODS
+// RESPONSIVE

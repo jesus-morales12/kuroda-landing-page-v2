@@ -31,9 +31,10 @@
   height: 60px; }
 
 .header__item {
-  padding: 12px 10px;
+  padding: 12px 15px;
   font-weight: bold;
-  font-size: 21px; }
+  font-size: 21px;
+  transition: .2s ease; }
 
 .header__menu {
   font-size: 15px;
@@ -85,21 +86,47 @@
     .small-header {
       display: none; } }
 
+.fade-swiper__img-one, .fade-swiper__img-two, .fade-swiper__img-three {
+  min-height: 350px; }
+  @media only screen and (min-width: 576px) {
+    .fade-swiper__img-one, .fade-swiper__img-two, .fade-swiper__img-three {
+      min-height: 400px; } }
+  @media only screen and (min-width: 768px) {
+    .fade-swiper__img-one, .fade-swiper__img-two, .fade-swiper__img-three {
+      min-height: 450px; } }
+  @media only screen and (min-width: 992px) {
+    .fade-swiper__img-one, .fade-swiper__img-two, .fade-swiper__img-three {
+      min-height: 80vh; } }
+
 .logo {
   height: 42px;
   padding-left: 20px; }
 
 .logo--link {
-  text-decoration: none; }
+  text-decoration: none;
+  text-align: center; }
 
 .marketplace__store--menu {
   width: 120px;
   padding: 8px 0;
   text-align: center; }
 
+.fade-swiper__img-one {
+  background-image: url("../img/modern-minimalist-bathroom-min.jpg");
+  background-position: bottom; }
+.fade-swiper__img-two {
+  background-image: url("../img/kitchen-bg-min.jpg");
+  background-position: bottom; }
+.fade-swiper__img-three {
+  background-image: url("../img/bathroom-min.jpg");
+  background-position: center; }
+
+.product-display__item {
+  width: 100%; }
+
 .social-network {
   font-size: 18px;
-  padding: 0 10px; }
+  margin: 0 10px; }
 
 .social-network__fb {
   color: #3b5998; }
@@ -110,6 +137,74 @@
 .social-network__youtube {
   color: #FF0000; }
 
+.fade-swiper {
+  width: 100%; }
+
+@media only screen and (min-width: 768px) {
+  .fade-swiper__mobile-nav {
+    display: none; } }
+
+/* DEFAULT */
+.fade-swiper .swiper-container {
+  width: 100%;
+  height: 100%; }
+
+.fade-swiper .swiper-slide {
+  background-size: cover; }
+
+.product-display {
+  margin: 35px auto;
+  text-align: center;
+  width: 95%; }
+  @media only screen and (min-width: 576px) {
+    .product-display {
+      width: 80%; } }
+  @media only screen and (min-width: 768px) {
+    .product-display {
+      width: 768px; } }
+  @media only screen and (min-width: 992px) {
+    .product-display {
+      width: 980px; } }
+  @media only screen and (min-width: 1400px) {
+    .product-display {
+      width: 1200px; } }
+
+.button-buy {
+  display: block;
+  margin: 8px 0;
+  padding: 8px 0;
+  background-color: #32EE67;
+  color: #FFFFFF;
+  border-radius: 2px;
+  font-size: 20px;
+  transition: 0.3s ease; }
+
+@media only screen and (min-width: 992px) {
+  .button-buy:hover {
+    transition: 0.3s ease;
+    background-color: #02A12E; } }
+
+.product-display__title {
+  font-weight: 100;
+  font-size: 40px; }
+  @media only screen and (min-width: 992px) {
+    .product-display__title {
+      font-size: 60px;
+      padding-bottom: 30px; } }
+
+.product-display__description {
+  font-size: 12px; }
+  @media only screen and (min-width: 992px) {
+    .product-display__description {
+      font-size: 16px; } }
+
+.product-display__box {
+  flex: 50%;
+  padding: 10px 15px; }
+  @media only screen and (min-width: 576px) {
+    .product-display__box {
+      flex: 33.3333333333%; } }
+
 * {
   padding: 0;
   margin: 0;
@@ -118,5 +213,8 @@
 
 body {
   background-color: #FFFFFF; }
+
+p {
+  font-family: 'Merriweather', serif; }
 
 /*# sourceMappingURL=style.css.map */
