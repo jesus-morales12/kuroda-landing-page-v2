@@ -121,6 +121,11 @@
   background-image: url("../img/bathroom-min.jpg");
   background-position: center; }
 
+.services__background {
+  height: 90vh;
+  background: linear-gradient(rgba(20, 20, 20, 0.8)), url("../img/6.jpg") no-repeat center;
+  background-size: cover; }
+
 .product-display__item {
   width: 100%; }
 
@@ -152,6 +157,9 @@
 .fade-swiper .swiper-slide {
   background-size: cover; }
 
+.product-display__description, .service__description {
+  line-height: 150%; }
+
 .product-display {
   margin: 35px auto;
   text-align: center;
@@ -173,24 +181,49 @@
   display: block;
   margin: 8px 0;
   padding: 8px 0;
-  background-color: #32EE67;
   color: #FFFFFF;
+  background-color: #02A12E;
   border-radius: 2px;
   font-size: 20px;
   transition: 0.3s ease; }
 
-@media only screen and (min-width: 992px) {
-  .button-buy:hover {
-    transition: 0.3s ease;
-    background-color: #02A12E; } }
+.services {
+  position: relative;
+  height: 130vh;
+  background-color: #141414; }
+  @media only screen and (min-width: 576px) {
+    .services {
+      background: none;
+      height: 90vh; } }
 
-.product-display__title {
-  font-weight: 100;
-  font-size: 40px; }
+.services__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 25px; }
+
+.service__item {
+  padding: 0 12px;
+  justify-content: flex-start; }
+  @media only screen and (min-width: 576px) {
+    .service__item {
+      flex: 50%; } }
   @media only screen and (min-width: 992px) {
-    .product-display__title {
-      font-size: 60px;
-      padding-bottom: 30px; } }
+    .service__item {
+      padding: 0 30px;
+      flex: 25%; } }
+
+.service__title {
+  color: #FFFFFF; }
+
+.service__item-title {
+  font-size: 25px;
+  font-weigth: 600;
+  padding-bottom: 10px; }
 
 .product-display__description {
   font-size: 12px; }
@@ -198,12 +231,53 @@
     .product-display__description {
       font-size: 16px; } }
 
+.service__description {
+  font-size: 15px; }
+  @media only screen and (min-width: 768px) {
+    .service__description {
+      font-size: 17px; } }
+  @media only screen and (min-width: 992px) {
+    .service__description {
+      font-size: 20px; } }
+
+.service__icon {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 45px; }
+  @media only screen and (min-width: 576px) {
+    .service__icon {
+      font-size: 55px; } }
+  @media only screen and (min-width: 768px) {
+    .service__icon {
+      font-size: 75px; } }
+  @media only screen and (min-width: 992px) {
+    .service__icon {
+      font-size: 80px; } }
+  @media only screen and (min-width: 1400px) {
+    .service__icon {
+      font-size: 90px; } }
+
+.product-display__title, .service__title {
+  font-weight: 100;
+  font-size: 40px; }
+  @media only screen and (min-width: 992px) {
+    .product-display__title, .service__title {
+      font-size: 60px;
+      padding-bottom: 30px; } }
+
 .product-display__box {
   flex: 50%;
   padding: 10px 15px; }
   @media only screen and (min-width: 576px) {
     .product-display__box {
-      flex: 33.3333333333%; } }
+      flex: 33.3333333333%;
+      padding: 10px 15px; } }
+
+@media only screen and (min-width: 992px) {
+  .button-buy:hover {
+    transition: 0.3s ease;
+    background-color: #015418; } }
 
 * {
   padding: 0;

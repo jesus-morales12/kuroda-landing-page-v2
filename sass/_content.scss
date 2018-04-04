@@ -1,3 +1,7 @@
+%description {
+    line-height: 150%;
+}
+
 // BLOCK
 .product-display {
     margin: 35px auto;
@@ -21,21 +25,98 @@
     display: block;
     margin: 8px 0;
     padding: 8px 0;
-    background-color: $light-green;
     color: $white;
+    background-color: $light-green;
     border-radius: 2px;
     font-size: 20px;
     transition: 0.3s ease;
 }
 
-.button-buy:hover {
-    @include responsive(l) {
-        transition: 0.3s ease;
-        background-color: $dark-green;
+.services {
+    position: relative;
+    height: 130vh;
+    background-color: $black;
+    @include responsive(s) {
+        background: none;
+        height: 90vh;
     }
 }
 
 // ELEMENT
+.services__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $white;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 25px;
+}
+
+.service__item {
+    padding: 0 12px;
+    justify-content: flex-start;
+    @include responsive(s) {
+        flex: 50%;
+    }
+    @include responsive(l) {
+        padding: 0 30px;
+        flex: 25%;
+    }
+}
+
+.service__title {
+    @extend .product-display__title;
+    color: $white;
+}
+
+.service__item-title {
+    font: {
+        size: 25px;
+        weigth: 600;
+    }
+    padding-bottom: 10px;
+}
+
+.product-display__description {
+    @extend %description;
+    font-size: 12px;
+    @include responsive(l) {
+        font-size: 16px;
+    }
+}
+
+.service__description {
+    @extend %description;
+    font-size: 15px;
+    @include responsive(m) {
+        font-size: 17px;
+    }
+    @include responsive(l) {
+        font-size: 20px;
+    }
+}
+
+.service__icon {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 45px;
+    @include responsive(s) {
+        font-size: 55px;
+    }
+    @include responsive(m) {
+        font-size: 75px;
+    }
+    @include responsive(l) {
+        font-size: 80px;
+    }
+    @include responsive(xl) {
+        font-size: 90px;
+    }
+}
+
 .product-display__title {
     font: {
         weight: 100;
@@ -49,20 +130,19 @@
     }
 }
 
-.product-display__description {
-    font-size: 12px;
-    @include responsive(l) {
-        font-size: 16px;
-    }
-}
-
 .product-display__box {
     flex: percentage($number: 1/2);
     padding: 10px 15px;
     @include responsive(s) {
         flex: percentage($number: 1/3);
+        padding: 10px 15px;
     }
 }
 
 // MODS
-// RESPONSIVE
+.button-buy:hover {
+    @include responsive(l) {
+        transition: 0.3s ease;
+        background-color: $dark-green;
+    }
+}
