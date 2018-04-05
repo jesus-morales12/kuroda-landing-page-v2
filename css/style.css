@@ -142,9 +142,21 @@
   background-position: center; }
 
 .services__background {
-  height: 90vh;
   background: linear-gradient(rgba(20, 20, 20, 0.8)), url("../img/6.jpg") no-repeat center;
-  background-size: cover; }
+  background-size: cover;
+  height: 880px; }
+  @media only screen and (min-width: 576px) {
+    .services__background {
+      height: 580px; } }
+  @media only screen and (min-width: 768px) {
+    .services__background {
+      height: 600px; } }
+  @media only screen and (min-width: 992px) {
+    .services__background {
+      height: 580px; } }
+  @media only screen and (min-width: 1400px) {
+    .services__background {
+      height: 500px; } }
 
 .clients__regular {
   background-image: url("../img/plumber-min.jpg");
@@ -190,6 +202,14 @@
   text-align: center;
   margin: 0 auto; }
 
+.button-buy, .button-register {
+  color: #FFFFFF;
+  border-radius: 2px;
+  transition: 0.2s ease;
+  font-size: 20px;
+  font-weight: bold;
+  display: block; }
+
 .marketplace {
   margin: 0 auto;
   width: 300px;
@@ -206,13 +226,7 @@
       width: 100%; } }
 
 .services {
-  position: relative;
-  height: 130vh;
-  background-color: #141414; }
-  @media only screen and (min-width: 576px) {
-    .services {
-      background: none;
-      height: 90vh; } }
+  position: relative; }
 
 .product-display {
   margin: 35px auto;
@@ -232,24 +246,13 @@
       width: 1200px; } }
 
 .button-buy {
-  display: block;
   margin: 8px 0;
   padding: 8px 0;
-  color: #FFFFFF;
-  background-color: #02A12E;
-  border-radius: 2px;
-  font-size: 20px;
-  transition: 0.3s ease; }
+  background-color: #02A12E; }
 
 .button-register {
-  color: #FFFFFF;
   background-color: #EE3233;
-  border-radius: 2px;
-  transition: 0.2s ease;
   padding: 10px 35px;
-  font-size: 20px;
-  font-weight: bold;
-  display: block;
   margin-top: 12px; }
   @media only screen and (min-width: 576px) {
     .button-register {
@@ -309,7 +312,7 @@
   padding-top: 25px; }
 
 .service__item {
-  padding: 0 12px;
+  padding: 10px 12px;
   justify-content: flex-start; }
   @media only screen and (min-width: 576px) {
     .service__item {
@@ -334,7 +337,8 @@
       font-size: 16px; } }
 
 .service__description {
-  font-size: 15px; }
+  font-size: 15px;
+  padding: 0 15px; }
   @media only screen and (min-width: 768px) {
     .service__description {
       font-size: 17px; } }

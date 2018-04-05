@@ -73,9 +73,21 @@
 }
 
 .services__background {
-    height: 90vh;
     background: linear-gradient(rgba($color: $black, $alpha: 0.8)), url('../img/6.jpg') no-repeat center;
     background-size: cover;
+    height: 880px;
+    @include responsive(s) {
+        height: 580px;
+    }
+    @include responsive(m) {
+        height: 600px;
+    }
+    @include responsive(l) {
+        height: 580px;
+    }
+    @include responsive(xl) {
+        height: 500px;
+    }
 }
 
 .clients__regular {
