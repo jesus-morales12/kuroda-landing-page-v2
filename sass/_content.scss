@@ -72,8 +72,10 @@
 }
 
 .button-register:hover {
-    transition: 0.2s ease;
-    background-color: $dark-red;
+    @include responsive(l) {
+        transition: 0.2s ease;
+        background-color: $dark-red;
+    }
 }
 
 .online-shopping {
