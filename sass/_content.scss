@@ -42,6 +42,24 @@
     }
 }
 
+.clients {
+    width: 100%;
+}
+
+
+.clients__content {
+    background-color: $white;
+    margin: 0 auto;
+    text-align: center;
+    flex: 50%;
+}
+
+.clients__description {
+    @extend %description;
+    font-size: 20px;
+}
+
+
 // ELEMENT
 .services__content {
     position: absolute;

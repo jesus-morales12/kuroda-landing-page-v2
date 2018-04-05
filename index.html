@@ -131,6 +131,71 @@
 
                 </div>
             </div>
+
+            <!-- CLIENTES -->
+            <div class="clients --flex">
+                <div class="clients__regular"></div>
+                <div class="clients__content">
+                    <h1 class="product-display__title">
+                        Encuéntranos en línea
+                    </h1>
+                    <p class="clients__description">
+                        Compra a través de las siguientes páginas:
+                    </p>
+                    <div class="--flex --space-around">
+
+                    </div>
+                </div>
+                <div class="clients__content">
+                    <h1 class="product-display__title">
+                        Mayoristas
+                    </h1>
+                    <p class="clients__description">
+                        Clic botón tienda B2B
+                    </p>
+                </div>
+                <div class="clients__b-to-b"></div>
+            </div>
+
+            <!-- MUESTRA DE PRODUCTOS -->
+            <div class="product-display">
+                <h1 class="product-display__title">
+                    CONTROLA EL CLIMA
+                </h1>
+                <div class="--flex --space-around">
+
+                    <div class="product-display__box --vflex --space-between --even-width">
+                        <img src="img/products/calentador-cinsa-de-paso-cdp-06-10-lts-gas-lp.jpg" alt="" class="product-display__item">
+                        <p class="product-display__description">
+                            Calentador Cinsa De Paso Cdp 06
+                        </p>
+                        <a href="http://kuroda.mercadoshops.com.mx/calentador-cinsa-de-paso-cdp-06-10-lts-gas-lp-804142617xJM" target="_blank" class="button-buy --no-decoration">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+
+                    <div class="product-display__box --vflex --space-between --even-width">
+                        <img src="img/products/minisplit-rheem-tonelada-110v.jpg" alt="" class="product-display__item">
+                        <p class="product-display__description">
+                            Minisplit Rheem 1 Tonelada 110V
+                        </p>
+                        <a href="http://kuroda.mercadoshops.com.mx/minisplit-rheem-tonelada-110v-solo-frio-819241451xJM" target="_blank" class="button-buy --no-decoration">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+
+                    <div class="product-display__box --vflex --space-between --even-width">
+                        <img src="img/products/calentador-calorex-instantaneo-8lts-gas-lp.jpg" alt="" class="product-display__item">
+                        <p class="product-display__description">
+                            Calentador Calorex Instantáneo 8Lts Gas LP
+                        </p>
+                        <a href="http://kuroda.mercadoshops.com.mx/calentador-calorex-instantaneo-8lts-gas-lp-812753246xJM" target="_blank" class="button-buy --no-decoration">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <!-- SERVICIOS DE KURODA -->
             <div class="services">
                 <div class="services__background"></div>
@@ -190,46 +255,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- MUESTRA DE PRODUCTOS -->
-            <div class="product-display">
-                <h1 class="product-display__title">
-                    CONTROLA EL CLIMA
-                </h1>
-                <div class="--flex --space-around">
-
-                    <div class="product-display__box --vflex --space-between --even-width">
-                        <img src="img/products/calentador-cinsa-de-paso-cdp-06-10-lts-gas-lp.jpg" alt="" class="product-display__item">
-                        <p class="product-display__description">
-                            Calentador Cinsa De Paso Cdp 06
-                        </p>
-                        <a href="http://kuroda.mercadoshops.com.mx/calentador-cinsa-de-paso-cdp-06-10-lts-gas-lp-804142617xJM" target="_blank" class="button-buy --no-decoration">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </div>
-
-                    <div class="product-display__box --vflex --space-between --even-width">
-                        <img src="img/products/minisplit-rheem-tonelada-110v.jpg" alt="" class="product-display__item">
-                        <p class="product-display__description">
-                            Minisplit Rheem 1 Tonelada 110V
-                        </p>
-                        <a href="http://kuroda.mercadoshops.com.mx/minisplit-rheem-tonelada-110v-solo-frio-819241451xJM" target="_blank" class="button-buy --no-decoration">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </div>
-
-                    <div class="product-display__box --vflex --space-between --even-width">
-                        <img src="img/products/calentador-calorex-instantaneo-8lts-gas-lp.jpg" alt="" class="product-display__item">
-                        <p class="product-display__description">
-                            Calentador Calorex Instantáneo 8Lts Gas LP
-                        </p>
-                        <a href="http://kuroda.mercadoshops.com.mx/calentador-calorex-instantaneo-8lts-gas-lp-812753246xJM" target="_blank" class="button-buy --no-decoration">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
 
         </div>
 
@@ -302,11 +327,11 @@
             var fade_swiper = new Swiper('.fade-swiper', {
                 spaceBetween: 30,
                 effect: 'fade',
-                loop: false,
-                // autoplay: {
-                //     delay: 4000,
-                //     disableOnInteraction: false,
-                // },
+                loop: true,
+                autoplay: {
+                    delay: 3300,
+                    disableOnInteraction: false,
+                },
                 breakpoints: {
                     767: {
                         autoplay: false

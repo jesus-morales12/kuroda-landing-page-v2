@@ -11,6 +11,13 @@
     }
 }
 
+%clients__backgrounds {
+    flex: 50%;
+    min-height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 // LOGO
 .logo {
     height: 42px;
@@ -57,6 +64,18 @@
     height: 90vh;
     background: linear-gradient(rgba($color: $black, $alpha: 0.8)), url('../img/6.jpg') no-repeat center;
     background-size: cover;
+}
+
+.clients__regular {
+    @extend %clients__backgrounds;
+    background-image: url('../img/plumber-min.jpg');
+    background-position: top;
+}
+
+.clients__b-to-b {
+    @extend %clients__backgrounds;
+    background-image: url('../img/construction-min.jpg');
+    background-position: center;
 }
 
 // IMAGES

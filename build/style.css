@@ -121,6 +121,14 @@
     .fade-swiper__img-one, .fade-swiper__img-two, .fade-swiper__img-three {
       min-height: 80vh; } }
 
+.clients__regular, .clients__b-to-b {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  min-height: 40vh;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .logo {
   height: 42px;
   padding-left: 20px; }
@@ -149,6 +157,14 @@
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 20, 0.8))), url("../img/6.jpg") no-repeat center;
   background: linear-gradient(rgba(20, 20, 20, 0.8)), url("../img/6.jpg") no-repeat center;
   background-size: cover; }
+
+.clients__regular {
+  background-image: url("../img/plumber-min.jpg");
+  background-position: top; }
+
+.clients__b-to-b {
+  background-image: url("../img/construction-min.jpg");
+  background-position: center; }
 
 .product-display__item {
   width: 100%; }
@@ -181,7 +197,7 @@
 .fade-swiper .swiper-slide {
   background-size: cover; }
 
-.product-display__description, .service__description {
+.clients__description, .product-display__description, .service__description {
   line-height: 150%; }
 
 .product-display {
@@ -220,6 +236,20 @@
     .services {
       background: none;
       height: 90vh; } }
+
+.clients {
+  width: 100%; }
+
+.clients__content {
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%; }
+
+.clients__description {
+  font-size: 20px; }
 
 .services__content {
   position: absolute;
