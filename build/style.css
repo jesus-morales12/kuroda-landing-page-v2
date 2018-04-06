@@ -215,10 +215,6 @@
 .fade-swiper {
   width: 100%; }
 
-@media only screen and (min-width: 768px) {
-  .fade-swiper__mobile-nav {
-    display: none; } }
-
 /* DEFAULT */
 .fade-swiper .swiper-container {
   width: 100%;
@@ -234,12 +230,14 @@
 
 .button-buy, .button-register {
   color: #FFFFFF;
-  border-radius: 2px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   font-size: 20px;
   font-weight: bold;
   display: block; }
+  @media only screen and (min-width: 576px) {
+    .button-buy, .button-register {
+      border-radius: 2px; } }
 
 .marketplace {
   margin: 0 auto;
@@ -268,13 +266,13 @@
       width: 80%; } }
   @media only screen and (min-width: 768px) {
     .product-display {
-      width: 768px; } }
+      width: 600px; } }
   @media only screen and (min-width: 992px) {
     .product-display {
-      width: 980px; } }
+      width: 800px; } }
   @media only screen and (min-width: 1400px) {
     .product-display {
-      width: 1200px; } }
+      width: 991px; } }
 
 .button-buy {
   margin: 8px 0;
@@ -438,6 +436,44 @@
     transition: 0.3s ease;
     background-color: #015418; } }
 
+.footer {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  padding-top: 15px; }
+
+.slogan {
+  width: 100%;
+  font-size: 17px;
+  font-weight: 500;
+  font-style: italic;
+  padding: 8px 12px; }
+
+.footer__item {
+  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: center;
+  color: white;
+  margin: 0 auto; }
+  @media only screen and (min-width: 576px) {
+    .footer__item {
+      width: 0;
+      -webkit-box-flex: 50%;
+          -ms-flex: 50%;
+              flex: 50%; } }
+  @media only screen and (min-width: 768px) {
+    .footer__item {
+      -webkit-box-flex: 33.3333333333%;
+          -ms-flex: 33.3333333333%;
+              flex: 33.3333333333%; } }
+
+.footer__link {
+  display: block; }
+
+.footer--theme {
+  background-color: #EE3233; }
+
 * {
   padding: 0;
   margin: 0;
@@ -450,3 +486,18 @@ body {
 
 p {
   font-family: 'Merriweather', serif; }
+
+#my-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh; }
+
+#my-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }

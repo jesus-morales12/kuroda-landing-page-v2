@@ -5,13 +5,13 @@
 @import 'social-network';
 @import 'swiper';
 @import 'content';
-
+@import 'footer';
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-}  
+}
 
 body {
     background-color: $white;
@@ -19,4 +19,14 @@ body {
 
 p {
     font-family: 'Merriweather', serif;
+}
+
+#my-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#my-content {
+    flex: 1;
 }

@@ -53,13 +53,11 @@
                         <div class="swiper-slide fade-swiper__img-two"></div>
                         <div class="swiper-slide fade-swiper__img-three"></div>
                     </div>
-                    <div class="fade-swiper__mobile-nav">
 
-                        <div class="swiper-pagination swiper-pagination-white"></div>
+                    <div class="swiper-pagination swiper-pagination-black"></div>
+                    <div class="swiper-button-next swiper-button-black"></div>
+                    <div class="swiper-button-prev swiper-button-black"></div>
 
-                        <div class="swiper-button-next swiper-button-black"></div>
-                        <div class="swiper-button-prev swiper-button-black"></div>
-                    </div>
                 </div>
             </div>
 
@@ -279,10 +277,26 @@
 
         </div>
 
-        <div id="my-footer">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquam aliquid reprehenderit incidunt exercitationem.
-            Excepturi quam assumenda accusantium natus nulla vel dolore, facilis odit consequatur? Quis debitis eveniet dicta
-            reprehenderit?
+        <div id="my-footer" class="footer footer--theme --flex --space-around">
+            <div class="footer__item">
+                <div class="slogan">
+                    La experiencia está en Kuroda
+                </div>
+            </div>
+            <div class="footer__item">
+                <div class="--flex --space--around">
+                    <a href="#" class="--no-decoration footer__link">Aviso de privacidad</a>
+                    <a href="#" class="--no-decoration footer__link">Aviso de privacidad</a>
+                    <a href="#" class="--no-decoration footer__link">Aviso de privacidad</a>
+                </div>
+            </div>
+            <div class="footer__item">
+                <div class="--flex --space--around">
+                    <a href="#" class="--no-decoration footer__link">Aviso de privacidad</a>
+                    <a href="#" class="--no-decoration footer__link">Aviso de privacidad</a>
+                    <a href="#" class="--no-decoration footer__link">Aviso de privacidad</a>
+                </div>
+            </div>
         </div>
         <nav id="my-menu">
             <ul>
@@ -358,11 +372,6 @@
                     delay: 3300,
                     disableOnInteraction: false,
                 },
-                breakpoints: {
-                    767: {
-                        autoplay: false
-                    },
-                },
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
@@ -370,6 +379,14 @@
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
+                },
+                keyboard: {
+                    enabled: true,
+                },
+                breakpoints: {
+                    767: {
+                        autoplay: false
+                    },
                 },
 
             });

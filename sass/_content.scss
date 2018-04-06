@@ -6,11 +6,13 @@
 
 %button {
     color: $white;
-    border-radius: 2px;
     transition: 0.2s ease;
     font-size: 20px;
     font-weight: bold;
     display: block;
+    @include responsive(s) {
+        border-radius: 2px;
+    }
 }
 
 // BLOCK
@@ -44,13 +46,13 @@
         width: 80%;
     }
     @include responsive(m) {
-        width: 768px;
+        width: 600px;
     }
     @include responsive(l) {
-        width: 980px;
+        width: 800px;
     }
     @include responsive(xl) {
-        width: 1200px;
+        width: 991px;
     }
 }
 
