@@ -65,12 +65,10 @@
 
 .button-register {
     @extend %button;
+    display: inline-flex;
     background-color: $red;
     padding: 10px 35px;
     margin-top: 12px;
-    @include responsive(s) {
-        display: inline-flex;
-    }
 }
 
 .button-register:hover {
@@ -90,7 +88,7 @@
     background-color: $white;
     margin: 0 auto;
     text-align: center;
-    @include responsive(l) {
+    @include responsive(m) {
         flex: 50%;
         border: 1px solid rgba($color: $black, $alpha: .1);
     }
@@ -171,7 +169,7 @@
     @extend %description;
     font-size: 12px;
     @include responsive(l) {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
@@ -199,7 +197,7 @@
         font-size: 75px;
     }
     @include responsive(l) {
-        font-size: 80px;
+        font-size: 70px;
     }
     @include responsive(xl) {
         font-size: 90px;

@@ -13,7 +13,7 @@
 
 %clients__backgrounds {
     width: 100%;
-    min-height: 40vh;
+    height: 40vh;
     background-repeat: no-repeat;
     background-size: cover;
     @include responsive(m) {
@@ -21,6 +21,7 @@
     }
     @include responsive(l) {
         width: 50%;
+        height: 50vh;
     }
 }
 
@@ -45,6 +46,10 @@
             right: 0;
         }
     }
+}
+
+.example {
+    width: 100%;
 }
 
 // BACKGROUNDS
@@ -80,13 +85,13 @@
         height: 580px;
     }
     @include responsive(m) {
-        height: 600px;
+        height: 620px;
     }
     @include responsive(l) {
-        height: 580px;
+        height: 650px;
     }
     @include responsive(xl) {
-        height: 500px;
+        height: 90vh;
     }
 }
 

@@ -94,9 +94,13 @@
 .responsive-header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse; }
   @media only screen and (min-width: 992px) {
     .responsive-header {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       -ms-flex-pack: distribute;
           justify-content: space-around;
       position: -webkit-sticky;
@@ -130,7 +134,7 @@
 
 .clients__regular, .clients__b-to-b {
   width: 100%;
-  min-height: 40vh;
+  height: 40vh;
   background-repeat: no-repeat;
   background-size: cover; }
   @media only screen and (min-width: 768px) {
@@ -138,7 +142,8 @@
       width: 50%; } }
   @media only screen and (min-width: 992px) {
     .clients__regular, .clients__b-to-b {
-      width: 50%; } }
+      width: 50%;
+      height: 50vh; } }
 
 .logo {
   height: 42px;
@@ -156,6 +161,9 @@
     .marketplace__store--menu {
       padding-left: 0;
       padding-right: 0; } }
+
+.example {
+  width: 100%; }
 
 .fade-swiper__img-one {
   background-image: url("../img/modern-minimalist-bathroom-min.jpg");
@@ -177,13 +185,13 @@
       height: 580px; } }
   @media only screen and (min-width: 768px) {
     .services__background {
-      height: 600px; } }
+      height: 620px; } }
   @media only screen and (min-width: 992px) {
     .services__background {
-      height: 580px; } }
+      height: 650px; } }
   @media only screen and (min-width: 1400px) {
     .services__background {
-      height: 500px; } }
+      height: 90vh; } }
 
 .clients__regular {
   background-image: url("../img/plumber-min.jpg");
@@ -280,14 +288,12 @@
   background-color: #02A12E; }
 
 .button-register {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   background-color: #EE3233;
   padding: 10px 35px;
   margin-top: 12px; }
-  @media only screen and (min-width: 576px) {
-    .button-register {
-      display: -webkit-inline-box;
-      display: -ms-inline-flexbox;
-      display: inline-flex; } }
 
 @media only screen and (min-width: 992px) {
   .button-register:hover {
@@ -306,7 +312,7 @@
   background-color: #FFFFFF;
   margin: 0 auto;
   text-align: center; }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 768px) {
     .online-shopping__content {
       -webkit-box-flex: 50%;
           -ms-flex: 50%;
@@ -377,7 +383,7 @@
   font-size: 12px; }
   @media only screen and (min-width: 992px) {
     .product-display__description {
-      font-size: 16px; } }
+      font-size: 12px; } }
 
 .service__description {
   font-size: 15px;
@@ -402,7 +408,7 @@
       font-size: 75px; } }
   @media only screen and (min-width: 992px) {
     .service__icon {
-      font-size: 80px; } }
+      font-size: 70px; } }
   @media only screen and (min-width: 1400px) {
     .service__icon {
       font-size: 90px; } }
@@ -438,9 +444,21 @@
 
 .footer {
   width: 100%;
-  height: 100px;
   margin: 0 auto;
   padding-top: 15px; }
+
+.copyright {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 15px 0; }
+  @media only screen and (min-width: 1400px) {
+    .copyright {
+      padding-top: 8px;
+      padding-bottom: 12px;
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .slogan {
   width: 100%;
@@ -449,37 +467,38 @@
   font-style: italic;
   padding: 8px 12px; }
 
-.footer__item {
-  width: 100%;
-  -ms-flex-item-align: center;
-      align-self: center;
+.footer__block {
+  width: 200px;
   text-align: center;
-  color: white;
-  margin: 0 auto; }
-  @media only screen and (min-width: 576px) {
-    .footer__item {
-      width: 0;
-      -webkit-box-flex: 50%;
-          -ms-flex: 50%;
-              flex: 50%; } }
-  @media only screen and (min-width: 768px) {
-    .footer__item {
-      -webkit-box-flex: 33.3333333333%;
-          -ms-flex: 33.3333333333%;
-              flex: 33.3333333333%; } }
+  margin: 0 auto;
+  padding-top: 8px; }
+
+.footer__options {
+  list-style-type: none; }
+
+.footer__options > li {
+  padding: 8px 0; }
 
 .footer__link {
-  display: block; }
+  color: #FFFFFF;
+  font-weight: lighter;
+  font-size: 15px; }
+
+.footer__title {
+  color: #FFFFFF;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 300; }
 
 .footer--theme {
-  background-color: #EE3233; }
+  background-color: #141414; }
 
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Lato', sans-serif;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Lato', sans-serif; }
+          box-sizing: border-box; }
 
 body {
   background-color: #FFFFFF; }
@@ -501,3 +520,6 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1; }
+
+#my-menu:not(.mm-menu) {
+  display: none; }

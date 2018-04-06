@@ -55,7 +55,9 @@
 // RESPONSIVE
 .responsive-header {
     justify-content: space-between;
+    flex-wrap: wrap-reverse;
     @include responsive(l) {
+        flex-wrap: wrap;
         justify-content: space-around;
         position: sticky;
         top: 0;
