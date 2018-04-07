@@ -48,9 +48,6 @@
     }
 }
 
-.example {
-    width: 100%;
-}
 
 // BACKGROUNDS
 .fade-swiper__img {
@@ -80,18 +77,18 @@
 .services__background {
     background: linear-gradient(rgba($color: $black, $alpha: 0.8)), url('../img/6.jpg') no-repeat center;
     background-size: cover;
-    height: 980px;
+    height: 1150px;
     @include responsive(s) {
-        height: 580px;
+        height: 880px;
     }
     @include responsive(m) {
-        height: 620px;
+        height: 900px;
     }
     @include responsive(l) {
-        height: 650px;
+        height: 850px;
     }
     @include responsive(xl) {
-        height: 90vh;
+        height: 100vh;
     }
 }
 

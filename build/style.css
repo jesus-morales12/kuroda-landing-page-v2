@@ -162,9 +162,6 @@
       padding-left: 0;
       padding-right: 0; } }
 
-.example {
-  width: 100%; }
-
 .fade-swiper__img-one {
   background-image: url("../img/modern-minimalist-bathroom-min.jpg");
   background-position: bottom; }
@@ -179,19 +176,19 @@
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 20, 0.8))), url("../img/6.jpg") no-repeat center;
   background: linear-gradient(rgba(20, 20, 20, 0.8)), url("../img/6.jpg") no-repeat center;
   background-size: cover;
-  height: 980px; }
+  height: 1150px; }
   @media only screen and (min-width: 576px) {
     .services__background {
-      height: 580px; } }
+      height: 880px; } }
   @media only screen and (min-width: 768px) {
     .services__background {
-      height: 620px; } }
+      height: 900px; } }
   @media only screen and (min-width: 992px) {
     .services__background {
-      height: 650px; } }
+      height: 850px; } }
   @media only screen and (min-width: 1400px) {
     .services__background {
-      height: 90vh; } }
+      height: 100vh; } }
 
 .clients__regular {
   background-image: url("../img/plumber-min.jpg");
@@ -261,6 +258,12 @@
   @media only screen and (min-width: 1400px) {
     .marketplace {
       width: 100%; } }
+
+.button-help {
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 5px 12px;
+  font-weight: lighter; }
 
 .services {
   position: relative; }
@@ -498,17 +501,16 @@
   width: 97%;
   padding-bottom: 12px;
   margin: 0 auto; }
-  @media only screen and (min-width: 1400px) {
-    .beetrack {
-      margin-top: 45px; } }
 
 .beetrack__container {
-  display: block;
-  width: 100%;
-  background-color: #141414; }
+  margin: 0 auto;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 10px;
+  padding-bottom: 40px; }
 
 .beetrack__title {
-  padding-top: 15px; }
+  margin-bottom: -45px; }
 
 * {
   padding: 0;

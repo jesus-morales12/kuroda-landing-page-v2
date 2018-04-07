@@ -2,17 +2,18 @@
     width: 97%;
     padding-bottom: 12px;
     margin: 0 auto;
-    @include responsive(xl) {
-        margin-top: 45px;
-    }
+    // background-color: rgba($color: $black, $alpha: 0.1);
 }
 
 .beetrack__container {
-    display: block;
-    width: 100%;
-    background-color: rgba($color: $black, $alpha: 8.0);
+    // background-color: rgba($color: $black, $alpha: 0.1);
+    margin: 0 auto;
+    text-align: center;
+    color: $white;
+    padding-top: 10px;
+    padding-bottom: 40px;
 }
 
 .beetrack__title {
-    padding-top: 15px;
+    margin-bottom: -45px;
 }
