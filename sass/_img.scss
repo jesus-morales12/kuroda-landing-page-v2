@@ -26,7 +26,7 @@
 }
 
 // LOGO
-.logo {
+.kuroda-logo {
     height: 42px;
     padding-left: 20px;
 }
@@ -80,7 +80,7 @@
 .services__background {
     background: linear-gradient(rgba($color: $black, $alpha: 0.8)), url('../img/6.jpg') no-repeat center;
     background-size: cover;
-    height: 880px;
+    height: 980px;
     @include responsive(s) {
         height: 580px;
     }

@@ -36,10 +36,12 @@
 
 .services {
     position: relative;
+    height: 1050px;
 }
 
 .product-display {
-    margin: 35px auto;
+    margin: 0 auto;
+    padding: 35px 0;
     text-align: center;
     width: 95%;
     @include responsive(s) {
@@ -80,7 +82,7 @@
 
 .online-shopping {
     width: 100%;
-    margin: 50px 0;
+    padding-bottom: 35px;
 }
 
 .online-shopping__content {

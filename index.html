@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/jquery.mmenu.all.css">
     <link rel="stylesheet" href="css/jquery.mhead.css">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="shortcut icon" href="img/favico.png">
     <title>Kuroda</title>
 </head>
 
@@ -19,23 +20,23 @@
         <!-- HEADER & NAVBAR RESPONSIVOS -->
         <div id="my-header" class="mh-head Sticky --flex responsive-header">
             <a href="#" class="logo--link --vcentered">
-                <img src="img/logo.png" alt="Kuroda" class="logo">
+                <img src="img/logo.png" alt="Kuroda" class="kuroda-logo">
             </a>
-            <a href="#" class="header__item --vcentered  header__item--theme big-header --no-decoration">INICIO</a>
-            <a href="#" class="header__item --vcentered  header__item--theme big-header --no-decoration">SUCURSALES</a>
-            <a href="#" class="header__item --vcentered  header__item--theme big-header --no-decoration">MARCAS</a>
-            <a href="#" class="header__item --vcentered  header__item--theme big-header --no-decoration">NOSOTROS</a>
+            <a href="index.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">INICIO</a>
+            <a href="sucursales.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">SUCURSALES</a>
+            <a href="marcas.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">MARCAS</a>
+            <a href="nosotros.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">NOSOTROS</a>
             <div class="--flex --space-between big-header --vcentered ">
-                <a href="https://facebook.com" class="social-network social-network__fb --no-decoration">
+                <a href="https://www.facebook.com/KurodaMX/" class="social-network social-network__fb --no-decoration">
                     <i class="fab fa-facebook-square --no-decoration"></i>
                 </a>
-                <a href="#" class="social-network social-network__twitter --no-decoration">
+                <a href="https://twitter.com/kurodamx" class="social-network social-network__twitter --no-decoration">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#" class="social-network social-network__youtube --no-decoration">
+                <a href="https://www.youtube.com/channel/UCtETojrCXZ0DHKA1rpmE4pQ" class="social-network social-network__youtube --no-decoration">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <a href="#" class="social-network social-network__instagram --no-decoration">
+                <a href="https://www.instagram.com/kurodamx/" class="social-network social-network__instagram --no-decoration">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
@@ -189,6 +190,16 @@
                             </p>
                         </div>
                     </div>
+                    <div class="beetrack__container">
+                        <div class="beetrack">
+                            <h2 class="service__item-title beetrack__title">
+                                Rastrea tu pedido
+                            </h2>
+                            <div id="beetrack_widget" lang="es" api-key="dByY71Il2-PS4t0sxdMd6g"></div>
+                            <script type="text/javascript" charset="UTF-8" language="javascript" src="https://beetrack-general.s3-us-west-2.amazonaws.com/widget/dByY71Il2-PS4t0sxdMd6g.json"></script>
+                            <script async src="https://app.beetrack.cl/javascript_widget/beetrack_widget.js"></script>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -243,16 +254,16 @@
                             Compra a través de las siguientes páginas:
                         </p>
                         <div class="--flex --space-around marketplace">
-                            <a href="#">
+                            <a href="https://eshops.mercadolibre.com.mx/e-kuroda">
                                 <img src="img/marketplace/mercado-libre.png" class="marketplace__store--menu" alt="Mercado Libre!">
                             </a>
-                            <a href="">
+                            <a href="http://kuroda.mercadoshops.com.mx">
                                 <img src="img/marketplace/mercado-shop.png" class="marketplace__store--menu" alt="Mercado Shops">
                             </a>
-                            <a href="">
+                            <a href="https://www.amazon.com.mx/s?marketplaceID=A1AM78C64UM0Y8&me=A2N0U7Y1U99AE6&merchant=A2N0U7Y1U99AE6&redirect=true">
                                 <img src="img/marketplace/amazon.png" class="marketplace__store--menu" alt="Amazon!">
                             </a>
-                            <a href="">
+                            <a href="https://www.walmart.com.mx/vendedores/2264">
                                 <img src="img/marketplace/walmart.png" class="marketplace__store--menu" alt="Walmart">
                             </a>
                         </div>
@@ -276,28 +287,31 @@
         </div>
 
         <div id="my-footer" class="footer footer--theme --flex --space-between">
+            <!-- EXPLORA  -->
             <div class="footer__block">
                 <h4 class="footer__title">EXPLORA</h4>
                 <ul class="footer__options">
                     <li>
-                        <a href="#" class="--no-decoration footer__link">Inicio</a>
+                        <a href="index.html" class="--no-decoration footer__link">Inicio</a>
                     </li>
                     <li>
-                        <a href="#" class="--no-decoration footer__link">Sucursales</a>
+                        <a href="sucursales.html" class="--no-decoration footer__link">Sucursales</a>
                     </li>
                     <li>
-                        <a href="#" class="--no-decoration footer__link">Marcas</a>
+                        <a href="marcas.html" class="--no-decoration footer__link">Marcas</a>
                     </li>
                     <li>
-                        <a href="#" class="--no-decoration footer__link">Nosotros</a>
+                        <a href="nosotros.html" class="--no-decoration footer__link">Nosotros</a>
                     </li>
                 </ul>
             </div>
+
+            <!-- COMUNÍCATE -->
             <div class="footer__block">
                 <h4 class="footer__title">COMUNÍCATE</h4>
                 <ul class="footer__options">
                     <li>
-                        <a href="#" class="--no-decoration footer__link">contacto@kuroda.com</a>
+                        <a href="mailto:contacto@kuroda.com?subject=Correo desde kuroda.com" class="--no-decoration footer__link">contacto@kuroda.com</a>
                     </li>
                     <li>
                         <a href="tel:01-800-5876-321" class="--no-decoration footer__link">01 (800) 5876-321</a>
@@ -307,23 +321,27 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- SÍGUENOS -->
             <div class="footer__block">
                 <h4 class="footer__title">SÍGUENOS</h4>
                 <ul class="footer__options">
                     <li>
-                        <a href="#" class="--no-decoration footer__link">Facebook</a>
+                        <a href="https://www.facebook.com/KurodaMX/" class="--no-decoration footer__link">Facebook</a>
                     </li>
                     <li>
-                        <a href="#" class="--no-decoration footer__link">Twitter</a>
+                        <a href="https://twitter.com/kurodamx" class="--no-decoration footer__link">Twitter</a>
                     </li>
                     <li>
-                        <a href="#" class="--no-decoration footer__link">YouTube</a>
+                        <a href="https://www.youtube.com/channel/UCtETojrCXZ0DHKA1rpmE4pQ" class="--no-decoration footer__link">YouTube</a>
                     </li>
                     <li>
-                        <a href="#" class="--no-decoration footer__link">Instagram</a>
+                        <a href="https://www.instagram.com/kurodamx/" class="--no-decoration footer__link">Instagram</a>
                     </li>
                 </ul>
             </div>
+
+            <!-- LEGAL -->
             <div class="footer__block">
                 <h4 class="footer__title">LEGAL</h4>
                 <ul class="footer__options">
@@ -340,38 +358,43 @@
             </div>
         </div>
 
-
-
         <nav id="my-menu">
             <ul>
                 <li>
-                    <a href="#">INICIO</a>
+                    <a href="index.html">INICIO</a>
                 </li>
                 <li>
-                    <a href="#">SUCURSALES</a>
+                    <a href="sucursales.html">SUCURSALES</a>
                 </li>
                 <li>
-                    <a href="#">MARCAS</a>
+                    <a href="marcas.html">MARCAS</a>
                 </li>
                 <li>
-                    <a href="#">NOSOTROS</a>
+                    <a href="nosotros.html">NOSOTROS</a>
                 </li>
                 <li>
                     <a href="#">COMPRA EN LÍNEA</a>
                     <ul>
                         <li style="text-align: center">
-                            <a href="#">
+                            <a href="https://eshops.mercadolibre.com.mx/e-kuroda" class="--no-decoration">
                                 <img src="img/marketplace/mercado-libre.png" class="marketplace__store--menu" alt="Mercado Libre!">
                             </a>
                         </li>
                         <li style="text-align: center">
-                            <img src="img/marketplace/mercado-shop.png" class="marketplace__store--menu" alt="Mercado Shops">
+                            <a href="http://kuroda.mercadoshops.com.mx" class="--no-decoration">
+                                <img src="img/marketplace/mercado-shop.png" class="marketplace__store--menu" alt="Mercado Shops">
+                            </a>
                         </li>
                         <li style="text-align: center">
-                            <img src="img/marketplace/amazon.png" class="marketplace__store--menu" alt="Amazon!">
+                            <a href="https://www.amazon.com.mx/s?marketplaceID=A1AM78C64UM0Y8&me=A2N0U7Y1U99AE6&merchant=A2N0U7Y1U99AE6&redirect=true"
+                                class="--no-decoration">
+                                <img src="img/marketplace/amazon.png" class="marketplace__store--menu" alt="Amazon!">
+                            </a>
                         </li>
                         <li style="text-align: center">
-                            <img src="img/marketplace/walmart.png" class="marketplace__store--menu" alt="Walmart">
+                            <a href="https://www.walmart.com.mx/vendedores/2264" class="--no-decoration">
+                                <img src="img/marketplace/walmart.png" class="marketplace__store--menu" alt="Walmart">
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -382,7 +405,6 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery.mmenu.all.js"></script>
     <script src="js/jquery.mhead.js"></script>
-
     <script>
         jQuery(document).ready(function ($) {
             $("#my-menu").mmenu({
@@ -395,23 +417,18 @@
                 "iconbar": {
                     "add": true,
                     "top": [
-                        "<a href='#/'><i class='fab fa-twitter'></i></a>",
-                        "<a href='#/'><i class='fab fa-facebook'></i></a>",
-                        "<a href='#/'><i class='fab fa-youtube'></i></a>",
-                        "<a href='#/'><i class='fab fa-instagram'></i></a>"
+                        "<a href='https://www.facebook.com/KurodaMX/' target='_blank'><i class='fab fa-facebook'></i></a>",
+                        "<a href='https://twitter.com/kurodamx' target='_blank'><i class='fab fa-twitter'></i></a>",
+                        "<a href='https://www.youtube.com/channel/UCtETojrCXZ0DHKA1rpmE4pQ' target='_blank'><i class='fab fa-youtube'></i></a>",
+                        "<a href='https://www.instagram.com/kurodamx/' target='_blank'><i class='fab fa-instagram'></i></a>"
                     ]
                 },
-                // // TESTING - CONFIGURATION
-                // transitionDuration: 600,
-                // openingInterval: 50
-
             });
             $("#my-header").mhead({
                 scroll: {
-                    hide: 50
+                    hide: 20
                 }
             });
-
             var fade_swiper = new Swiper('.fade-swiper', {
                 spaceBetween: 30,
                 effect: 'fade',
@@ -436,10 +453,24 @@
                         autoplay: false
                     },
                 },
-
             });
         });
     </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5a7b8c5c4b401e45400cc43c/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
     <script src="js/fontawesome.js"></script>
 </body>
 

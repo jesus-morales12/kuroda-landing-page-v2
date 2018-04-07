@@ -145,7 +145,7 @@
       width: 50%;
       height: 50vh; } }
 
-.logo {
+.kuroda-logo {
   height: 42px;
   padding-left: 20px; }
 
@@ -179,7 +179,7 @@
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 20, 0.8))), url("../img/6.jpg") no-repeat center;
   background: linear-gradient(rgba(20, 20, 20, 0.8)), url("../img/6.jpg") no-repeat center;
   background-size: cover;
-  height: 880px; }
+  height: 980px; }
   @media only screen and (min-width: 576px) {
     .services__background {
       height: 580px; } }
@@ -263,10 +263,12 @@
       width: 100%; } }
 
 .services {
-  position: relative; }
+  position: relative;
+  height: 1050px; }
 
 .product-display {
-  margin: 35px auto;
+  margin: 0 auto;
+  padding: 35px 0;
   text-align: center;
   width: 95%; }
   @media only screen and (min-width: 576px) {
@@ -303,7 +305,7 @@
 
 .online-shopping {
   width: 100%;
-  margin: 50px 0; }
+  padding-bottom: 35px; }
 
 .online-shopping__content {
   -webkit-box-flex: 1;
@@ -492,6 +494,22 @@
 
 .footer--theme {
   background-color: #141414; }
+
+.beetrack {
+  width: 97%;
+  padding-bottom: 12px;
+  margin: 0 auto; }
+  @media only screen and (min-width: 1400px) {
+    .beetrack {
+      margin-top: 45px; } }
+
+.beetrack__container {
+  display: block;
+  width: 100%;
+  background-color: #141414; }
+
+.beetrack__title {
+  padding-top: 15px; }
 
 * {
   padding: 0;
