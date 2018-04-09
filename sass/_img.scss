@@ -48,8 +48,36 @@
     }
 }
 
+.marketplace__store--large {
+    width: 110px;
+    padding: 15px 0;
+    @include responsive(m) {
+        padding: {
+            left: 5px;
+            right: 5px;
+        }
+        width: 140px;
+    }
+    @include responsive(l) {
+        width: 140px;
+        transition: 0.2s ease;
+    }
+}
+
+.marketplace__store--large:hover {
+    @include responsive(l) {
+        transition: 0.2s ease;
+        width: 150px;
+    }
+}
 
 // BACKGROUNDS
+
+.about__background {
+    background-image: url('../img/nosotros/nosotros.jpg');
+    filter: opacity(0.8);
+}
+
 .fade-swiper__img {
     &-one {
         @extend %fade-swiper__img-height;
@@ -82,13 +110,13 @@
         height: 880px;
     }
     @include responsive(m) {
-        height: 900px;
+        height: 925px;
     }
     @include responsive(l) {
-        height: 850px;
+        height: 875px;
     }
     @include responsive(xl) {
-        height: 100vh;
+        height: 825px;
     }
 }
 

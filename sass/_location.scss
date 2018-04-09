@@ -1,0 +1,172 @@
+#storelocator-list,
+#storelocator-routing {
+  height: 450px;
+}
+
+#storelocator-leftcolumn,
+#storelocator-map_canvas {
+  height: 450px;
+}
+
+#storelocatorwidget-container,
+#storelocator-directions-panel {
+  width: 100%;
+}
+
+#storelocatorwidget {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+// // // Adjusting All Text Link Colors This is the color of link before it is clicked on or hovered over: 
+#storelocatorwidget a {
+  text-decoration: none;
+  color: #b20000;
+  margin: {
+    top: 10px;
+    bottom: 10px;
+  }
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%; // @include responsive(m) {
+  //   width: 22%;
+  // }
+  @include responsive(l) {
+    width: auto;
+    margin: {
+      left: 8px;
+    }
+  }
+}
+
+p {
+  padding: 3px 0;
+}
+
+input {
+  width: 100% !important;
+  font-size: 16px; // @include responsive(m) {
+  //   width: 35% !important;
+  // }
+  @include responsive(l) {
+    width: 45% !important;
+  }
+}
+
+// // This is the color of a link when the mouse hovers over it: 
+#storelocatorwidget a:hover {
+  color: #2a6496;
+}
+
+// // Adjusting the Text Colors of Specific Elements Store Name 
+a.storelocator-storename {
+  color: #000000;
+}
+
+// // Description 
+.storelocator-description {
+  color: #000000;
+}
+
+.storelocator-location {
+  font-weight: bold;
+  color: #000;
+}
+
+// // Address 
+.storelocator-address {
+  color: #000000;
+}
+
+// // Make the Map popup window transparent 
+.gm-style>div:first-child>div+div>div:last-child>div>div:first-child>div {
+  opacity: 0.8;
+}
+
+// // Change the text color in Select and address Input box
+span#storelocator-search-label,
+span#search_radius_text,
+div#storelocator-filter_checkbox_text {
+  color: #000000;
+}
+
+// // Adjusting input field glow You can get RGBA colours from here to update into the fields below: http: //hex2rgba.devoth.com/
+input:focus {
+  border-color: rgba($color: #B20000, $alpha: 0.75) !important;
+  box-shadow: 0 1px 1px rgbargba(253, 175, 23, 0.75) inset, 0 0 8px rgbargba(253, 175, 23, 0.6) !important;
+  outline: 0 none !important;
+}
+
+// My Location Button To change button colors,
+// you need to adjust each of the entries where it gives a color of #B20000 to your preferred color (use a search and replace function in your favorite text editor to do this !):
+.storelocator-btn-primary,
+.storelocator-btn-primary:hover,
+.storelocator-btn-primary:active,
+.storelocator-btn-primary:visited,
+.storelocator-btn-primary:focus {
+  color: #FFF !important;
+  border: none !important; // border-color: #000 !important;
+  background-color: #B20000 !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#B20000", endColorstr="#B20000") !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#B20000), to(#B20000)) !important;
+  background-image: -moz-linear-gradient(top, #B20000, #B20000) !important;
+  background-image: -ms-linear-gradient(top, #B20000, #B20000) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #B20000), color-stop(100%, #B20000)) !important;
+  background-image: -webkit-linear-gradient(top, #B20000, #B20000) !important;
+  background-image: -o-linear-gradient(top, #B20000, #B20000) !important;
+  background-image: linear-gradient(#B20000, #B20000) !important;
+}
+
+// Show on Map / Directions Buttons To change button colors,
+// you need to adjust each of the entries where it gives a color of #B20000 to your preferred color (use a search and replace function in your favorite text editor to do this !): 
+.storelocator-btn-danger,
+.storelocator-btn-danger:hover,
+.storelocator-btn-danger:active,
+.storelocator-btn-danger:visited,
+.storelocator-btn-danger:focus {
+  color: #FFF !important;
+  border: none !important;
+  background-color: #B20000 !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#B20000", endColorstr="#B20000") !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#B20000), to(#B20000)) !important;
+  background-image: -moz-linear-gradient(top, #B20000, #B20000) !important;
+  background-image: -ms-linear-gradient(top, #B20000, #B20000) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #B20000), color-stop(100%, #B20000)) !important;
+  background-image: -webkit-linear-gradient(top, #B20000, #B20000) !important;
+  background-image: -o-linear-gradient(top, #B20000, #B20000) !important;
+  background-image: linear-gradient(#B20000, #B20000) !important;
+}
+
+.find-store {
+  width: 100%;
+  margin: {
+    top: -60px;
+    left: auto;
+    right: auto;
+    bottom: 0;
+  }
+  background-color: rgba($color: #FFFFFF, $alpha: 0.7);
+  @include responsive(m) {
+    margin: 0 auto;
+  }
+  @include responsive(l) {
+    width: 990px;
+  }
+}
+
+// .find-store__background {
+//   background-image: url("../img/banners/6.jpg");
+//   min-height: 100vh;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+// #storelocatorwidget {
+//   @include responsive(l) {
+//     margin-left: 50px;
+//   }
+//   @include responsive(xl) {
+//     margin-left: 120px;
+//   }
+// }

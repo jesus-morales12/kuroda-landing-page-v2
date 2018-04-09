@@ -19,7 +19,7 @@
 
         <!-- HEADER & NAVBAR RESPONSIVOS -->
         <div id="my-header" class="mh-head Sticky --flex responsive-header">
-            <a href="#" class="logo--link --vcentered">
+            <a href="index.html" class="logo--link --vcentered">
                 <img src="img/logo.png" alt="Kuroda" class="kuroda-logo">
             </a>
             <a href="index.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">INICIO</a>
@@ -27,16 +27,16 @@
             <a href="marcas.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">MARCAS</a>
             <a href="nosotros.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">NOSOTROS</a>
             <div class="--flex --space-between big-header --vcentered ">
-                <a href="https://www.facebook.com/KurodaMX/" class="social-network social-network__fb --no-decoration">
+                <a href="https://www.facebook.com/KurodaMX/" target="_blank" class="social-network social-network__fb --no-decoration">
                     <i class="fab fa-facebook-square --no-decoration"></i>
                 </a>
-                <a href="https://twitter.com/kurodamx" class="social-network social-network__twitter --no-decoration">
+                <a href="https://twitter.com/kurodamx" target="_blank" class="social-network social-network__twitter --no-decoration">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://www.youtube.com/channel/UCtETojrCXZ0DHKA1rpmE4pQ" class="social-network social-network__youtube --no-decoration">
+                <a href="https://www.youtube.com/channel/UCtETojrCXZ0DHKA1rpmE4pQ" target="_blank" class="social-network social-network__youtube --no-decoration">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <a href="https://www.instagram.com/kurodamx/" class="social-network social-network__instagram --no-decoration">
+                <a href="https://www.instagram.com/kurodamx/" target="_blank" class="social-network social-network__instagram --no-decoration">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
@@ -44,10 +44,11 @@
                 MENU
             </a>
         </div>
+        
         <div id="my-content">
 
             <!-- CARRUSEL TIPO FADE BACKGROUND -->
-            <!-- <div class="fade-swiper">
+            <div class="fade-swiper">
                 <div class="swiper-container fade-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide fade-swiper__img-one"></div>
@@ -60,10 +61,10 @@
                     <div class="swiper-button-prev swiper-button-black"></div>
 
                 </div>
-            </div> -->
+            </div>
 
             <!-- MUESTRA DE PRODUCTOS -->
-            <!-- <div class="product-display">
+            <div class="product-display">
                 <h1 class="product-display__title">
                     CREA TU ESPACIO
                 </h1>
@@ -132,7 +133,7 @@
                     </div>
 
                 </div>
-            </div> -->
+            </div>
 
             <!-- SERVICIOS DE KURODA -->
             <div class="services">
@@ -198,7 +199,9 @@
                             Rastrea tu pedido
                         </h2>
                         <div class="beetrack">
-                            <div id="beetrack_widget" lang="es" api-key="NvtWDmSB2ZmWt7peO72lmw"></div> <script type="text/javascript" charset="UTF-8" language="javascript" src="https://beetrack-general.s3-us-west-2.amazonaws.com/widget/NvtWDmSB2ZmWt7peO72lmw.json"></script> <script async src="https://app.beetrack.cl/javascript_widget/beetrack_widget.js"></script>
+                            <div id="beetrack_widget" lang="es" api-key="NvtWDmSB2ZmWt7peO72lmw"></div>
+                            <script type="text/javascript" charset="UTF-8" language="javascript" src="https://beetrack-general.s3-us-west-2.amazonaws.com/widget/NvtWDmSB2ZmWt7peO72lmw.json"></script>
+                            <script async src="https://app.beetrack.cl/javascript_widget/beetrack_widget.js"></script>
                         </div>
                         <a href="#" class="--no-decoration button-help">Más información</a>
                     </div>
@@ -212,7 +215,7 @@
                 </h1>
                 <div class="--flex --space-around">
 
-                    <div class="product-display__box --vflex --space-between --even-width">
+                    <div class="product-display__box --vflex --space-between ">
                         <img src="img/products/calentador-cinsa-de-paso-cdp-06-10-lts-gas-lp.jpg" alt="" class="product-display__item">
                         <p class="product-display__description">
                             Calentador Cinsa De Paso Cdp 06
@@ -222,7 +225,7 @@
                         </a>
                     </div>
 
-                    <div class="product-display__box --vflex --space-between --even-width">
+                    <div class="product-display__box --vflex --space-between ">
                         <img src="img/products/minisplit-rheem-tonelada-110v.jpg" alt="" class="product-display__item">
                         <p class="product-display__description">
                             Minisplit Rheem 1 Tonelada 110V
@@ -232,7 +235,7 @@
                         </a>
                     </div>
 
-                    <div class="product-display__box --vflex --space-between --even-width">
+                    <div class="product-display__box --vflex --space-between ">
                         <img src="img/products/calentador-calorex-instantaneo-8lts-gas-lp.jpg" alt="" class="product-display__item">
                         <p class="product-display__description">
                             Calentador Calorex Instantáneo 8Lts Gas LP
@@ -241,11 +244,13 @@
                             <i class="fas fa-shopping-cart"></i>
                         </a>
                     </div>
+
+
                 </div>
             </div>
 
             <!-- TIENDAS EN LÍNEA -->
-            <!-- <div class="online-shopping">
+            <div class="online-shopping">
                 <div class="--flex">
                     <div class="clients__regular"></div>
                     <div class="online-shopping__content">
@@ -256,17 +261,17 @@
                             Compra a través de las siguientes páginas:
                         </p>
                         <div class="--flex --space-around marketplace">
-                            <a href="https://eshops.mercadolibre.com.mx/e-kuroda">
-                                <img src="img/marketplace/mercado-libre.png" class="marketplace__store--menu" alt="Mercado Libre!">
+                            <a href="https://eshops.mercadolibre.com.mx/e-kuroda" target="_blank">
+                                <img src="img/marketplace/mercado-libre.png" class="marketplace__store--large" alt="Mercado Libre!">
                             </a>
-                            <a href="http://kuroda.mercadoshops.com.mx">
-                                <img src="img/marketplace/mercado-shop.png" class="marketplace__store--menu" alt="Mercado Shops">
+                            <a href="http://kuroda.mercadoshops.com.mx" target="_blank">
+                                <img src="img/marketplace/mercado-shop.png" class="marketplace__store--large" alt="Mercado Shops">
                             </a>
-                            <a href="https://www.amazon.com.mx/s?marketplaceID=A1AM78C64UM0Y8&me=A2N0U7Y1U99AE6&merchant=A2N0U7Y1U99AE6&redirect=true">
-                                <img src="img/marketplace/amazon.png" class="marketplace__store--menu" alt="Amazon!">
+                            <a href="https://www.amazon.com.mx/s?marketplaceID=A1AM78C64UM0Y8&me=A2N0U7Y1U99AE6&merchant=A2N0U7Y1U99AE6&redirect=true" target="_blank">
+                                <img src="img/marketplace/amazon.png" class="marketplace__store--large" alt="Amazon!">
                             </a>
-                            <a href="https://www.walmart.com.mx/vendedores/2264">
-                                <img src="img/marketplace/walmart.png" class="marketplace__store--menu" alt="Walmart">
+                            <a href="https://www.walmart.com.mx/vendedores/2264" target="_blank">
+                                <img src="img/marketplace/walmart.png" class="marketplace__store--large" alt="Walmart">
                             </a>
                         </div>
                     </div>
@@ -285,7 +290,7 @@
                     </div>
                     <div class="clients__b-to-b"></div>
                 </div>
-            </div> -->
+            </div>
         </div>
 
         <div id="my-footer" class="footer footer--theme --flex --space-between">
@@ -348,7 +353,7 @@
                 <h4 class="footer__title">LEGAL</h4>
                 <ul class="footer__options">
                     <li>
-                        <a href="#" class="--no-decoration footer__link">Aviso de privacidad</a>
+                        <a href="privacidad.html" class="--no-decoration footer__link">Aviso de privacidad</a>
                     </li>
                 </ul>
             </div>

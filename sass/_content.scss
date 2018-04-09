@@ -25,13 +25,17 @@
     }
     @include responsive(s) {
         width: 100%;
-    }
-    @include responsive(m) {
-        width: 350px;
-    }
+    } // @include responsive(m) {
+    //     width: 350px;
+    // }
     @include responsive(xl) {
         width: 100%;
     }
+}
+
+.about__container {
+    display: flex;
+    min-height: 92.5vh;
 }
 
 .button-help {
@@ -39,6 +43,15 @@
     border: 1px solid rgba($color: $white, $alpha: .6);
     padding: 5px 12px;
     font-weight: lighter;
+    transition: 0.2s ease;
+}
+
+.button-help:hover {
+    @include responsive(l) {
+        transition: 0.2s ease;
+        border: 1px solid $white;
+        color: white;
+    }
 }
 
 .services {
@@ -134,6 +147,44 @@
             bottom: 30px;
         }
     }
+}
+
+.privacy-container {
+    margin: {
+        top: 15px;
+        bottom: 30px;
+        left: auto;
+        right: auto;
+    }
+    width: 85%;
+    @include responsive(l) {
+        width: 800px;
+    }
+    @include responsive(xl) {
+        margin-bottom: 60px;
+        width: 1000px;
+    }
+}
+
+.privacy__content {
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 12px;
+    padding: 8px 0;
+    text-align: justify;
+}
+
+.privacy__list {
+    list-style-position: inside;
+    margin-top: 12px;
+}
+
+.privacy__list li {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 8px 0;
+    text-align: justify;
 }
 
 // ELEMENT
