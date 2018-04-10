@@ -33,6 +33,27 @@
     }
 }
 
+.marketplace__button {
+    color: $white;
+    text-align: right;
+    background-color: $red;
+    font: {
+        size: 20px;
+        weight: bolder;
+    }
+    display: inline-flex;
+    margin-top: 12px;
+    border-radius: 2px;
+    padding: 5px 28px;
+    transition: 0.3s ease; 
+}
+
+.marketplace__button:hover {
+    transition: 0.3s ease;
+    background-color: $dark-red;
+}
+
+
 .about__container {
     display: flex;
     min-height: 92.5vh;

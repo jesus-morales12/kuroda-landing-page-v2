@@ -311,6 +311,22 @@
     .marketplace {
       width: 100%; } }
 
+.marketplace__button {
+  color: #FFFFFF;
+  text-align: right;
+  background-color: #EE3233;
+  font-size: 20px;
+  font-weight: bolder;
+  display: inline-flex;
+  margin-top: 12px;
+  border-radius: 2px;
+  padding: 5px 28px;
+  transition: 0.3s ease; }
+
+.marketplace__button:hover {
+  transition: 0.3s ease;
+  background-color: #A11213; }
+
 .about__container {
   display: flex;
   min-height: 92.5vh; }

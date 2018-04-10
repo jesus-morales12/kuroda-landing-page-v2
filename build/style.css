@@ -345,6 +345,26 @@
     .marketplace {
       width: 100%; } }
 
+.marketplace__button {
+  color: #FFFFFF;
+  text-align: right;
+  background-color: #EE3233;
+  font-size: 20px;
+  font-weight: bolder;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-top: 12px;
+  border-radius: 2px;
+  padding: 5px 28px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease; }
+
+.marketplace__button:hover {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  background-color: #A11213; }
+
 .about__container {
   display: -webkit-box;
   display: -ms-flexbox;
