@@ -311,21 +311,44 @@
     .marketplace {
       width: 100%; } }
 
-.marketplace__button {
-  color: #FFFFFF;
-  text-align: right;
-  background-color: #EE3233;
-  font-size: 20px;
-  font-weight: bolder;
-  display: inline-flex;
-  margin-top: 12px;
-  border-radius: 2px;
-  padding: 5px 28px;
-  transition: 0.3s ease; }
+.contact-form__container, .address-book__container {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media only screen and (min-width: 576px) {
+    .contact-form__container, .address-book__container {
+      width: 500px; } }
+  @media only screen and (min-width: 768px) {
+    .contact-form__container, .address-book__container {
+      width: 650px; } }
+  @media only screen and (min-width: 992px) {
+    .contact-form__container, .address-book__container {
+      width: 700px; } }
+  @media only screen and (min-width: 1400px) {
+    .contact-form__container, .address-book__container {
+      width: 800px; } }
 
-.marketplace__button:hover {
-  transition: 0.3s ease;
-  background-color: #A11213; }
+.address-book__title {
+  font-size: 35px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: lighter;
+  color: #202020;
+  margin-top: 17.6px; }
+
+::placeholder {
+  color: rgba(20, 20, 20, 0.5); }
+
+form li div span {
+  width: 100%; }
+  @media only screen and (min-width: 1400px) {
+    form li div span {
+      width: 50%; } }
+
+.marketplace__button {
+  color: #EE3233;
+  font-size: 20px;
+  font-weight: bolder; }
 
 .about__container {
   display: flex;

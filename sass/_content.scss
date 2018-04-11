@@ -33,27 +33,74 @@
     }
 }
 
+.contact-form__container {
+    width: 300px;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    @include responsive(s) {
+        width: 500px;
+    }
+    @include responsive(m) {
+        width: 650px;
+    }
+    @include responsive(l) {
+        width: 700px;
+    }
+    @include responsive(xl) {
+        width: 800px;
+    }
+}
+
+.address-book__container {
+    @extend .contact-form__container;
+}
+
+.address-book__title {
+    font-size: 35px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: lighter;
+    color: #202020;
+    margin-top: 17.6px;
+}
+
+::placeholder {
+    color: rgba($color: $black, $alpha: .5);
+}
+
+form li div span {
+    width: 100%;
+    @include responsive(xl) {
+        width: 50%;
+    }
+}
+
 .marketplace__button {
-    color: $white;
-    text-align: right;
-    background-color: $red;
+    color: $red;
     font: {
         size: 20px;
         weight: bolder;
-    }
-    display: inline-flex;
-    margin-top: 12px;
-    border-radius: 2px;
-    padding: 5px 28px;
-    transition: 0.3s ease; 
+    } 
+    // color: $white;
+    // text-align: right;
+    // background-color: $red;
+    // font: {
+    //     size: 20px;
+    //     weight: bolder;
+    // }
+    // display: inline-flex;
+    // margin-top: 12px;
+    // border-radius: 2px;
+    // padding: 5px 28px;
+    // transition: 0.3s ease;
 }
 
-.marketplace__button:hover {
-    transition: 0.3s ease;
-    background-color: $dark-red;
-}
-
-
+// .marketplace__button:hover {
+//     transition: 0.3s ease;
+//     background-color: $dark-red;
+// }
 .about__container {
     display: flex;
     min-height: 92.5vh;
