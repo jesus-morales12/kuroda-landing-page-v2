@@ -299,9 +299,10 @@
     .button-buy, .button-register {
       border-radius: 2px; } }
 
-.contact {
-  padding-top: 10px;
-  padding-bottom: 20px; }
+@media only screen and (min-width: 992px) {
+  .contact {
+    padding-top: 10px;
+    padding-bottom: 20px; } }
 
 .marketplace {
   margin: 0 auto;
@@ -316,7 +317,7 @@
       width: 100%; } }
 
 .contact-form__container {
-  width: 95%;
+  width: 80%;
   margin: 0 auto; }
   @media only screen and (min-width: 576px) {
     .contact-form__container {
@@ -333,7 +334,7 @@
 
 .address-book__container {
   margin: 0 auto;
-  width: 95%; }
+  width: 80%; }
   @media only screen and (min-width: 576px) {
     .address-book__container {
       width: 500px; } }

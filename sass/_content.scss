@@ -17,10 +17,12 @@
 
 // BLOCK
 .contact {
+    @include responsive(l) {
     padding: {
         top: 10px;
         bottom: 20px;
     }
+}
 }
 .marketplace {
     margin: 0 auto;
@@ -40,7 +42,7 @@
 }
 
 .contact-form__container {
-    width: 95%;
+    width: 80%;
     margin: 0 auto;
     @include responsive(s) {
         width: 500px;
@@ -58,7 +60,7 @@
 
 .address-book__container {
     margin: 0 auto;
-    width: 95%;
+    width: 80%;
     @include responsive(s) {
         width: 500px;
     }
