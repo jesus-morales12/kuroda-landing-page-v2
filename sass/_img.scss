@@ -48,11 +48,36 @@
     }
 }
 
-.example {
-    width: 100%;
+.marketplace__store--large {
+    width: 110px;
+    padding: 15px 0;
+    @include responsive(m) {
+        padding: {
+            left: 5px;
+            right: 5px;
+        }
+        width: 140px;
+    }
+    @include responsive(l) {
+        width: 140px;
+        transition: 0.2s ease;
+    }
+}
+
+.marketplace__store--large:hover {
+    @include responsive(l) {
+        transition: 0.2s ease;
+        width: 150px;
+    }
 }
 
 // BACKGROUNDS
+
+.about__background {
+    background-image: url('../img/nosotros/nosotros.jpg');
+    filter: opacity(0.8);
+}
+
 .fade-swiper__img {
     &-one {
         @extend %fade-swiper__img-height;
@@ -80,18 +105,18 @@
 .services__background {
     background: linear-gradient(rgba($color: $black, $alpha: 0.8)), url('../img/6.jpg') no-repeat center;
     background-size: cover;
-    height: 980px;
+    height: 1150px;
     @include responsive(s) {
-        height: 580px;
+        height: 880px;
     }
     @include responsive(m) {
-        height: 620px;
+        height: 925px;
     }
     @include responsive(l) {
-        height: 650px;
+        height: 875px;
     }
     @include responsive(xl) {
-        height: 90vh;
+        height: 825px;
     }
 }
 
