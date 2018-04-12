@@ -76,12 +76,33 @@
 .logo {
     width: 100%;
     background-color: $white;
+    text-align: center;
 }
 
 .logo__img {
     width: 100%;
     padding: 0;
     margin: 0;
+    @include responsive(l) {
+        width: 850px;
+    }
+    @include responsive(xl) {
+        width: 1200px;
+    }
+}
+
+.--logo-small {
+    display: block;
+    @include responsive(l) {
+        display: none;
+    }
+}
+
+.--logo-big {
+    display: none;
+    @include responsive(l) {
+        display: block;
+    }
 }
 
 .address-book__list {
@@ -472,7 +493,6 @@
         background: none;
     }
 }
-
 
 .confirmation__title {
     padding: 5px 10px;

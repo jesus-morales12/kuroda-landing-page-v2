@@ -347,12 +347,31 @@
 
 .logo {
   width: 100%;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  text-align: center; }
 
 .logo__img {
   width: 100%;
   padding: 0;
   margin: 0; }
+  @media only screen and (min-width: 992px) {
+    .logo__img {
+      width: 850px; } }
+  @media only screen and (min-width: 1400px) {
+    .logo__img {
+      width: 1200px; } }
+
+.--logo-small {
+  display: block; }
+  @media only screen and (min-width: 992px) {
+    .--logo-small {
+      display: none; } }
+
+.--logo-big {
+  display: none; }
+  @media only screen and (min-width: 992px) {
+    .--logo-big {
+      display: block; } }
 
 .address-book__list {
   list-style-type: none; }
