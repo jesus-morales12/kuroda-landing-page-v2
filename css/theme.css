@@ -1,32 +1,26 @@
 /* ----- Logo ----- */
 
-#logo a {
-	background-image: url('../images/wflogo-padding.png');
-	min-height: 0;
-	height: 80px;
-}
-
 * html #logo a {
 	/* IE6 png Support */
 	background-image: none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/wflogo-padding.png", sizingMethod="crop");
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/wflogo.png", sizingMethod="crop");
 }
 
 /* ----- Backgrounds ----- */
 
 html {
 	background-image: none;
-	background-color: #EEEEEE;
+	background-color: #FFFFFF;
 }
 
 #logo {
 	background-image: none;
-	background-color: #dedede;
+	background-color: #DEDEDE;
 }
 
 #container,
 html.embed {
-	background-color: #ffffff;
+	background-color: #FFFFFF;
 }
 
 .safari .wufoo input.file {
@@ -35,17 +29,17 @@ html.embed {
 }
 
 .wufoo li.focused {
-	background-color: transparent;
+	background-color: #FFF7C0;
 }
 
 .wufoo .instruct {
-	background-color: #ffffff;
+	background-color: #F5F5F5;
 }
 
 /* ----- Borders ----- */
 
 #container {
-	border: 0 solid transparent;
+	/* border: 1px solid #CCCCCC; */
 }
 
 .wufoo .info,
@@ -76,32 +70,28 @@ html.embed {
 
 /* ----- Typography ----- */
 
-* {
-	font-family: 'Lato', sans-serif;
-}
-
 .wufoo .info h2 {
-	font-size: 35px;
+	font-size: 30px;
 	font-family: inherit;
 	font-style: normal;
 	font-weight: lighter;
-	color: #202020;
+	color: #141414;
 }
 
 .wufoo .info div {
-	font-size: 20px;
+	font-size: 95%;
 	font-family: inherit;
 	font-style: normal;
 	font-weight: normal;
-	color: #202020;
+	color: #444444;
 }
 
 .wufoo .section h3 {
-	font-size: 240%;
+	font-size: 110%;
 	font-family: inherit;
 	font-style: normal;
 	font-weight: normal;
-	color: #202020;
+	color: #000000;
 }
 
 .wufoo .section div {
@@ -114,19 +104,19 @@ html.embed {
 
 .wufoo label.desc,
 .wufoo legend.desc {
-	font-size: 110%;
+	font-size: 95%;
 	font-family: inherit;
 	font-style: normal;
 	font-weight: bold;
-	color: #202020;
+	color: #444444;
 }
 
 .wufoo label.choice {
-	font-size: 160%;
+	font-size: 100%;
 	font-family: inherit;
 	font-style: normal;
 	font-weight: normal;
-	color: #202020;
+	color: #444444;
 }
 
 .wufoo input.text,
@@ -135,15 +125,14 @@ html.embed {
 .wufoo select.select {
 	font-style: normal;
 	font-weight: normal;
-	color: #202020;
+	color: #141414;
 	font-size: 16px;
-	width: 100%;
-	padding: 5px 8px;
+	font-family: 'Merriweather', serif;
 }
 
-/* 
+	{
 	* Custom Fonts Break Dropdown Selection in IE *
-*/ 
+}
 
 .wufoo input.text,
 .wufoo textarea.textarea,
@@ -151,36 +140,27 @@ html.embed {
 	font-family: inherit;
 }
 
-/* .safari .wufoo select.select {
-	background: #ffffff url(../images/fieldbg.gif) repeat-x top;
-	border: 1px solid Background color 'ffffff url(../images/fieldbg.gif) repeat-x top' is not a hex color value.#;
-	border-bottom: 1px solid Background color 'ffffff url(../images/fieldbg.gif) repeat-x top' is not a hex color value.#;
-	border-right: 1px solid Background color 'ffffff url(../images/fieldbg.gif) repeat-x top' is not a hex color value.#;
-	font-size: 160% !important;
-} */
-
 .wufoo li div,
 .wufoo li span,
 .wufoo li div label,
 .wufoo li span label {
 	font-family: inherit;
-	color: #202020;
-	padding: 5px 0;
+	color: #141414;
 }
 
 .safari .wufoo input.file {
 	/* Webkit */
-	font-size: 160%;
+	font-size: 100%;
 	font-family: inherit;
-	color: #202020;
+	color: #141414;
 }
 
 .wufoo .instruct small {
-	font-size: 80%;
+	font-size: 85%;
 	font-family: inherit;
 	font-style: normal;
 	font-weight: normal;
-	color: #444444;
+	color: #141414;
 }
 
 .altInstruct small,
@@ -190,7 +170,7 @@ li.leftThird small,
 li.middleThird small,
 li.rightThird small,
 .iphone small {
-	color: #444444 !important;
+	color: #141414 !important;
 }
 
 /* ----- Button Styles ----- */
@@ -199,11 +179,21 @@ li.rightThird small,
 
 /* ----- Highlight Styles ----- */
 
+.wufoo li.focused label.desc,
+.wufoo li.focused legend.desc,
+.wufoo li.focused div,
+.wufoo li.focused span,
+.wufoo li.focused div label,
+.wufoo li.focused span label,
+.safari .wufoo li.focused input.file {
+	color: #000000;
+}
+
 /* ----- Confirmation ----- */
 
 .confirm h2 {
 	font-family: inherit;
-	color: #202020;
+	color: #444444;
 }
 
 a.powertiny b,
@@ -225,7 +215,7 @@ a.powertiny em {
 .pgStyle1 b,
 .wufoo .buttons .marker {
 	font-family: inherit;
-	color: #202020;
+	color: #141414;
 }
 
 .pgStyle1 var,
@@ -240,18 +230,18 @@ a.powertiny em {
 .pgStyle1 .selected var,
 .pgStyle2 var,
 .pgStyle2 var em {
-	background: #373737;
-	color: #FFFFFF;
+	background: #FFF7C0;
+	color: #000000;
 }
 
 .pgStyle1 .selected var {
-	border: 1px solid #202020;
+	border: 1px solid #e6dead;
 }
 
 /* Likert Backgrounds */
 
 .likert table {
-	background-color: #ffffff;
+	background-color: #FFFFFF;
 }
 
 .likert thead td,
@@ -281,18 +271,18 @@ a.powertiny em {
 .likert caption,
 .likert thead td,
 .likert tbody th label {
-	color: #202020;
+	color: #444444;
 	font-family: inherit;
 }
 
 .likert tbody td label {
-	color: #373737;
+	color: #575757;
 	font-family: inherit;
 }
 
 .likert caption,
 .likert tbody th label {
-	font-size: 110%;
+	font-size: 95%;
 }
 
 /* Likert Hover */
@@ -300,12 +290,12 @@ a.powertiny em {
 .likert tbody tr:hover td,
 .likert tbody tr:hover th,
 .likert tbody tr:hover label {
-	background-color: transparent;
+	background-color: #FFF7C0;
 	color: #000000;
 }
 
 .likert tbody tr:hover td {
-	border-left: 1px solid #cccccc;
+	border-left: 1px solid #ccc69a;
 }
 
 /* ----- Running Total ----- */
@@ -320,32 +310,32 @@ a.powertiny em {
 
 .wufoo #lola {
 	font-family: inherit;
-	color: #202020;
+	color: #444444;
 }
 
 .wufoo #lola tfoot th {
-	color: #4d4d4d;
+	color: #696969;
 }
 
 /* ----- Report Styles ----- */
 
 .wufoo .wfo_graph h3 {
-	font-size: 110%;
+	font-size: 95%;
 	font-family: inherit;
-	color: #202020;
+	color: #444444;
 }
 
 .wfo_txt,
 .wfo_graph h4 {
-	color: #202020;
+	color: #444444;
 }
 
 .wufoo .footer h4 {
-	color: #202020;
+	color: #000000;
 }
 
 .wufoo .footer span {
-	color: #202020;
+	color: #444444;
 }
 
 /* ----- Number Widget ----- */
@@ -364,11 +354,11 @@ a.powertiny em {
 
 #widget,
 #widget body {
-	background: #ffffff;
+	background: #FFFFFF;
 }
 
 .fcNav a.show {
-	background-color: #ffffff;
+	background-color: #FFFFFF;
 	border-color: #cccccc;
 }
 
@@ -386,7 +376,7 @@ a.powertiny em {
 .fc tbody th,
 .fc tfoot th,
 .fc tfoot td {
-	background-color: #ffffff;
+	background-color: #FFFFFF;
 	border-right: 1px solid #cccccc;
 	border-bottom: 1px solid #dedede;
 }
@@ -402,7 +392,7 @@ a.powertiny em {
 .fc caption,
 .fcNav,
 .fcNav a {
-	color: #202020;
+	color: #444444;
 }
 
 .fc tfoot,
@@ -416,11 +406,11 @@ a.powertiny em {
 }
 
 .fc .indent .count {
-	color: #292929;
+	color: #4b4b4b;
 }
 
 .fc .cards tbody td a span {
-	color: #636363;
+	color: #7d7d7d;
 }
 
 /* ----- Chart Widget Hover Colors ----- */
@@ -429,7 +419,7 @@ a.powertiny em {
 .fc tbody tr:hover th,
 .fc tfoot tr:hover td,
 .fc tfoot tr:hover th {
-	background-color: transparent;
+	background-color: #FFF7C0;
 }
 
 .fc tbody tr:hover th div,
@@ -477,20 +467,13 @@ a.powertiny em {
 
 /* Drop Shadows */
 
-#container {
-	-webkit-box-shadow: none !important;
-	-moz-box-shadow: none !important;
-	-o-box-shadow: none !important;
-	box-shadow: none !important;
-}
-
 /* - - - Local Fonts - - - */
 
 /* - - - Responsive - - - */
 
 @media only screen and (max-width: 480px) {
 	html {
-		background-color: #ffffff;
+		background-color: #FFFFFF;
 	}
 	a.powertiny b,
 	a.powertin em {

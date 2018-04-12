@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'Pictos';
+    src: url("/fonts/pictos.eot?iefix");
+    src: local("Pictos"), url("/fonts/pictos.woff") format("woff"), url("/fonts/pictos.ttf") format("truetype"), url("/fonts/pictos.svg#webfontIyfZbseF") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
 .pictos {
-    font-family: "Pictos"
+    font-family: 'Lato', sans-serif
 }
 
 .p-a:before {
@@ -265,7 +273,7 @@
 }
 
 .wufoo {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif letter-spacing: .01em
 }
 
 .wufoo li {
@@ -275,8 +283,9 @@
 .info {
     display: inline-block;
     clear: both;
-    /* margin: 0 0 px 0; */
+    margin: 0 0 5px 0;
     padding: 0 1% 1.1em 1%;
+    /* border-bottom: 1px dotted #ccc */
 }
 
 .info[class] {
@@ -289,7 +298,7 @@
 }
 
 .info h2 {
-    font-weight: normal;
+    font-weight: bolder;
     font-size: 160%;
     margin: 0 0 5px 0;
     clear: left
@@ -361,15 +370,15 @@ form li div {
 
 form li span {
     margin: 0 .3em 0 0;
-    padding: 0;
+    padding: 3px 0;
     float: left;
-    color: #444;
+    color: #444
 }
 
 form li div span {
     margin: 0;
-    /* display: block; */
-    /* width: 100%; */
+    display: block;
+    width: 100%;
     float: left
 }
 
@@ -545,17 +554,17 @@ input.file,
 textarea.textarea,
 select.select {
     font-family: 'Lato', sans-serif;
-    font-size: 100%;
     color: #333;
     margin: 0;
-    padding: 2px 0
+    padding: 5px 8px;
 }
 
 input.text,
 input.search,
 textarea.textarea {
-    border: 1px solid rgba(20,20,20,0.2);
+    border: 1px solid rgba(20, 20, 20, 0.3);
     border-radius: 2px;
+    /* background: #fff url(../images/fieldbg.gif) repeat-x top */
 }
 
 input.nospin::-webkit-inner-spin-button,
@@ -688,7 +697,7 @@ textarea.large {
 }
 
 li.file a {
-    color: #222;
+    color: #141414;
     text-decoration: none
 }
 
@@ -850,37 +859,32 @@ form li.likert {
 
 form li.buttons {
     width: auto !important;
-    display: block;
     position: relative;
     clear: both;
     padding: 10px 1% 10px 1%;
-    width: 100%;
 }
 
 form li.buttons input {
-    font-size: 18px;
-    display: inline-flex;
-    background-color: #EE3233;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 5px;
     color: #fff;
+    background-color: #EE3233;
     border: none;
-    border-radius: 2px;
-    padding: 8px 25px;
+    padding: 8px 35px;
     transition: 0.2s ease;
 }
 
 form li.buttons input:hover {
+    cursor: pointer;
     transition: 0.2s ease;
     background-color: #A11213;
-    cursor: pointer;
 }
 
-
-
 input.btTxt {
-    padding: 0 15px;
+    padding: 0 7px;
     width: auto;
-    overflow: visible;
+    overflow: visible
 }
 
 .safari input.btTxt {
@@ -1167,7 +1171,7 @@ form li.section h3 {
     margin: 0 0 3px 0;
     width: auto;
     padding: 12px 1% 0 1%;
-    border-top: 1px dotted #ccc
+    /* border-top: 1px dotted #ccc */
 }
 
 form li.first {
@@ -1209,7 +1213,7 @@ form li.section.scrollText h3 {
 form li.captcha {
     width: auto !important;
     clear: both;
-    border-top: 1px dotted #ccc;
+    /* border-top: 1px dotted #ccc; */
     margin-top: 5px;
     padding: 1.1em 1% 9px 1%;
     width: auto !important;
@@ -1217,8 +1221,7 @@ form li.captcha {
 }
 
 form li.captcha label.desc {
-    /* width: auto !important; */
-    width: 100%;
+    width: auto !important;
     margin-bottom: 4px;
     float: none
 }
@@ -1258,7 +1261,7 @@ iframe[src="about:blank"] {
 
 form li.paging-context {
     clear: both;
-    border-bottom: 1px dotted #ccc;
+    /* border-bottom: 1px dotted #ccc; */
     margin: 0 0 7px 0;
     padding: 5px 1% 10px 1%;
     width: auto !important;

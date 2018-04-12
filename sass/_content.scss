@@ -16,6 +16,12 @@
 }
 
 // BLOCK
+.contact {
+    padding: {
+        top: 10px;
+        bottom: 20px;
+    }
+}
 .marketplace {
     margin: 0 auto;
     width: 300px;
@@ -34,19 +40,16 @@
 }
 
 .contact-form__container {
-    width: 300px;
-    margin: {
-        left: auto;
-        right: auto;
-    }
+    width: 95%;
+    margin: 0 auto;
     @include responsive(s) {
         width: 500px;
     }
     @include responsive(m) {
-        width: 650px;
+        width: 400px;
     }
     @include responsive(l) {
-        width: 700px;
+        width: 550px;
     }
     @include responsive(xl) {
         width: 800px;
@@ -54,36 +57,69 @@
 }
 
 .address-book__container {
-    @extend .contact-form__container;
+    margin: 0 auto;
+    width: 95%;
+    @include responsive(s) {
+        width: 500px;
+    }
+    @include responsive(m) {
+        width: 300px;
+    }
+    @include responsive(l) {
+        width: 350px;
+    }
+}
+
+.address-book__list {
+    list-style-type: none;
+    @include responsive(xl) {
+        padding-bottom: 20px;
+    }
+}
+
+.address-book__list li {
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+.address-book__list li a {
+    color: $black;
 }
 
 .address-book__title {
-    font-size: 35px;
+    font-size: 30px;
     font-family: inherit;
     font-style: normal;
     font-weight: lighter;
     color: #202020;
     margin-top: 17.6px;
+    padding-bottom: 15px;
+}
+
+.input--responsive {
+    width: 100%;
+    margin-bottom: 8px !important;
+    @include responsive(m) {
+        width: 50%;
+    }
 }
 
 ::placeholder {
     color: rgba($color: $black, $alpha: .5);
 }
 
-form li div span {
-    width: 100%;
-    @include responsive(xl) {
-        width: 50%;
-    }
-}
-
+// form li div span {
+//     width: 100%;
+//     @include responsive(xl) {
+//         width: 50%;
+//     }
+// }
 .marketplace__button {
     color: $red;
     font: {
         size: 20px;
         weight: bolder;
-    } 
-    // color: $white;
+    } // color: $white;
     // text-align: right;
     // background-color: $red;
     // font: {
