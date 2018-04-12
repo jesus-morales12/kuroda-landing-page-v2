@@ -45,7 +45,7 @@
                 MENU
             </a>
         </div>
-        
+
         <div id="my-content">
 
             <!-- CARRUSEL TIPO FADE BACKGROUND -->
@@ -207,7 +207,24 @@
                             <script type="text/javascript" charset="UTF-8" language="javascript" src="https://beetrack-general.s3-us-west-2.amazonaws.com/widget/NvtWDmSB2ZmWt7peO72lmw.json"></script>
                             <script async src="https://app.beetrack.cl/javascript_widget/beetrack_widget.js"></script>
                         </div>
-                        <a href="#" class="--no-decoration button-help">Más información</a>
+                        <!-- <a href="#" class="--no-decoration button-help">Más información</a>
+                        <!-- Trigger/Open The Modal -->
+                        <button id="myBtn" class="button-help">Más información</button>
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                    <span class="close">
+                                        <i class="far fa-times-circle"></i>
+                                    </span>
+                                <div class="help">
+                                    <img src="img/ayuda.png" alt="Factura" class="help__img">
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -245,7 +262,7 @@
                             <i class="fas fa-shopping-cart"></i>
                         </a>
                     </div>
-                    
+
                 </div>
                 <a href="http://kuroda.mercadoshops.com.mx" target="_blank" class="marketplace__button --no-decoration">
                     Ver más productos
@@ -270,7 +287,8 @@
                             <a href="http://kuroda.mercadoshops.com.mx" target="_blank">
                                 <img src="img/marketplace/mercado-shop.png" class="marketplace__store--large" alt="Mercado Shops">
                             </a>
-                            <a href="https://www.amazon.com.mx/s?marketplaceID=A1AM78C64UM0Y8&me=A2N0U7Y1U99AE6&merchant=A2N0U7Y1U99AE6&redirect=true" target="_blank">
+                            <a href="https://www.amazon.com.mx/s?marketplaceID=A1AM78C64UM0Y8&me=A2N0U7Y1U99AE6&merchant=A2N0U7Y1U99AE6&redirect=true"
+                                target="_blank">
                                 <img src="img/marketplace/amazon.png" class="marketplace__store--large" alt="Amazon!">
                             </a>
                             <a href="https://www.walmart.com.mx/vendedores/2264" target="_blank">
@@ -471,6 +489,32 @@
                 },
             });
         });
+
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">

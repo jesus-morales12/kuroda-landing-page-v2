@@ -63,6 +63,25 @@
         </div>
 
         <div id="my-content">
+            <!-- The Modal -->
+            <div id="myModal" class="confirmation">
+
+                <!-- Modal content -->
+                <div class="confirmation-content">
+                    <div class="--flex --space-between confirmation__header">
+                        <h3 class="confirmation__title">Confirmación</h3>
+                        <span class="close">
+                            <i class="far fa-times-circle"></i>
+                        </span>
+                    </div>
+                    <div class="confirmation__message">
+                        ¡Tu mensaje ha sido enviado exitosamente! 
+                        <!-- <br/>
+                        En un momento uno de nuestros agentes se pondrá en contacto contigo. -->
+                    </div>
+
+                </div>
+            </div>
             <div class="--reverse-flex --space-around contact">
                 <div class="contact-form__container">
                     <div id="container" class="ltr">
@@ -187,21 +206,30 @@
                     </h1>
                     <ul class="address-book__list">
                         <li>
-                            Nicolás Bravo y Juan José Rios S/N 
-                            <br/>
-                            Col. Almada. CP 80200. 
-                            <br/>
-                            Culiacán, Sinaloa, México.
+                            Nicolás Bravo y Juan José Rios S/N
+                            <br/> Col. Almada. CP 80200.
+                            <br/> Culiacán, Sinaloa, México.
                         </li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:667-712-2104" class="--no-decoration">(667) 712-2104</a></li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:667-716-2800" class="--no-decoration">(667) 716-2800</a></li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:667-712-2104" class="--no-decoration">(667) 712-2104</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:667-716-2800" class="--no-decoration">(667) 716-2800</a>
+                        </li>
                     </ul>
                     <h1 class="address-book__title">
                         Bolsa de trabajo
                     </h1>
                     <ul class="address-book__list">
-                        <li><i class="far fa-envelope"></i> <a href="mailto:rhksa@kuroda.com?subject=Bolsa de trabajo" class="--no-decoration">rhksa@kuroda.com</a></li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:667-716-3400" class="--no-decoration">(667) 716-3400</a> ext 1134</li>
+                        <li>
+                            <i class="far fa-envelope"></i>
+                            <a href="mailto:rhksa@kuroda.com?subject=Bolsa de trabajo" class="--no-decoration">rhksa@kuroda.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:667-716-3400" class="--no-decoration">(667) 716-3400</a> ext 1134</li>
                     </ul>
                 </div>
             </div>
@@ -355,6 +383,24 @@
                     hide: 20
                 }
             });
+            // Get the modal
+            var confirmation = document.getElementById('myModal');
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                confirmation.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == confirmation) {
+                    confirmation.style.display = "none";
+                }
+            }
         });
     </script>
     <!--Start of Tawk.to Script-->

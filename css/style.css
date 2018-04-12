@@ -343,7 +343,16 @@
       width: 300px; } }
   @media only screen and (min-width: 992px) {
     .address-book__container {
-      width: 350px; } }
+      width: 300px; } }
+
+.logo {
+  width: 100%;
+  background-color: #FFFFFF; }
+
+.logo__img {
+  width: 100%;
+  padding: 0;
+  margin: 0; }
 
 .address-book__list {
   list-style-type: none; }
@@ -380,18 +389,32 @@
 .marketplace__button {
   color: #EE3233;
   font-size: 20px;
-  font-weight: bolder; }
+  font-weight: bolder;
+  margin-top: 12px;
+  border-radius: 2px;
+  transition: 0.3s ease; }
+
+.marketplace__button:hover {
+  transition: 0.3s ease;
+  color: #A11213; }
 
 .about__container {
   display: flex;
   min-height: 92.5vh; }
 
 .button-help {
-  color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  padding: 5px 12px;
   font-weight: lighter;
-  transition: 0.2s ease; }
+  padding: 5px 12px;
+  color: #FFFFFF;
+  background: none;
+  border: 1px solid #FFFFFF;
+  font-size: 18px; }
+  @media only screen and (min-width: 992px) {
+    .button-help {
+      color: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      transition: 0.2s ease;
+      cursor: pointer; } }
 
 @media only screen and (min-width: 992px) {
   .button-help:hover {
@@ -593,6 +616,137 @@
   .button-buy:hover {
     transition: 0.3s ease;
     background-color: #015418; } }
+
+/* MODAL TEST AREA */
+/* The Modal (background) */
+.confirmation {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 100px; }
+  @media only screen and (min-width: 576px) {
+    .confirmation {
+      padding-top: 0; } }
+  @media only screen and (min-width: 992px) {
+    .confirmation {
+      padding-top: 100px; } }
+
+.confirmation-content {
+  background-color: #FFFFFF;
+  width: 90%;
+  margin: auto; }
+  @media only screen and (min-width: 576px) {
+    .confirmation-content {
+      margin: 15% auto;
+      width: 400px; } }
+  @media only screen and (min-width: 992px) {
+    .confirmation-content {
+      margin: auto;
+      width: 450px; } }
+
+.confirmation__message {
+  padding-top: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 18px;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center; }
+
+.confirmation__header {
+  width: 100%;
+  background-color: #015418;
+  color: #FFFFFF; }
+  .confirmation__header span {
+    color: #FFFFFF; }
+  .confirmation__header .close:hover {
+    background: none; }
+
+.confirmation__title {
+  padding: 5px 10px; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 100px; }
+  @media only screen and (min-width: 576px) {
+    .modal {
+      padding-top: 0; } }
+  @media only screen and (min-width: 992px) {
+    .modal {
+      padding-top: 85px; } }
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  width: 90%;
+  margin: auto; }
+  @media only screen and (min-width: 576px) {
+    .modal-content {
+      margin: 5% auto; } }
+  @media only screen and (min-width: 768px) {
+    .modal-content {
+      margin: 15% auto; } }
+  @media only screen and (min-width: 992px) {
+    .modal-content {
+      margin: auto;
+      width: 80%; } }
+
+.help {
+  margin: 0 auto;
+  padding-bottom: 25px; }
+
+.help__img {
+  width: 100%;
+  padding: 0 8px; }
+
+.help__description {
+  text-align: left;
+  color: #141414;
+  padding: 5px 8px;
+  font-size: 16px; }
+  @media only screen and (min-width: 992px) {
+    .help__description {
+      font-size: 17px; } }
+  @media only screen and (min-width: 1400px) {
+    .help__description {
+      font-size: 20px; } }
+
+/* The Close Button */
+.close__container {
+  width: 100%; }
+
+.close {
+  color: #141414;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bolder;
+  float: right;
+  transition: 0.2s ease; }
+  @media only screen and (min-width: 768px) {
+    .close {
+      font-size: 19px; } }
+  @media only screen and (min-width: 992px) {
+    .close {
+      font-size: 22px; } }
+
+.close:hover,
+.close:focus {
+  color: #FFFFFF;
+  background-color: #141414;
+  transition: 0.2s ease;
+  text-decoration: none;
+  cursor: pointer; }
 
 .footer {
   width: 100%;

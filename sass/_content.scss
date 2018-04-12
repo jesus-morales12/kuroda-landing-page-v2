@@ -18,12 +18,13 @@
 // BLOCK
 .contact {
     @include responsive(l) {
-    padding: {
-        top: 10px;
-        bottom: 20px;
+        padding: {
+            top: 10px;
+            bottom: 20px;
+        }
     }
 }
-}
+
 .marketplace {
     margin: 0 auto;
     width: 300px;
@@ -68,8 +69,19 @@
         width: 300px;
     }
     @include responsive(l) {
-        width: 350px;
+        width: 300px;
     }
+}
+
+.logo {
+    width: 100%;
+    background-color: $white;
+}
+
+.logo__img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .address-book__list {
@@ -121,35 +133,35 @@
     font: {
         size: 20px;
         weight: bolder;
-    } // color: $white;
-    // text-align: right;
-    // background-color: $red;
-    // font: {
-    //     size: 20px;
-    //     weight: bolder;
-    // }
-    // display: inline-flex;
-    // margin-top: 12px;
-    // border-radius: 2px;
-    // padding: 5px 28px;
-    // transition: 0.3s ease;
+    }
+    margin-top: 12px;
+    border-radius: 2px;
+    transition: 0.3s ease;
 }
 
-// .marketplace__button:hover {
-//     transition: 0.3s ease;
-//     background-color: $dark-red;
-// }
+.marketplace__button:hover {
+    transition: 0.3s ease;
+    color: $dark-red;
+}
+
 .about__container {
     display: flex;
     min-height: 92.5vh;
 }
 
 .button-help {
-    color: rgba($color: $white, $alpha: .6);
-    border: 1px solid rgba($color: $white, $alpha: .6);
-    padding: 5px 12px;
     font-weight: lighter;
-    transition: 0.2s ease;
+    padding: 5px 12px;
+    color: $white;
+    background: none;
+    border: 1px solid $white;
+    font-size: 18px;
+    @include responsive(l) {
+        color: rgba($color: $white, $alpha: .6);
+        border: 1px solid rgba($color: $white, $alpha: .6);
+        transition: 0.2s ease;
+        cursor: pointer;
+    }
 }
 
 .button-help:hover {
@@ -400,4 +412,158 @@
         transition: 0.3s ease;
         background-color: $dark-green;
     }
+}
+
+/* MODAL TEST AREA */
+
+/* The Modal (background) */
+
+.confirmation {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 100px;
+    @include responsive(s) {
+        padding-top: 0;
+    }
+    @include responsive(l) {
+        padding-top: 100px;
+    }
+}
+
+.confirmation-content {
+    background-color: $white;
+    width: 90%;
+    margin: auto;
+    @include responsive(s) {
+        margin: 15% auto;
+        width: 400px;
+    }
+    @include responsive(l) {
+        margin: auto;
+        width: 450px;
+    }
+}
+
+.confirmation__message {
+    padding: {
+        top: 8px;
+        left: 10px;
+        right: 10px;
+        bottom: 18px;
+    }
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+}
+
+.confirmation__header {
+    width: 100%;
+    background-color: $dark-green;
+    color: $white;
+    span {
+        color: $white;
+    }
+    .close:hover {
+        background: none;
+    }
+}
+
+
+.confirmation__title {
+    padding: 5px 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 100px;
+    @include responsive(s) {
+        padding-top: 0;
+    }
+    @include responsive(l) {
+        padding-top: 85px;
+    }
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    width: 90%;
+    margin: auto;
+    @include responsive(s) {
+        margin: 5% auto;
+    }
+    @include responsive(m) {
+        margin: 15% auto;
+    }
+    @include responsive(l) {
+        margin: auto;
+        width: 80%;
+    }
+}
+
+.help {
+    // width: 50%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+.help__img {
+    width: 100%;
+    padding: 0 8px;
+}
+
+.help__description {
+    text-align: left;
+    color: $black;
+    padding: 5px 8px;
+    font-size: 16px;
+    @include responsive(l) {
+        font-size: 17px;
+    }
+    @include responsive(xl) {
+        font-size: 20px;
+    }
+}
+
+/* The Close Button */
+
+.close__container {
+    width: 100%;
+}
+
+.close {
+    color: $black;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    float: right;
+    transition: 0.2s ease;
+    @include responsive(m) {
+        font-size: 19px;
+    }
+    @include responsive(l) {
+        font-size: 22px;
+    }
+}
+
+.close:hover,
+.close:focus {
+    color: $white;
+    background-color: $black; // border-color: $white;
+    transition: 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
 }
