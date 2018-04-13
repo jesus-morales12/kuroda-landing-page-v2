@@ -215,6 +215,25 @@
     .services__background {
       height: 825px; } }
 
+.message__background {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8))), url("../img/nosotros/personal.jpg") no-repeat center;
+  background: linear-gradient(rgba(255, 255, 255, 0.8)), url("../img/nosotros/personal.jpg") no-repeat center;
+  background-size: cover;
+  height: 400px; }
+  @media only screen and (min-width: 576px) {
+    .message__background {
+      height: 425px; } }
+  @media only screen and (min-width: 768px) {
+    .message__background {
+      height: 500px; } }
+  @media only screen and (min-width: 992px) {
+    .message__background {
+      height: 55vh;
+      background-attachment: fixed; } }
+  @media only screen and (min-width: 1400px) {
+    .message__background {
+      height: 65vh; } }
+
 .clients__regular {
   background-image: url("../img/plumber-min.jpg");
   background-position: top; }
@@ -531,8 +550,7 @@
     background-color: #A11213; } }
 
 .online-shopping {
-  width: 100%;
-  padding-bottom: 35px; }
+  width: 100%; }
 
 .online-shopping__content {
   -webkit-box-flex: 1;
@@ -836,6 +854,48 @@
   text-decoration: none;
   cursor: pointer; }
 
+.message {
+  position: relative;
+  padding-top: 20px; }
+  @media only screen and (min-width: 768px) {
+    .message {
+      padding-top: 0; } }
+
+.message__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  margin: 0 auto;
+  font-size: 16px;
+  width: 80%; }
+  @media only screen and (min-width: 576px) {
+    .message__text {
+      font-size: 18px;
+      width: 400px;
+      padding: 12px 0; } }
+  @media only screen and (min-width: 768px) {
+    .message__text {
+      width: 400px; } }
+  @media only screen and (min-width: 992px) {
+    .message__text {
+      width: 500px; } }
+  @media only screen and (min-width: 1400px) {
+    .message__text {
+      font-size: 20px;
+      width: 500px; } }
+
+.message__signature {
+  display: block;
+  margin-top: 25px;
+  font-weight: bolder;
+  font-size: 20px; }
+  @media only screen and (min-width: 1400px) {
+    .message__signature {
+      font-size: 22px; } }
+
 .footer {
   width: 100%;
   margin: 0 auto;
@@ -902,6 +962,112 @@
 .beetrack__title {
   margin-bottom: -45px; }
 
+#storelocator-list,
+#storelocator-routing {
+  height: 450px; }
+
+#storelocator-leftcolumn,
+#storelocator-map_canvas {
+  height: 450px; }
+
+#storelocatorwidget-container,
+#storelocator-directions-panel {
+  width: 100%; }
+
+#storelocatorwidget {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #000000; }
+
+#storelocatorwidget a {
+  text-decoration: none;
+  color: #b20000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%; }
+  @media only screen and (min-width: 992px) {
+    #storelocatorwidget a {
+      width: auto;
+      margin-left: 8px; } }
+
+p {
+  padding: 3px 0; }
+
+input {
+  width: 100% !important;
+  font-size: 16px; }
+  @media only screen and (min-width: 992px) {
+    input {
+      width: 45% !important; } }
+
+#storelocatorwidget a:hover {
+  color: #2a6496; }
+
+a.storelocator-storename {
+  color: #000000; }
+
+.storelocator-description {
+  color: #000000; }
+
+.storelocator-location {
+  font-weight: bold;
+  color: #000; }
+
+.storelocator-address {
+  color: #000000; }
+
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div {
+  opacity: 0.8; }
+
+span#storelocator-search-label,
+span#search_radius_text,
+div#storelocator-filter_checkbox_text {
+  color: #000000; }
+
+input:focus {
+  border-color: rgba(178, 0, 0, 0.75) !important;
+  -webkit-box-shadow: 0 1px 1px rgbargba(253, 175, 23, 0.75) inset, 0 0 8px rgbargba(253, 175, 23, 0.6) !important;
+          box-shadow: 0 1px 1px rgbargba(253, 175, 23, 0.75) inset, 0 0 8px rgbargba(253, 175, 23, 0.6) !important;
+  outline: 0 none !important; }
+
+.storelocator-btn-primary,
+.storelocator-btn-primary:hover,
+.storelocator-btn-primary:active,
+.storelocator-btn-primary:visited,
+.storelocator-btn-primary:focus {
+  color: #FFF !important;
+  border: none !important;
+  background-color: #B20000 !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#B20000), to(#B20000)) !important;
+  background-image: linear-gradient(#B20000, #B20000) !important; }
+
+.storelocator-btn-danger,
+.storelocator-btn-danger:hover,
+.storelocator-btn-danger:active,
+.storelocator-btn-danger:visited,
+.storelocator-btn-danger:focus {
+  color: #FFF !important;
+  border: none !important;
+  background-color: #B20000 !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#B20000), to(#B20000)) !important;
+  background-image: linear-gradient(#B20000, #B20000) !important; }
+
+/* TEST AREA */
+.find-store {
+  margin: 0 auto; }
+  @media only screen and (min-width: 992px) {
+    .find-store {
+      width: 992px; } }
+
+.storelocator-store {
+  border: 1px solid #ccc !important;
+  border-collapse: collapse !important; }
+
+#storelocator-messages {
+  border: none; }
+
 * {
   padding: 0;
   margin: 0;
@@ -915,7 +1081,8 @@ body {
   position: relative; }
 
 p {
-  font-family: 'Merriweather', serif; }
+  font-family: 'Merriweather', serif;
+  line-height: 150%; }
 
 #my-page {
   display: -webkit-box;

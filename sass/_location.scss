@@ -108,13 +108,6 @@ input:focus {
   color: #FFF !important;
   border: none !important; // border-color: #000 !important;
   background-color: #B20000 !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#B20000", endColorstr="#B20000") !important;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#B20000), to(#B20000)) !important;
-  background-image: -moz-linear-gradient(top, #B20000, #B20000) !important;
-  background-image: -ms-linear-gradient(top, #B20000, #B20000) !important;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #B20000), color-stop(100%, #B20000)) !important;
-  background-image: -webkit-linear-gradient(top, #B20000, #B20000) !important;
-  background-image: -o-linear-gradient(top, #B20000, #B20000) !important;
   background-image: linear-gradient(#B20000, #B20000) !important;
 }
 
@@ -128,45 +121,30 @@ input:focus {
   color: #FFF !important;
   border: none !important;
   background-color: #B20000 !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#B20000", endColorstr="#B20000") !important;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#B20000), to(#B20000)) !important;
-  background-image: -moz-linear-gradient(top, #B20000, #B20000) !important;
-  background-image: -ms-linear-gradient(top, #B20000, #B20000) !important;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #B20000), color-stop(100%, #B20000)) !important;
-  background-image: -webkit-linear-gradient(top, #B20000, #B20000) !important;
-  background-image: -o-linear-gradient(top, #B20000, #B20000) !important;
   background-image: linear-gradient(#B20000, #B20000) !important;
 }
 
+/* TEST AREA */
+
 .find-store {
-  width: 100%;
-  margin: {
-    top: -60px;
-    left: auto;
-    right: auto;
-    bottom: 0;
-  }
-  background-color: rgba($color: #FFFFFF, $alpha: 0.7);
-  @include responsive(m) {
-    margin: 0 auto;
-  }
+  margin: 0 auto;
   @include responsive(l) {
-    width: 990px;
+    width: 992px;
   }
+  // @include responsive(xl) {
+  //   width: 1000px;
+  // }
 }
 
-// .find-store__background {
-//   background-image: url("../img/banners/6.jpg");
-//   min-height: 100vh;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
+// #storelocator-list {
+//   border: 1px solid #ccc;
 // }
-// #storelocatorwidget {
-//   @include responsive(l) {
-//     margin-left: 50px;
-//   }
-//   @include responsive(xl) {
-//     margin-left: 120px;
-//   }
-// }
+
+.storelocator-store {
+  border: 1px solid #ccc !important;
+  border-collapse: collapse !important;
+}
+
+#storelocator-messages {
+  border: none;
+}
