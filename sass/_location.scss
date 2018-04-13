@@ -14,57 +14,61 @@
 }
 
 #storelocatorwidget {
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
+  font-family: 'Lato', sans-serif; // font-size: 16px;
   color: #000000;
+  margin: 0 auto;
+  width: 90% !important;
+  @include responsive(s) {
+    width: 95% !important;
+  }
+  @include responsive(m) {
+    width: 750px !important;
+  }
+  @include responsive(l) {
+    width: 992px !important;
+  }
+  @include responsive(xl) {
+    width: 1000px !important;
+  }
 }
 
-// // // Adjusting All Text Link Colors This is the color of link before it is clicked on or hovered over: 
 #storelocatorwidget a {
   text-decoration: none;
-  color: #b20000;
-  margin: {
-    top: 10px;
-    bottom: 10px;
-  }
-  font-size: 14px;
+  color: $black;
+  margin: 5px 0;
   font-weight: bold;
-  width: 100%; // @include responsive(m) {
-  //   width: 22%;
-  // }
-  @include responsive(l) {
-    width: auto;
-    margin: {
-      left: 8px;
-    }
-  }
-}
-
-p {
-  padding: 3px 0;
+  font-size: 15px;
+  padding: 5px 8px;
 }
 
 input {
   width: 100% !important;
-  font-size: 16px; // @include responsive(m) {
-  //   width: 35% !important;
-  // }
+  font-size: 16px;
+  padding: 8px !important;
+  @include responsive(s) {
+    width: 50% !important;
+  }
+  @include responsive(m) {
+    width: 480px !important;
+  }
   @include responsive(l) {
-    width: 45% !important;
+    width: 700px !important;
+  }
+  @include responsive(l) {
+    width: 710px !important;
   }
 }
 
-// // This is the color of a link when the mouse hovers over it: 
 #storelocatorwidget a:hover {
   color: #2a6496;
 }
 
-// // Adjusting the Text Colors of Specific Elements Store Name 
 a.storelocator-storename {
-  color: #000000;
+  font-size: 18px !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-// // Description 
 .storelocator-description {
   color: #000000;
 }
@@ -74,77 +78,94 @@ a.storelocator-storename {
   color: #000;
 }
 
-// // Address 
 .storelocator-address {
   color: #000000;
+  line-height: 150% !important;
+  font-size: 14px;
 }
 
-// // Make the Map popup window transparent 
 .gm-style>div:first-child>div+div>div:last-child>div>div:first-child>div {
   opacity: 0.8;
 }
 
-// // Change the text color in Select and address Input box
 span#storelocator-search-label,
 span#search_radius_text,
 div#storelocator-filter_checkbox_text {
   color: #000000;
+  display: block;
+  font-size: 30px;
+  padding-bottom: 15px;
+  display: none;
 }
 
-// // Adjusting input field glow You can get RGBA colours from here to update into the fields below: http: //hex2rgba.devoth.com/
 input:focus {
-  border-color: rgba($color: #B20000, $alpha: 0.75) !important;
+  border-color: rgba($color: $red, $alpha: 0.75) !important;
   box-shadow: 0 1px 1px rgbargba(253, 175, 23, 0.75) inset, 0 0 8px rgbargba(253, 175, 23, 0.6) !important;
   outline: 0 none !important;
 }
 
-// My Location Button To change button colors,
-// you need to adjust each of the entries where it gives a color of #B20000 to your preferred color (use a search and replace function in your favorite text editor to do this !):
 .storelocator-btn-primary,
 .storelocator-btn-primary:hover,
 .storelocator-btn-primary:active,
 .storelocator-btn-primary:visited,
 .storelocator-btn-primary:focus {
   color: #FFF !important;
-  border: none !important; // border-color: #000 !important;
-  background-color: #B20000 !important;
-  background-image: linear-gradient(#B20000, #B20000) !important;
+  border: none !important;
+  background-color: $red !important;
+  background-image: linear-gradient($red, $red) !important;
+  width: 100%;
+  @include responsive(s) {
+    width: auto;
+  }
+  @include responsive(m) {
+    font-size: 15px !important; // width: 200px;
+  }
+  @include responsive(l) {
+    font-size: 15px !important; // width: 200px !important;
+  }
 }
 
-// Show on Map / Directions Buttons To change button colors,
-// you need to adjust each of the entries where it gives a color of #B20000 to your preferred color (use a search and replace function in your favorite text editor to do this !): 
 .storelocator-btn-danger,
 .storelocator-btn-danger:hover,
 .storelocator-btn-danger:active,
 .storelocator-btn-danger:visited,
 .storelocator-btn-danger:focus {
-  color: #FFF !important;
+  color: $light-green !important;
   border: none !important;
-  background-color: #B20000 !important;
-  background-image: linear-gradient(#B20000, #B20000) !important;
-}
-
-/* TEST AREA */
-
-.find-store {
-  margin: 0 auto;
-  @include responsive(l) {
-    width: 992px;
+  background: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  text-align: left !important;
+  width: 100%;
+  padding: 5px 0 !important;
+  @include responsive(s) {
+    width: 165px;
   }
-  // @include responsive(xl) {
-  //   width: 1000px;
-  // }
+  @include responsive(l) {
+    width: 175px;
+    font-weight: 600 !important;
+  }
 }
 
-// #storelocator-list {
-//   border: 1px solid #ccc;
-// }
+.storelocator-buttons {
+  text-align: center !important;
+  @include responsive(s) {
+    text-align: left !important;
+  }
+}
 
 .storelocator-store {
-  border: 1px solid #ccc !important;
-  border-collapse: collapse !important;
+  padding: 0 8px !important;
+  margin: 0;
 }
 
 #storelocator-messages {
   border: none;
+  text-align: center;
+  font-size: 15px;
+  padding: 0 20px;
+  line-height: 150%;
+  @include responsive(l) {
+    padding: 0 8px;
+  }
 }

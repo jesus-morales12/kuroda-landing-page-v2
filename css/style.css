@@ -361,7 +361,7 @@
       width: 300px; } }
   @media only screen and (min-width: 992px) {
     .address-book__container {
-      width: 300px; } }
+      width: 350px; } }
 
 .logo {
   width: 100%;
@@ -905,37 +905,54 @@
 
 #storelocatorwidget {
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  color: #000000; }
+  color: #000000;
+  margin: 0 auto;
+  width: 90% !important; }
+  @media only screen and (min-width: 576px) {
+    #storelocatorwidget {
+      width: 95% !important; } }
+  @media only screen and (min-width: 768px) {
+    #storelocatorwidget {
+      width: 750px !important; } }
+  @media only screen and (min-width: 992px) {
+    #storelocatorwidget {
+      width: 992px !important; } }
+  @media only screen and (min-width: 1400px) {
+    #storelocatorwidget {
+      width: 1000px !important; } }
 
 #storelocatorwidget a {
   text-decoration: none;
-  color: #b20000;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 14px;
+  color: #141414;
+  margin: 5px 0;
   font-weight: bold;
-  width: 100%; }
-  @media only screen and (min-width: 992px) {
-    #storelocatorwidget a {
-      width: auto;
-      margin-left: 8px; } }
-
-p {
-  padding: 3px 0; }
+  font-size: 15px;
+  padding: 5px 8px; }
 
 input {
   width: 100% !important;
-  font-size: 16px; }
+  font-size: 16px;
+  padding: 8px !important; }
+  @media only screen and (min-width: 576px) {
+    input {
+      width: 50% !important; } }
+  @media only screen and (min-width: 768px) {
+    input {
+      width: 480px !important; } }
   @media only screen and (min-width: 992px) {
     input {
-      width: 45% !important; } }
+      width: 700px !important; } }
+  @media only screen and (min-width: 992px) {
+    input {
+      width: 710px !important; } }
 
 #storelocatorwidget a:hover {
   color: #2a6496; }
 
 a.storelocator-storename {
-  color: #000000; }
+  font-size: 18px !important;
+  padding: 0 !important;
+  margin: 0 !important; }
 
 .storelocator-description {
   color: #000000; }
@@ -945,7 +962,9 @@ a.storelocator-storename {
   color: #000; }
 
 .storelocator-address {
-  color: #000000; }
+  color: #000000;
+  line-height: 150% !important;
+  font-size: 14px; }
 
 .gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div {
   opacity: 0.8; }
@@ -953,10 +972,14 @@ a.storelocator-storename {
 span#storelocator-search-label,
 span#search_radius_text,
 div#storelocator-filter_checkbox_text {
-  color: #000000; }
+  color: #000000;
+  display: block;
+  font-size: 30px;
+  padding-bottom: 15px;
+  display: none; }
 
 input:focus {
-  border-color: rgba(178, 0, 0, 0.75) !important;
+  border-color: rgba(238, 50, 51, 0.75) !important;
   box-shadow: 0 1px 1px rgbargba(253, 175, 23, 0.75) inset, 0 0 8px rgbargba(253, 175, 23, 0.6) !important;
   outline: 0 none !important; }
 
@@ -967,32 +990,79 @@ input:focus {
 .storelocator-btn-primary:focus {
   color: #FFF !important;
   border: none !important;
-  background-color: #B20000 !important;
-  background-image: linear-gradient(#B20000, #B20000) !important; }
+  background-color: #EE3233 !important;
+  background-image: linear-gradient(#EE3233, #EE3233) !important;
+  width: 100%; }
+  @media only screen and (min-width: 576px) {
+    .storelocator-btn-primary,
+    .storelocator-btn-primary:hover,
+    .storelocator-btn-primary:active,
+    .storelocator-btn-primary:visited,
+    .storelocator-btn-primary:focus {
+      width: auto; } }
+  @media only screen and (min-width: 768px) {
+    .storelocator-btn-primary,
+    .storelocator-btn-primary:hover,
+    .storelocator-btn-primary:active,
+    .storelocator-btn-primary:visited,
+    .storelocator-btn-primary:focus {
+      font-size: 15px !important; } }
+  @media only screen and (min-width: 992px) {
+    .storelocator-btn-primary,
+    .storelocator-btn-primary:hover,
+    .storelocator-btn-primary:active,
+    .storelocator-btn-primary:visited,
+    .storelocator-btn-primary:focus {
+      font-size: 15px !important; } }
 
 .storelocator-btn-danger,
 .storelocator-btn-danger:hover,
 .storelocator-btn-danger:active,
 .storelocator-btn-danger:visited,
 .storelocator-btn-danger:focus {
-  color: #FFF !important;
+  color: #02A12E !important;
   border: none !important;
-  background-color: #B20000 !important;
-  background-image: linear-gradient(#B20000, #B20000) !important; }
-
-/* TEST AREA */
-.find-store {
-  margin: 0 auto; }
+  background: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  text-align: left !important;
+  width: 100%;
+  padding: 5px 0 !important; }
+  @media only screen and (min-width: 576px) {
+    .storelocator-btn-danger,
+    .storelocator-btn-danger:hover,
+    .storelocator-btn-danger:active,
+    .storelocator-btn-danger:visited,
+    .storelocator-btn-danger:focus {
+      width: 165px; } }
   @media only screen and (min-width: 992px) {
-    .find-store {
-      width: 992px; } }
+    .storelocator-btn-danger,
+    .storelocator-btn-danger:hover,
+    .storelocator-btn-danger:active,
+    .storelocator-btn-danger:visited,
+    .storelocator-btn-danger:focus {
+      width: 175px;
+      font-weight: 600 !important; } }
+
+.storelocator-buttons {
+  text-align: center !important; }
+  @media only screen and (min-width: 576px) {
+    .storelocator-buttons {
+      text-align: left !important; } }
 
 .storelocator-store {
-  border: 1px solid #ccc !important;
-  border-collapse: collapse !important; }
+  padding: 0 8px !important;
+  margin: 0; }
 
 #storelocator-messages {
-  border: none; }
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  padding: 0 20px;
+  line-height: 150%; }
+  @media only screen and (min-width: 992px) {
+    #storelocator-messages {
+      padding: 0 8px; } }
 
 * {
   padding: 0;
