@@ -42,6 +42,26 @@
     }
 }
 
+.contact__message {
+    width: 80%;
+    line-height: 150%;
+    font-size: 15px;
+    margin: 0 auto;
+    padding: 25px 0;
+    @include responsive(s) {
+        font-size: 16px;
+    }
+    @include responsive(l) {
+        
+        font-size: 17px;
+    }
+    @include responsive(xl) {
+        padding: 0;
+        margin-top: 50px;
+        width: 60%;
+    }
+}
+
 .contact-form__container {
     width: 80%;
     margin: 0 auto;
@@ -230,6 +250,12 @@
     background-color: $red;
     padding: 10px 35px;
     margin-top: 12px;
+    @include responsive(m) {
+        margin-top: 35px;
+    }
+    @include responsive(l) {
+        margin-top: 12px;
+    }
 }
 
 .button-register:hover {
@@ -240,8 +266,7 @@
 }
 
 .online-shopping {
-    width: 100%;
-    // padding-bottom: 35px;
+    width: 100%; // padding-bottom: 35px;
 }
 
 .online-shopping__content {

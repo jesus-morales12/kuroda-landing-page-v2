@@ -369,6 +369,24 @@
     .marketplace {
       width: 100%; } }
 
+.contact__message {
+  width: 80%;
+  line-height: 150%;
+  font-size: 15px;
+  margin: 0 auto;
+  padding: 25px 0; }
+  @media only screen and (min-width: 576px) {
+    .contact__message {
+      font-size: 16px; } }
+  @media only screen and (min-width: 992px) {
+    .contact__message {
+      font-size: 17px; } }
+  @media only screen and (min-width: 1400px) {
+    .contact__message {
+      padding: 0;
+      margin-top: 50px;
+      width: 60%; } }
+
 .contact-form__container {
   width: 80%;
   margin: 0 auto; }
@@ -543,6 +561,12 @@
   background-color: #EE3233;
   padding: 10px 35px;
   margin-top: 12px; }
+  @media only screen and (min-width: 768px) {
+    .button-register {
+      margin-top: 35px; } }
+  @media only screen and (min-width: 992px) {
+    .button-register {
+      margin-top: 12px; } }
 
 @media only screen and (min-width: 992px) {
   .button-register:hover {
