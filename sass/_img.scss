@@ -72,7 +72,6 @@
 }
 
 // BACKGROUNDS
-
 .about__background {
     background-image: url('../img/nosotros/nosotros.jpg');
     filter: opacity(0.8);
@@ -117,6 +116,25 @@
     }
     @include responsive(xl) {
         height: 825px;
+    }
+}
+
+.message__background {
+    background: linear-gradient(rgba($color: $white, $alpha: 0.8)), url('../img/nosotros/personal.jpg') no-repeat center;
+    background-size: cover;
+    height: 400px;
+    @include responsive(s) {
+        height: 425px;
+    }
+    @include responsive(m) {
+        height: 500px;
+    }
+    @include responsive(l) {
+        height: 55vh;
+        background-attachment: fixed;
+    }
+    @include responsive(xl) {
+        height: 65vh;
     }
 }
 

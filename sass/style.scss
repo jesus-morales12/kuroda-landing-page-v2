@@ -8,6 +8,8 @@
 @import 'footer';
 @import 'beetrack';
 @import 'contact-form';
+@import 'location';
+
 * {
     padding: 0;
     margin: 0;
@@ -23,6 +25,7 @@ body {
 
 p {
     font-family: 'Merriweather', serif;
+    line-height: 150%;
 }
 
 #my-page {
