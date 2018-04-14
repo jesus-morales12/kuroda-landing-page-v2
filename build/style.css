@@ -493,11 +493,12 @@
   color: #FFFFFF;
   background: none;
   border: 1px solid #FFFFFF;
-  font-size: 18px; }
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6); }
   @media only screen and (min-width: 992px) {
     .button-help {
-      color: rgba(255, 255, 255, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.6);
+      font-size: 18px;
       -webkit-transition: 0.2s ease;
       transition: 0.2s ease;
       cursor: pointer; } }
@@ -962,6 +963,22 @@
 .beetrack__title {
   margin-bottom: -45px; }
 
+#beetrack__widget .text_input ::-webkit-input-placeholder {
+  color: red !important;
+  font-size: 20px !important; }
+
+#beetrack__widget .text_input :-ms-input-placeholder {
+  color: red !important;
+  font-size: 20px !important; }
+
+#beetrack__widget .text_input ::-ms-input-placeholder {
+  color: red !important;
+  font-size: 20px !important; }
+
+#beetrack__widget .text_input ::placeholder {
+  color: red !important;
+  font-size: 20px !important; }
+
 #storelocator-list,
 #storelocator-routing {
   height: 450px; }
@@ -1000,39 +1017,39 @@
   font-size: 15px;
   padding: 5px 8px; }
 
-input {
+#storelocatorwidget input {
   width: 100% !important;
   font-size: 16px;
   padding: 8px !important; }
   @media only screen and (min-width: 576px) {
-    input {
+    #storelocatorwidget input {
       width: 50% !important; } }
   @media only screen and (min-width: 768px) {
-    input {
+    #storelocatorwidget input {
       width: 480px !important; } }
   @media only screen and (min-width: 992px) {
-    input {
+    #storelocatorwidget input {
       width: 700px !important; } }
   @media only screen and (min-width: 992px) {
-    input {
+    #storelocatorwidget input {
       width: 710px !important; } }
 
 #storelocatorwidget a:hover {
   color: #2a6496; }
 
-a.storelocator-storename {
+#storelocatorwidget a.storelocator-storename {
   font-size: 18px !important;
   padding: 0 !important;
   margin: 0 !important; }
 
-.storelocator-description {
+#storelocatorwidget .storelocator-description {
   color: #000000; }
 
-.storelocator-location {
+#storelocatorwidget .storelocator-location {
   font-weight: bold;
   color: #000; }
 
-.storelocator-address {
+#storelocatorwidget .storelocator-address {
   color: #000000;
   line-height: 150% !important;
   font-size: 14px; }
@@ -1040,16 +1057,16 @@ a.storelocator-storename {
 .gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div {
   opacity: 0.8; }
 
-span#storelocator-search-label,
-span#search_radius_text,
-div#storelocator-filter_checkbox_text {
+#storelocatorwidget span#storelocator-search-label,
+#storelocatorwidget span#search_radius_text,
+#storelocatorwidget div#storelocator-filter_checkbox_text {
   color: #000000;
   display: block;
   font-size: 30px;
   padding-bottom: 15px;
   display: none; }
 
-input:focus {
+#storelocatorwidget input:focus {
   border-color: rgba(238, 50, 51, 0.75) !important;
   -webkit-box-shadow: 0 1px 1px rgbargba(253, 175, 23, 0.75) inset, 0 0 8px rgbargba(253, 175, 23, 0.6) !important;
           box-shadow: 0 1px 1px rgbargba(253, 175, 23, 0.75) inset, 0 0 8px rgbargba(253, 175, 23, 0.6) !important;

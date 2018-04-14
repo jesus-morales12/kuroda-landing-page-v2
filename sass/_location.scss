@@ -41,7 +41,7 @@
   padding: 5px 8px;
 }
 
-input {
+#storelocatorwidget input {
   width: 100% !important;
   font-size: 16px;
   padding: 8px !important;
@@ -63,22 +63,22 @@ input {
   color: #2a6496;
 }
 
-a.storelocator-storename {
+#storelocatorwidget a.storelocator-storename {
   font-size: 18px !important;
   padding: 0 !important;
   margin: 0 !important;
 }
 
-.storelocator-description {
+#storelocatorwidget .storelocator-description {
   color: #000000;
 }
 
-.storelocator-location {
+#storelocatorwidget .storelocator-location {
   font-weight: bold;
   color: #000;
 }
 
-.storelocator-address {
+#storelocatorwidget .storelocator-address {
   color: #000000;
   line-height: 150% !important;
   font-size: 14px;
@@ -88,9 +88,9 @@ a.storelocator-storename {
   opacity: 0.8;
 }
 
-span#storelocator-search-label,
-span#search_radius_text,
-div#storelocator-filter_checkbox_text {
+#storelocatorwidget span#storelocator-search-label,
+#storelocatorwidget span#search_radius_text,
+#storelocatorwidget div#storelocator-filter_checkbox_text {
   color: #000000;
   display: block;
   font-size: 30px;
@@ -98,7 +98,7 @@ div#storelocator-filter_checkbox_text {
   display: none;
 }
 
-input:focus {
+#storelocatorwidget input:focus {
   border-color: rgba($color: $red, $alpha: 0.75) !important;
   box-shadow: 0 1px 1px rgbargba(253, 175, 23, 0.75) inset, 0 0 8px rgbargba(253, 175, 23, 0.6) !important;
   outline: 0 none !important;
