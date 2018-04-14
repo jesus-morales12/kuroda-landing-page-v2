@@ -602,7 +602,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: justify;
     margin: 0 auto;
     font-size: 16px;
     width: 80%;
@@ -628,6 +628,7 @@
     margin-top: 25px;
     font-weight: bolder;
     font-size: 20px;
+    text-align: center;
     @include responsive(xl) {
         font-size: 22px;
     }
