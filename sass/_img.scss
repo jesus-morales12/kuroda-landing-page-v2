@@ -81,28 +81,28 @@
     &-one {
         @extend %fade-swiper__img-height;
         background: {
-            image: url('../img/modern-minimalist-bathroom-min.jpg');
+            image: url('../img/backgrounds/modern-minimalist-bathroom-min.jpg');
             position: bottom;
         }
     }
     &-two {
         @extend %fade-swiper__img-height;
         background: {
-            image: url('../img/kitchen-bg-min.jpg');
+            image: url('../img/backgrounds/kitchen-bg-min.jpg');
             position: bottom;
         }
     }
     &-three {
         @extend %fade-swiper__img-height;
         background: {
-            image: url('../img/bathroom-min.jpg');
+            image: url('../img/backgrounds/bathroom-min.jpg');
             position: center;
         }
     }
 }
 
 .services__background {
-    background: linear-gradient(rgba($color: $black, $alpha: 0.8)), url('../img/6.jpg') no-repeat center;
+    background: linear-gradient(rgba($color: $black, $alpha: 0.8)), url('../img/backgrounds/6.jpg') no-repeat center;
     background-size: cover;
     height: 1150px;
     @include responsive(s) {
@@ -140,13 +140,13 @@
 
 .clients__regular {
     @extend %clients__backgrounds;
-    background-image: url('../img/plumber-min.jpg');
+    background-image: url('../img/backgrounds/plumber-min.jpg');
     background-position: top;
 }
 
 .clients__b-to-b {
     @extend %clients__backgrounds;
-    background-image: url('../img/assembly-min.jpg');
+    background-image: url('../img/backgrounds/assembly-min.jpg');
     background-position: center;
 }
 
