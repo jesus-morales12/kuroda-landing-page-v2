@@ -1,5 +1,6 @@
 /* PALETTE COLORS */
 /* SOCIAL NETWORK ICON COLORS */
+/* MARKETPLACE COLORS */
 /* MEDIA QUERY BREAKPOINTS */
 .--flex, .--vflex {
   display: flex;
@@ -127,7 +128,7 @@
 
 .marketplace__store--menu {
   width: 120px;
-  padding: 15px 10px;
+  padding: 5px 0;
   text-align: center; }
   @media only screen and (min-width: 992px) {
     .marketplace__store--menu {
@@ -678,7 +679,6 @@
     transition: 0.3s ease;
     background-color: #015418; } }
 
-/* MODAL TEST AREA */
 /* The Modal (background) */
 .confirmation {
   position: fixed;
@@ -851,6 +851,7 @@
     .message__signature {
       font-size: 22px; } }
 
+/* MARKET PLACE - CSS BUTTONS */
 .footer {
   width: 100%;
   margin: 0 auto;

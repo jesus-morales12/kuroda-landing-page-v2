@@ -13,13 +13,17 @@ $fb-icon-color: #3b5998;
 $twitter-icon-color: #0084b4;
 $youtube-icon-color: #FF0000;
 $instagram-icon-color: #9b6954;
+
+/* MARKETPLACE COLORS */
+
+$walmart: #007dc6; 
+
 /* MEDIA QUERY BREAKPOINTS */
 
 $s: "screen and (min-width: 576px)";
 $m: "screen and (min-width: 768px)";
 $l: "screen and (min-width: 992px)";
 $xl: "screen and (min-width: 1400px)";
-
 @mixin responsive($device) {
     @if $device==s {
         @media only #{$s} {
