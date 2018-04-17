@@ -574,6 +574,11 @@
       margin-bottom: 60px;
       width: 1000px; } }
 
+.privacy-container hr {
+  margin-top: 20px;
+  margin-bottom: -20px;
+  border-color: rgba(20, 20, 20, 0.1); }
+
 .privacy__content {
   font-size: 16px;
   line-height: 150%;

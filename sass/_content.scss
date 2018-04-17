@@ -52,7 +52,6 @@
         font-size: 16px;
     }
     @include responsive(l) {
-        
         font-size: 17px;
     }
     @include responsive(xl) {
@@ -331,6 +330,12 @@
     }
 }
 
+.privacy-container hr {
+    margin-top: 20px;
+    margin-bottom: -20px;
+    border-color: rgba($color: $black, $alpha: .1);
+}
+
 .privacy__content {
     font-size: 16px;
     line-height: 150%;
@@ -559,7 +564,6 @@
 }
 
 .help {
-
     margin: 0 auto;
     padding-bottom: 25px;
 }
@@ -657,9 +661,7 @@
     }
 }
 
-
-
-/* MARKET PLACE - CSS BUTTONS */ 
+/* MARKET PLACE - CSS BUTTONS */
 
 // .walmart--button {
 //     background-color: $walmart;
