@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link data-icon rel="apple-touch-icon">
+    <link data-icon rel="icon">
+    <title>Vybroo</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/font-awesome.min.css">
+    <link rel="stylesheet" href="/player.css?d=24112016">
+</head>
+
+<body>
+    <iframe src="http://tu.vybroo.net/#kurodasinaloa" width="960" height="620" frameborder="0">
+        <div class="globalContainer" :class="showSideMenu ? 'withMenu' : ''">
+            <div class="messageBox" :class="[displayMessage ? 'active' : '']">
+                <i class="fa fa-warning"></i>
+                <span>{{message}}</span>
+            </div>
+            <div class="mainScreen" :style="{background: backgroundColor}">
+                <img :src="image">
+                <div class="counter">{{counter}}</div>
+            </div>
+            <div class="likes">
+                <div :class="liked == 1 ? 'selected' : ''" class="likeButton like" @click="likecontent">
+                    <i class="fa fa-thumbs-up"></i>
+                </div>
+                <div :class="liked == 2 ? 'selected' : ''" class="likeButton dislike" @click="dislikecontent">
+                    <i class="fa fa-thumbs-down"></i>
+                </div>
+            </div>
+            <div class="topButtons">
+                <div class="topButton" @click="mute">
+                    <i class="fa fa-volume-up"></i>
+                    <i class="fa fa-ban" v-show="muted"></i>
+                </div>
+                <!--<div class="topButton" @click="reload">-->
+                <!--<i class="fa fa-close"></i>-->
+                <!--</div>-->
+            </div>
+            <div class="topButton sideMenuToggle" @click="showSideMenu = true" v-show="!showSideMenu">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="oAudioBox" v-show="showOAudio">
+                Reproduciendo audio seleccionado...
+                <div class="oAudioCancel" @click="stopOAudio">Cancelar reproducción</div>
+            </div>
+            <div class="playBar">
+                <div class="duration" :style="{width: durationPercent + '%'}"></div>
+                <div class="buffer" :style="{width: bufferPercent + '%'}"></div>
+                <div class="icon">
+                    <i class="fa fa-{{type}}"></i>
+                </div>
+                <div class="title">{{title}}</div>
+                <div class="artist">{{artist}}</div>
+                <img class="smallLogo" src="/logo_small.png" @click="showVybroo">
+            </div>
+            <div class="vybrooInfo">
+                <a href="mailto:ayuda@vybroo.com">ayuda@vybroo.com</a> -
+                <a href="tel:6674555630">(667) 455 56 30</a> -
+                <a href="https://vybroo.com/AvisoDePrivacidad.docx">Aviso de privacidad</a>
+            </div>
+            <div class="brands" v-show="displayBrands">
+                <div class="brand" v-for="client in brands" :style="'background-color: #' + client.color" @click="changeHash(client.link)">
+                    <img :src="'/images/' + client.image">
+                </div>
+            </div>
+        </div>
+        <div class="loadingScreen" v-show="loading">
+            <img src="/logo.png" alt="Logo Vybroo">
+        </div>
+        <div class="mobilePlay" v-show="mobileplay" @click="forceplay">
+            <i class="fa fa-play"></i>
+        </div>
+        <div class="sideMenu" :class="showSideMenu ? 'active' : null">
+            <div class="sideMenuHeader">
+                <img src="logo_side_menu.png">
+                <i class="fa fa-bars" @click="showSideMenu = false"></i>
+            </div>
+            <a href="manual.docx" download="Manual de usuario.docx">
+                <div class="sideMenuBigButton">
+                    <i class="fa fa-file"></i>
+                    Manual de usuario
+                </div>
+            </a>
+            <a href="https://vybroo.com/AvisoDePrivacidad.docx" download="Aviso de privacidad.docx">
+                <div class="sideMenuBigButton">
+                    <i class="fa fa-warning"></i>
+                    Aviso de privacidad
+                </div>
+            </a>
+            <div v-show="oaudios.length > 0">
+                <div class="sideMenuSeparator"></div>
+                <div class="sideMenuTitle">Audios disponibles</div>
+                <div v-for="oaudio in oaudios" class="sideMenuItem" @click="playOAudio(oaudio.file)">
+                    <i class="fa fa-microphone"></i>{{oaudio.name}}
+                </div>
+            </div>
+            <div class="sideMenuSeparator"></div>
+            <div class="sideMenuTitle">Identificador</div>
+            <div class="trackid">
+                <input type="text" v-model="trackid" @blur="saveTrackID" @keyup.enter="saveTrackID">
+            </div>
+        </div>
+        <pre class="debugPanel" v-show="debugMode">
+-Debug Mode-<br>
+Token  : {{token}}<br>
+dB red : {{dBChange}}<br>
+last   : {{lastplay}}<br>
+silence: {{silenceCount}}<br>
+</pre>
+        <div id="notSupported">
+            <div id="notSupportedBox">
+                <h1>Notificación</h1>
+                <span>Este explorador no es compatible con la aplicación debido a que no cuenta con las funciones necesarias para
+                    reproducir el audio
+                </span>
+                <span>Te recomendamos descargar la ultima version de Google Chrome para poder utilizarla</span>
+                <a href="https://www.google.com/chrome/browser/desktop/">
+                    <img src="chrome.png">
+                    <br>Descargar</a>
+            </div>
+        </div>
+    </iframe>
+    <script>
+        ! function (e, t, a, n, c, s, o) {
+            e.GoogleAnalyticsObject = c, e[c] = e[c] || function () {
+                    (e[c].q = e[c].q || []).push(arguments)
+                }, e[c].l = 1 * new Date, s = t.createElement(a), o = t.getElementsByTagName(a)[0], s.async = 1, s.src =
+                n, o.parentNode.insertBefore(s, o)
+        }(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+    </script>
+    <script src="/vue.js"></script>
+    <script src="/vue-resource.js"></script>
+    <script src="/nosleep.js"></script>
+    <script src="/player_app.js?d=06042017"></script>
+</body>
+
+</html>
