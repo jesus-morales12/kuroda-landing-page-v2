@@ -229,6 +229,9 @@
 .social-network__instagram {
   color: #9b6954; }
 
+.radio-kuroda {
+  color: #141414; }
+
 /* FADE SWIPER */
 .fade-swiper {
   width: 100%; }
@@ -1099,6 +1102,34 @@
   @media only screen and (min-width: 992px) {
     #storelocator-messages {
       padding: 0 8px; } }
+
+.radio__container {
+  margin: 15px auto;
+  text-align: center;
+  width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .radio__container {
+      width: 700px; } }
+  @media only screen and (min-width: 992px) {
+    .radio__container {
+      width: 890px; } }
+  @media only screen and (min-width: 1400px) {
+    .radio__container {
+      width: 1200px; } }
+
+.radio__station {
+  border: 1px solid rgba(20, 20, 20, 0.1);
+  height: 80vh;
+  width: 85%; }
+  @media only screen and (min-width: 768px) {
+    .radio__station {
+      width: 680px; } }
+  @media only screen and (min-width: 992px) {
+    .radio__station {
+      width: 750px; } }
+  @media only screen and (min-width: 1400px) {
+    .radio__station {
+      width: 800px; } }
 
 * {
   padding: 0;

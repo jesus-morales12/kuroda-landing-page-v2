@@ -1,0 +1,32 @@
+.radio__container {
+    margin: 15px auto;
+    text-align: center;
+    width: 100%;
+    @include responsive(m) {
+        width: 700px;
+    }
+    @include responsive(l) {
+        width: 890px;
+    }
+    @include responsive(xl) {
+        width: 1200px;
+    }
+}
+
+.radio__station {
+    border: 1px solid rgba($color: $black, $alpha: 0.1);
+    height: 80vh;
+    width: 85%;
+    @include responsive(m) {
+        width: 680px;
+        // height: 550px;
+    }
+    @include responsive(l) {
+        width: 750px;
+        // height: 550px;
+    }
+    @include responsive(xl) {
+        width: 800px;
+        // height: 600px;
+    }
+}
