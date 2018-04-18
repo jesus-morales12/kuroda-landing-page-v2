@@ -3,30 +3,48 @@
     text-align: center;
     width: 100%;
     @include responsive(m) {
-        width: 700px;
+        width: 500px;
     }
     @include responsive(l) {
-        width: 890px;
+        width: 700px;
     }
     @include responsive(xl) {
-        width: 1200px;
+        width: 800px;
     }
 }
 
 .radio__station {
     border: 1px solid rgba($color: $black, $alpha: 0.1);
-    height: 80vh;
+    height: 70vh;
     width: 85%;
     @include responsive(m) {
-        width: 680px;
-        // height: 550px;
+        width: 500px; // height: 550px;
     }
     @include responsive(l) {
-        width: 750px;
-        // height: 550px;
+        width: 700px; // height: 550px;
     }
     @include responsive(xl) {
-        width: 800px;
-        // height: 600px;
+        width: 800px; // height: 600px;
     }
+}
+
+.radio__menu {
+    width: 350px;
+    padding: 15px 20px;
+    text-align: center;
+    @include responsive(m) {
+        width: 200px;
+        margin-right: 35px;
+    }
+}
+
+.radio__option {
+    display: block;
+    background-color: $dark-red;
+    color: $white;
+    text-align: center;
+    margin: 12px auto;
+    padding: 8px 0;
+    border-radius: 2px;
+    font-weight: 600;
 }

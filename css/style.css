@@ -230,7 +230,7 @@
   color: #9b6954; }
 
 .radio-kuroda {
-  color: #141414; }
+  color: #02A12E; }
 
 /* FADE SWIPER */
 .fade-swiper {
@@ -1109,27 +1109,46 @@
   width: 100%; }
   @media only screen and (min-width: 768px) {
     .radio__container {
-      width: 700px; } }
+      width: 500px; } }
   @media only screen and (min-width: 992px) {
     .radio__container {
-      width: 890px; } }
+      width: 700px; } }
   @media only screen and (min-width: 1400px) {
     .radio__container {
-      width: 1200px; } }
+      width: 800px; } }
 
 .radio__station {
   border: 1px solid rgba(20, 20, 20, 0.1);
-  height: 80vh;
+  height: 70vh;
   width: 85%; }
   @media only screen and (min-width: 768px) {
     .radio__station {
-      width: 680px; } }
+      width: 500px; } }
   @media only screen and (min-width: 992px) {
     .radio__station {
-      width: 750px; } }
+      width: 700px; } }
   @media only screen and (min-width: 1400px) {
     .radio__station {
       width: 800px; } }
+
+.radio__menu {
+  width: 350px;
+  padding: 15px 20px;
+  text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .radio__menu {
+      width: 200px;
+      margin-right: 35px; } }
+
+.radio__option {
+  display: block;
+  background-color: #A11213;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 12px auto;
+  padding: 8px 0;
+  border-radius: 2px;
+  font-weight: 600; }
 
 * {
   padding: 0;
