@@ -1,6 +1,6 @@
 var context, analyser, source, audio, oaudio, compressor, gain, timeouts, preloaders, nosleep, lastlink;
 if (window.AudioContext || window.webkitAudioContext) {
-  context = new (window.AudioContext || window.webkitAudioContext)();
+  context = new(window.AudioContext || window.webkitAudioContext)();
   analyser = context.createAnalyser();
   compressor = context.createDynamicsCompressor();
   gain = context.createGain();
@@ -73,7 +73,7 @@ var vm = new Vue({
     compressor.connect(gain);
     source.connect(context.destination);
     gain.connect(context.destination);
-    if(window.location.hash == '' && localStorage.lastlink) {
+    if (window.location.hash == '' && localStorage.lastlink) {
       window.location.hash = localStorage.lastlink;
     }
     audio.addEventListener('ended', this.handleEnded);
@@ -92,7 +92,7 @@ var vm = new Vue({
 
   methods: {
 
-    saveTrackID: function() {
+    saveTrackID: function () {
       localStorage.trackid = this.trackid || '';
       document.querySelector('.trackid input').blur()
     },
@@ -196,7 +196,11 @@ var vm = new Vue({
         return timeouts.silencePeriod = setTimeout(self.playNext, 60000);
       }
       this.log('Requesting [' + self.token + ']');
-      this.$http.post('/api', {token: this.token, stream: this.stream, cid: this.trackid})
+      this.$http.post('/api', {
+          token: this.token,
+          stream: this.stream,
+          cid: this.trackid
+        })
         .then(function (r) {
           if (r.data.code != 200) {
             self.handleError(r.data);
@@ -273,7 +277,7 @@ var vm = new Vue({
       this.errorCount = this.errorCount * 2 > 64 ? 64 : this.errorCount * 2;
     },
 
-    heartbeatDue: function() {
+    heartbeatDue: function () {
       var now = (new Date()).valueOf();
       return now - this.lastHearbeat >= 600000;
     },
@@ -320,11 +324,13 @@ var vm = new Vue({
       audio.pause();
       clearTimeout(timeouts.retryNext);
       clearTimeout(timeouts.silencePeriod);
-      self.$http.post('/client', {id: self.cleanHash()})
+      self.$http.post('/client', {
+          id: self.cleanHash()
+        })
         .then(function (r) {
           this.log(r);
           if (r.data.error) return self.handleError(r.data);
-          if (r.data.clients)  return self.displayClientsList(r.data.clients);
+          if (r.data.clients) return self.displayClientsList(r.data.clients);
           // adding the manifest for web apps
           var link = document.createElement('link');
           link.setAttribute('rel', 'manifest');
@@ -333,7 +339,7 @@ var vm = new Vue({
           document.querySelector('meta[name=theme-color]').content = "#" + r.data.color;
           try {
             localStorage.lastlink = window.location.hash.replace(/#/, '')
-          } catch(e) {}
+          } catch (e) {}
           self.backgroundColor = '#' + r.data.color;
           self.image = '/images/' + r.data.image;
           self.counter = r.data.counter || 0;
@@ -350,7 +356,7 @@ var vm = new Vue({
             'b835d3442c1e68d31a7ca67dad59a6f0.m4a'
           ];
 
-          if(r.data.play_intro && !document.cookie.match(/intro_played/)) {
+          if (r.data.play_intro && !document.cookie.match(/intro_played/)) {
             var src = intros[Math.floor(Math.random() * 3)];
             window.audio.src = '/a/spots/' + src;
             window.audio.play();
@@ -361,7 +367,9 @@ var vm = new Vue({
           window.ga("create", "UA-77920400-1", "auto");
           window.ga("send", "pageview");
           if (r.data.analytics) {
-            window.ga("create", r.data.analytics, "auto", {name: 'client'});
+            window.ga("create", r.data.analytics, "auto", {
+              name: 'client'
+            });
             window.ga("client.send", "pageview")
           }
           self.music_volume = r.data.music_volume > 0 && r.data.music_volume < 100 ? r.data.music_volume : 100;
@@ -379,7 +387,7 @@ var vm = new Vue({
 
     forceplay: function () {
       audio.play();
-      if(nosleep) {
+      if (nosleep) {
         nosleep.enable();
       }
       this.mobileplay = false;
@@ -391,7 +399,7 @@ var vm = new Vue({
       audio.volume = this.muted ? 0 : unmuted;
     },
 
-    reload: function() {
+    reload: function () {
       window.location.reload();
     },
 

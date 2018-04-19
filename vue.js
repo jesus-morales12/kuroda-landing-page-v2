@@ -5,9 +5,10 @@
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  global.Vue = factory();
-}(this, function () { 'use strict';
+    typeof define === 'function' && define.amd ? define(factory) :
+    global.Vue = factory();
+}(this, function () {
+  'use strict';
 
   function set(obj, key, val) {
     if (hasOwn(obj, key)) {
@@ -426,6 +427,7 @@
     var callbacks = [];
     var pending = false;
     var timerFunc;
+
     function nextTickHandler() {
       pending = false;
       var copies = callbacks.slice(0);
@@ -660,7 +662,7 @@
         // check double quote
         if (c === 0x22 && prev !== 0x5C) inDouble = !inDouble;
       } else if (c === 0x7C && // pipe
-      str.charCodeAt(i + 1) !== 0x7C && str.charCodeAt(i - 1) !== 0x7C) {
+        str.charCodeAt(i + 1) !== 0x7C && str.charCodeAt(i - 1) !== 0x7C) {
         if (dir.expression == null) {
           // first filter, end of expression
           lastFilterIndex = i + 1;
@@ -672,21 +674,29 @@
       } else {
         switch (c) {
           case 0x22:
-            inDouble = true;break; // "
+            inDouble = true;
+            break; // "
           case 0x27:
-            inSingle = true;break; // '
+            inSingle = true;
+            break; // '
           case 0x28:
-            paren++;break; // (
+            paren++;
+            break; // (
           case 0x29:
-            paren--;break; // )
+            paren--;
+            break; // )
           case 0x5B:
-            square++;break; // [
+            square++;
+            break; // [
           case 0x5D:
-            square--;break; // ]
+            square--;
+            break; // ]
           case 0x7B:
-            curly++;break; // {
+            curly++;
+            break; // {
           case 0x7D:
-            curly--;break; // }
+            curly--;
+            break; // }
         }
       }
     }
@@ -837,6 +847,7 @@
    */
 
   var filterRE$1 = /[^|]\|[^|]/;
+
   function inlineFilters(exp, single) {
     if (!filterRE$1.test(exp)) {
       return single ? exp : '(' + exp + ')';
@@ -846,9 +857,9 @@
         return '(' + exp + ')';
       } else {
         return 'this._applyFilters(' + dir.expression + // value
-        ',null,' + // oldValue (null for read)
-        JSON.stringify(dir.filters) + // filter descriptors
-        ',false)'; // write?
+          ',null,' + // oldValue (null for read)
+          JSON.stringify(dir.filters) + // filter descriptors
+          ',false)'; // write?
       }
     }
   }
@@ -936,12 +947,13 @@
     _maxUpdateCount: 100
 
   }, {
-    delimiters: { /**
-                   * Interpolation delimiters. Changing these would trigger
-                   * the text parser to re-compile the regular expressions.
-                   *
-                   * @type {Array<String>}
-                   */
+    delimiters: {
+      /**
+       * Interpolation delimiters. Changing these would trigger
+       * the text parser to re-compile the regular expressions.
+       *
+       * @type {Array<String>}
+       */
 
       get: function get() {
         return delimiters;
@@ -1046,15 +1058,15 @@
   function applyTransition(el, direction, op, vm, cb) {
     var transition = el.__v_trans;
     if (!transition ||
-    // skip if there are no js hooks and CSS transition is
-    // not supported
-    !transition.hooks && !transitionEndEvent ||
-    // skip transitions for initial compile
-    !vm._isCompiled ||
-    // if the vm is being manipulated by a parent directive
-    // during the parent's compilation phase, skip the
-    // animation.
-    vm.$parent && !vm.$parent._isCompiled) {
+      // skip if there are no js hooks and CSS transition is
+      // not supported
+      !transition.hooks && !transitionEndEvent ||
+      // skip transitions for initial compile
+      !vm._isCompiled ||
+      // if the vm is being manipulated by a parent directive
+      // during the parent's compilation phase, skip the
+      // animation.
+      vm.$parent && !vm.$parent._isCompiled) {
       op();
       if (cb) cb();
       return;
@@ -1432,6 +1444,7 @@
       nodes.push(node);
       removeWithTransition(node, vm, onRemoved);
     });
+
     function onRemoved() {
       removed++;
       if (done && removed >= nodes.length) {
@@ -1460,16 +1473,18 @@
     var hasAttrs = el.hasAttributes();
     if (!commonTagRE.test(tag) && !reservedTagRE.test(tag)) {
       if (resolveAsset(options, 'components', tag)) {
-        return { id: tag };
+        return {
+          id: tag
+        };
       } else {
         var is = hasAttrs && getIsBinding(el);
         if (is) {
           return is;
         } else if ('development' !== 'production') {
           if (tag.indexOf('-') > -1 || /HTMLUnknownElement/.test(el.toString()) &&
-          // Chrome returns unknown for several HTML5 elements.
-          // https://code.google.com/p/chromium/issues/detail?id=540526
-          !/^(data|time|rtc|rb)$/.test(tag)) {
+            // Chrome returns unknown for several HTML5 elements.
+            // https://code.google.com/p/chromium/issues/detail?id=540526
+            !/^(data|time|rtc|rb)$/.test(tag)) {
             warn('Unknown custom element: <' + tag + '> - did you ' + 'register the component correctly?');
           }
         }
@@ -1490,11 +1505,16 @@
     // dynamic syntax
     var exp = getAttr(el, 'is');
     if (exp != null) {
-      return { id: exp };
+      return {
+        id: exp
+      };
     } else {
       exp = getBindAttr(el, 'is');
       if (exp != null) {
-        return { id: exp, dynamic: true };
+        return {
+          id: exp,
+          dynamic: true
+        };
       }
     }
   }
@@ -1809,7 +1829,9 @@
       while (i--) {
         val = props[keys[i]];
         if (typeof val === 'function') {
-          props[keys[i]] = { type: val };
+          props[keys[i]] = {
+            type: val
+          };
         }
       }
     }
@@ -1870,6 +1892,7 @@
         mergeField(key);
       }
     }
+
     function mergeField(key) {
       var strat = strats[key] || defaultStrat;
       options[key] = strat(parent[key], child[key], vm, key);
@@ -1892,10 +1915,10 @@
     var assets = options[type];
     var camelizedId;
     return assets[id] ||
-    // camelCase ID
-    assets[camelizedId = camelize(id)] ||
-    // Pascal Case ID
-    assets[camelizedId.charAt(0).toUpperCase() + camelizedId.slice(1)];
+      // camelCase ID
+      assets[camelizedId = camelize(id)] ||
+      // Pascal Case ID
+      assets[camelizedId.charAt(0).toUpperCase() + camelizedId.slice(1)];
   }
 
   /**
@@ -1915,7 +1938,8 @@
    * Intercept mutating methods and emit events
    */
 
-  ;['push', 'pop', 'shift', 'unshift', 'splice', 'sort', 'reverse'].forEach(function (method) {
+  ;
+  ['push', 'pop', 'shift', 'unshift', 'splice', 'sort', 'reverse'].forEach(function (method) {
     // cache original method
     var original = arrayProto[method];
     def(arrayMethods, method, function mutator() {
@@ -2242,76 +2266,86 @@
   }
 
   var util = Object.freeze({
-  	defineReactive: defineReactive,
-  	set: set,
-  	del: del,
-  	hasOwn: hasOwn,
-  	isLiteral: isLiteral,
-  	isReserved: isReserved,
-  	_toString: _toString,
-  	toNumber: toNumber,
-  	toBoolean: toBoolean,
-  	stripQuotes: stripQuotes,
-  	camelize: camelize,
-  	hyphenate: hyphenate,
-  	classify: classify,
-  	bind: bind$1,
-  	toArray: toArray,
-  	extend: extend,
-  	isObject: isObject,
-  	isPlainObject: isPlainObject,
-  	def: def,
-  	debounce: _debounce,
-  	indexOf: indexOf,
-  	cancellable: cancellable,
-  	looseEqual: looseEqual,
-  	isArray: isArray,
-  	hasProto: hasProto,
-  	inBrowser: inBrowser,
-  	isIE9: isIE9,
-  	isAndroid: isAndroid,
-  	get transitionProp () { return transitionProp; },
-  	get transitionEndEvent () { return transitionEndEvent; },
-  	get animationProp () { return animationProp; },
-  	get animationEndEvent () { return animationEndEvent; },
-  	nextTick: nextTick,
-  	query: query,
-  	inDoc: inDoc,
-  	getAttr: getAttr,
-  	getBindAttr: getBindAttr,
-  	hasBindAttr: hasBindAttr,
-  	before: before,
-  	after: after,
-  	remove: remove,
-  	prepend: prepend,
-  	replace: replace,
-  	on: on$1,
-  	off: off,
-  	setClass: setClass,
-  	addClass: addClass,
-  	removeClass: removeClass,
-  	extractContent: extractContent,
-  	trimNode: trimNode,
-  	isTemplate: isTemplate,
-  	createAnchor: createAnchor,
-  	findRef: findRef,
-  	mapNodeRange: mapNodeRange,
-  	removeNodeRange: removeNodeRange,
-  	mergeOptions: mergeOptions,
-  	resolveAsset: resolveAsset,
-  	assertAsset: assertAsset,
-  	checkComponentAttr: checkComponentAttr,
-  	initProp: initProp,
-  	assertProp: assertProp,
-  	coerceProp: coerceProp,
-  	commonTagRE: commonTagRE,
-  	reservedTagRE: reservedTagRE,
-  	get warn () { return warn; }
+    defineReactive: defineReactive,
+    set: set,
+    del: del,
+    hasOwn: hasOwn,
+    isLiteral: isLiteral,
+    isReserved: isReserved,
+    _toString: _toString,
+    toNumber: toNumber,
+    toBoolean: toBoolean,
+    stripQuotes: stripQuotes,
+    camelize: camelize,
+    hyphenate: hyphenate,
+    classify: classify,
+    bind: bind$1,
+    toArray: toArray,
+    extend: extend,
+    isObject: isObject,
+    isPlainObject: isPlainObject,
+    def: def,
+    debounce: _debounce,
+    indexOf: indexOf,
+    cancellable: cancellable,
+    looseEqual: looseEqual,
+    isArray: isArray,
+    hasProto: hasProto,
+    inBrowser: inBrowser,
+    isIE9: isIE9,
+    isAndroid: isAndroid,
+    get transitionProp() {
+      return transitionProp;
+    },
+    get transitionEndEvent() {
+      return transitionEndEvent;
+    },
+    get animationProp() {
+      return animationProp;
+    },
+    get animationEndEvent() {
+      return animationEndEvent;
+    },
+    nextTick: nextTick,
+    query: query,
+    inDoc: inDoc,
+    getAttr: getAttr,
+    getBindAttr: getBindAttr,
+    hasBindAttr: hasBindAttr,
+    before: before,
+    after: after,
+    remove: remove,
+    prepend: prepend,
+    replace: replace,
+    on: on$1,
+    off: off,
+    setClass: setClass,
+    addClass: addClass,
+    removeClass: removeClass,
+    extractContent: extractContent,
+    trimNode: trimNode,
+    isTemplate: isTemplate,
+    createAnchor: createAnchor,
+    findRef: findRef,
+    mapNodeRange: mapNodeRange,
+    removeNodeRange: removeNodeRange,
+    mergeOptions: mergeOptions,
+    resolveAsset: resolveAsset,
+    assertAsset: assertAsset,
+    checkComponentAttr: checkComponentAttr,
+    initProp: initProp,
+    assertProp: assertProp,
+    coerceProp: coerceProp,
+    commonTagRE: commonTagRE,
+    reservedTagRE: reservedTagRE,
+    get warn() {
+      return warn;
+    }
   });
 
   var uid = 0;
 
-  function initMixin (Vue) {
+  function initMixin(Vue) {
 
     /**
      * The main init sequence. This is called for every
@@ -2350,8 +2384,8 @@
       // fragment instance properties
       this._isFragment = false;
       this._fragment = // @type {DocumentFragment}
-      this._fragmentStart = // @type {Text|Comment}
-      this._fragmentEnd = null; // @type {Text|Comment}
+        this._fragmentStart = // @type {Text|Comment}
+        this._fragmentEnd = null; // @type {Text|Comment}
 
       // lifecycle state
       this._isCompiled = this._isDestroyed = this._isReady = this._isAttached = this._isBeingDestroyed = false;
@@ -2901,12 +2935,16 @@
       }
       return hit;
     }
-    var res = { exp: exp };
+    var res = {
+      exp: exp
+    };
     res.get = isSimplePath(exp) && exp.indexOf('[') < 0
-    // optimized super simple getter
-    ? makeGetterFn('scope.' + exp)
-    // dynamic getter
-    : compileGetter(exp);
+      // optimized super simple getter
+      ?
+      makeGetterFn('scope.' + exp)
+      // dynamic getter
+      :
+      compileGetter(exp);
     if (needSet) {
       res.set = compileSetter(exp);
     }
@@ -2923,10 +2961,10 @@
 
   function isSimplePath(exp) {
     return pathTestRE.test(exp) &&
-    // don't treat true/false as paths
-    !booleanLiteralRE.test(exp) &&
-    // Math constants e.g. Math.PI, Math.E etc.
-    exp.slice(0, 5) !== 'Math.';
+      // don't treat true/false as paths
+      !booleanLiteralRE.test(exp) &&
+      // Math constants e.g. Math.PI, Math.E etc.
+      exp.slice(0, 5) !== 'Math.';
   }
 
   var expression = Object.freeze({
@@ -3233,11 +3271,11 @@
     if (this.active) {
       var value = this.get();
       if (value !== this.value ||
-      // Deep watchers and watchers on Object/Arrays should fire even
-      // when the value is the same, because the value may
-      // have mutated; but only do so if this is a
-      // non-shallow update (caused by a vm digest).
-      (isObject(value) || this.deep) && !this.shallow) {
+        // Deep watchers and watchers on Object/Arrays should fire even
+        // when the value is the same, because the value may
+        // have mutated; but only do so if this is a
+        // non-shallow update (caused by a vm digest).
+        (isObject(value) || this.deep) && !this.shallow) {
         // set new value
         var oldValue = this.value;
         this.value = value;
@@ -3572,7 +3610,8 @@
       var interp = this.descriptor.interp;
       if (!interp && attrWithPropsRE.test(attr) && attr in el) {
         el[attr] = attr === 'value' ? value == null // IE9 will set input.value to "null" for null...
-        ? '' : value : value;
+          ?
+          '' : value : value;
       }
       // set model props
       var modelProp = modelProps[attr];
@@ -4140,6 +4179,7 @@
       } else {
         toggle();
       }
+
       function toggle() {
         el.style.display = value ? '' : 'none';
       }
@@ -4418,8 +4458,8 @@
     }
     this.unlink = linker(vm, frag, host, scope, this);
     var single = this.single = frag.childNodes.length === 1 &&
-    // do not go single mode if the only node is an anchor
-    !frag.childNodes[0].__vue_anchor;
+      // do not go single mode if the only node is an anchor
+      !frag.childNodes[0].__vue_anchor;
     if (single) {
       this.node = frag.childNodes[0];
       this.before = singleBefore;
@@ -4853,9 +4893,9 @@
         if (frag.reused && !frag.staggerCb) {
           currentPrev = findPrevFrag(frag, start, this.id);
           if (currentPrev !== targetPrev && (!currentPrev ||
-          // optimization for moving a single item.
-          // thanks to suggestions by @livoras in #1807
-          findPrevFrag(currentPrev, start, this.id) !== targetPrev)) {
+              // optimization for moving a single item.
+              // thanks to suggestions by @livoras in #1807
+              findPrevFrag(currentPrev, start, this.id) !== targetPrev)) {
             this.move(frag, prevEl);
           }
         } else {
@@ -5389,7 +5429,8 @@
       }
     }
     // bind
-    var self = this;['enterNextTick', 'enterDone', 'leaveNextTick', 'leaveDone'].forEach(function (m) {
+    var self = this;
+    ['enterNextTick', 'enterDone', 'leaveNextTick', 'leaveDone'].forEach(function (m) {
       self[m] = bind$1(self[m], self);
     });
   }
@@ -5635,16 +5676,16 @@
   p$1.getCssTransitionType = function (className) {
     /* istanbul ignore if */
     if (!transitionEndEvent ||
-    // skip CSS transitions if page is not visible -
-    // this solves the issue of transitionend events not
-    // firing until the page is visible again.
-    // pageVisibility API is supported in IE10+, same as
-    // CSS transitions.
-    document.hidden ||
-    // explicit js-only transition
-    this.hooks && this.hooks.css === false ||
-    // element is hidden
-    isHidden(this.el)) {
+      // skip CSS transitions if page is not visible -
+      // this solves the issue of transitionend events not
+      // firing until the page is visible again.
+      // pageVisibility API is supported in IE10+, same as
+      // CSS transitions.
+      document.hidden ||
+      // explicit js-only transition
+      this.hooks && this.hooks.css === false ||
+      // element is hidden
+      isHidden(this.el)) {
       return;
     }
     var type = this.type || this.typeCache[className];
@@ -6318,8 +6359,8 @@
               }, null, null, scope); // el, host, scope
             }
           } else {
-              'development' !== 'production' && warn('Cannot bind dynamic prop on a root instance' + ' with no parent: ' + prop.name + '="' + raw + '"');
-            }
+            'development' !== 'production' && warn('Cannot bind dynamic prop on a root instance' + ' with no parent: ' + prop.name + '="' + raw + '"');
+          }
         } else if (prop.optimizedLiteral) {
           // optimized literal, cast it and just set once
           var stripped = stripQuotes(raw);
@@ -6558,10 +6599,10 @@
       var names = containerAttrs.filter(function (attr) {
         // allow vue-loader/vueify scoped css attributes
         return attr.name.indexOf('_v-') < 0 &&
-        // allow event listeners
-        !onRE.test(attr.name) &&
-        // allow slots
-        attr.name !== 'slot';
+          // allow event listeners
+          !onRE.test(attr.name) &&
+          // allow slots
+          attr.name !== 'slot';
       }).map(function (attr) {
         return '"' + attr.name + '"';
       });
@@ -6728,6 +6769,7 @@
         setTokenType('text');
       }
     }
+
     function setTokenType(type) {
       if (token.descriptor) return;
       var parsed = parseDirective(token.value);
@@ -6978,8 +7020,8 @@
         // warn against mixing mustaches with v-bind
         if ('development' !== 'production') {
           if (name === 'class' && Array.prototype.some.call(attrs, function (attr) {
-            return attr.name === ':class' || attr.name === 'v-bind:class';
-          })) {
+              return attr.name === ':class' || attr.name === 'v-bind:class';
+            })) {
             warn('class="' + rawValue + '": Do not mix mustache interpolation ' + 'and v-bind for "class" on the same element. Use one or the other.');
           }
         }
@@ -7189,18 +7231,18 @@
         // become a fragment instance: basically anything that
         // can create more than 1 root nodes.
         if (
-        // multi-children template
-        frag.childNodes.length > 1 ||
-        // non-element template
-        replacer.nodeType !== 1 ||
-        // single nested component
-        tag === 'component' || resolveAsset(options, 'components', tag) || hasBindAttr(replacer, 'is') ||
-        // element directive
-        resolveAsset(options, 'elementDirectives', tag) ||
-        // for block
-        replacer.hasAttribute('v-for') ||
-        // if block
-        replacer.hasAttribute('v-if')) {
+          // multi-children template
+          frag.childNodes.length > 1 ||
+          // non-element template
+          replacer.nodeType !== 1 ||
+          // single nested component
+          tag === 'component' || resolveAsset(options, 'components', tag) || hasBindAttr(replacer, 'is') ||
+          // element directive
+          resolveAsset(options, 'elementDirectives', tag) ||
+          // for block
+          replacer.hasAttribute('v-for') ||
+          // if block
+          replacer.hasAttribute('v-if')) {
           return frag;
         } else {
           options._replacerAttrs = extractAttrs(replacer);
@@ -7256,14 +7298,14 @@
   }
 
   var compiler = Object.freeze({
-  	compile: compile,
-  	compileAndLinkProps: compileAndLinkProps,
-  	compileRoot: compileRoot,
-  	terminalDirectives: terminalDirectives,
-  	transclude: transclude
+    compile: compile,
+    compileAndLinkProps: compileAndLinkProps,
+    compileRoot: compileRoot,
+    terminalDirectives: terminalDirectives,
+    transclude: transclude
   });
 
-  function stateMixin (Vue) {
+  function stateMixin(Vue) {
 
     /**
      * Accessor for `$data` property, since setting $data
@@ -7312,8 +7354,9 @@
       // make sure to convert string selectors into element now
       el = options.el = query(el);
       this._propsUnlinkFn = el && el.nodeType === 1 && props
-      // props must be linked in proper scope if inside v-for
-      ? compileAndLinkProps(this, el, props, this._scope) : null;
+        // props must be linked in proper scope if inside v-for
+        ?
+        compileAndLinkProps(this, el, props, this._scope) : null;
     };
 
     /**
@@ -7506,7 +7549,7 @@
 
   var eventRE = /^v-on:|^@/;
 
-  function eventsMixin (Vue) {
+  function eventsMixin(Vue) {
 
     /**
      * Setup the instance's option events & watchers.
@@ -7770,14 +7813,14 @@
       var preProcess = this._preProcess ? bind$1(this._preProcess, this) : null;
       var postProcess = this._postProcess ? bind$1(this._postProcess, this) : null;
       var watcher = this._watcher = new Watcher(this.vm, this.expression, this._update, // callback
-      {
-        filters: this.filters,
-        twoWay: this.twoWay,
-        deep: this.deep,
-        preProcess: preProcess,
-        postProcess: postProcess,
-        scope: this._scope
-      });
+        {
+          filters: this.filters,
+          twoWay: this.twoWay,
+          deep: this.deep,
+          preProcess: preProcess,
+          postProcess: postProcess,
+          scope: this._scope
+        });
       // v-model with inital inline value need to sync back to
       // model instead of update to DOM on init. They would
       // set the afterBind hook to indicate that.
@@ -7845,7 +7888,8 @@
     }, {
       immediate: true,
       user: false
-    });(this._paramUnwatchFns || (this._paramUnwatchFns = [])).push(unwatch);
+    });
+    (this._paramUnwatchFns || (this._paramUnwatchFns = [])).push(unwatch);
   };
 
   /**
@@ -7923,7 +7967,8 @@
    */
 
   Directive.prototype.on = function (event, handler) {
-    on$1(this.el, event, handler);(this._listeners || (this._listeners = [])).push([event, handler]);
+    on$1(this.el, event, handler);
+    (this._listeners || (this._listeners = [])).push([event, handler]);
   };
 
   /**
@@ -7961,7 +8006,7 @@
     }
   };
 
-  function lifecycleMixin (Vue) {
+  function lifecycleMixin(Vue) {
 
     /**
      * Update v-ref for component.
@@ -8210,7 +8255,7 @@
     };
   }
 
-  function miscMixin (Vue) {
+  function miscMixin(Vue) {
 
     /**
      * Apply a list of filter (descriptors) to a value.
@@ -8300,7 +8345,7 @@
     };
   }
 
-  function globalAPI (Vue) {
+  function globalAPI(Vue) {
 
     /**
      * Expose useful internals
@@ -8457,7 +8502,7 @@
 
   var filterRE = /[^|]\|[^|]/;
 
-  function dataAPI (Vue) {
+  function dataAPI(Vue) {
 
     /**
      * Get the value from an expression on this vm.
@@ -8626,7 +8671,7 @@
     }
   }
 
-  function domAPI (Vue) {
+  function domAPI(Vue) {
 
     /**
      * Convenience on-instance nextTick. The callback is
@@ -8812,7 +8857,7 @@
     }
   }
 
-  function eventsAPI (Vue) {
+  function eventsAPI(Vue) {
 
     /**
      * Listen on the given `event` with `fn`.
@@ -8837,6 +8882,7 @@
 
     Vue.prototype.$once = function (event, fn) {
       var self = this;
+
       function on() {
         self.$off(event, on);
         fn.apply(this, arguments);
@@ -8947,7 +8993,10 @@
       if (isSource) {
         // use object event to indicate non-source emit
         // on children
-        args[0] = { name: event, source: this };
+        args[0] = {
+          name: event,
+          source: this
+        };
       }
       for (var i = 0, l = children.length; i < l; i++) {
         var child = children[i];
@@ -8973,7 +9022,10 @@
       var args = toArray(arguments);
       // use object event to indicate non-source emit
       // on parents
-      args[0] = { name: event, source: this };
+      args[0] = {
+        name: event,
+        source: this
+      };
       while (parent) {
         shouldPropagate = parent.$emit.apply(parent, args);
         parent = shouldPropagate ? parent.$parent : null;
@@ -8992,6 +9044,7 @@
      */
 
     var hookRE = /^hook:/;
+
     function modifyListenerCount(vm, event, count) {
       var parent = vm.$parent;
       // hooks do not get broadcasted so no need
@@ -9004,7 +9057,7 @@
     }
   }
 
-  function lifecycleAPI (Vue) {
+  function lifecycleAPI(Vue) {
 
     /**
      * Set instance target element and kick off the compilation
