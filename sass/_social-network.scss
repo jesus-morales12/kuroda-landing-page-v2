@@ -1,8 +1,15 @@
 // BLOCK
 .social-network {
-    font-size: 18px;
-    margin: 0 10px;
+    @include responsive(l) {
+        font-size: 16px;
+        padding: 0 5px;
+    }
+    @include responsive (xl) {
+        font-size: 18px;
+        padding: 0 10px;
+    }
 }
+
 // ELEMENT
 .social-network__fb {
     color: $fb-icon-color;
@@ -25,5 +32,4 @@
 }
 
 // MOD
-
 // RESPONSIVE
