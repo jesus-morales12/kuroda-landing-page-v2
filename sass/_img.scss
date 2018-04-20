@@ -109,10 +109,10 @@
         height: 880px;
     }
     @include responsive(m) {
-        height: 925px;
+        height: 950px;
     }
     @include responsive(l) {
-        height: 875px;
+        height: 925px;
     }
     @include responsive(xl) {
         height: 825px;

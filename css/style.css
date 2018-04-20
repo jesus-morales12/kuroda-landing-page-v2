@@ -176,10 +176,10 @@
       height: 880px; } }
   @media only screen and (min-width: 768px) {
     .services__background {
-      height: 925px; } }
+      height: 950px; } }
   @media only screen and (min-width: 992px) {
     .services__background {
-      height: 875px; } }
+      height: 925px; } }
   @media only screen and (min-width: 1400px) {
     .services__background {
       height: 825px; } }
