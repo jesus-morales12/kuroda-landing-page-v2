@@ -176,10 +176,10 @@
       height: 880px; } }
   @media only screen and (min-width: 768px) {
     .services__background {
-      height: 925px; } }
+      height: 950px; } }
   @media only screen and (min-width: 992px) {
     .services__background {
-      height: 875px; } }
+      height: 925px; } }
   @media only screen and (min-width: 1400px) {
     .services__background {
       height: 825px; } }
@@ -213,9 +213,14 @@
 .product-display__item {
   width: 100%; }
 
-.social-network {
-  font-size: 18px;
-  margin: 0 10px; }
+@media only screen and (min-width: 992px) {
+  .social-network {
+    font-size: 16px;
+    padding: 0 5px; } }
+@media only screen and (min-width: 1400px) {
+  .social-network {
+    font-size: 18px;
+    padding: 0 10px; } }
 
 .social-network__fb {
   color: #3b5998; }
