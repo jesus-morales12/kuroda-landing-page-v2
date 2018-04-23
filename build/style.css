@@ -246,6 +246,9 @@
 .product-display__item {
   width: 100%; }
 
+.footer__logo {
+  width: 90%; }
+
 @media only screen and (min-width: 992px) {
   .social-network {
     font-size: 16px;
@@ -946,7 +949,8 @@
   width: 100%;
   text-align: center;
   color: #FFFFFF;
-  padding: 15px 0; }
+  padding: 15px 0;
+  font-size: 16px; }
   @media only screen and (min-width: 1400px) {
     .copyright {
       padding-top: 8px;

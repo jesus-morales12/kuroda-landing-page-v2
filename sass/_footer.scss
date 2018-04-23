@@ -11,6 +11,7 @@
     text-align: center;
     color: $white;
     padding: 15px 0;
+    font-size: 16px;
     @include responsive(xl) {
         padding: {
             top: 8px;
