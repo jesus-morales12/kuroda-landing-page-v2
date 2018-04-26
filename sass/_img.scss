@@ -29,6 +29,75 @@
 .kuroda-logo {
     height: 42px;
     padding-left: 20px;
+    @include responsive(l) {
+        height: 38px;
+        padding-left: 8px;
+    }
+    @include responsive(xl) {
+        height: 42px;
+        padding-left: 15px;
+    }
+}
+
+.projects-logo__container {
+    align-self: center;
+    width: 100px;
+    @include responsive(s) {
+        width: 120px;
+    }
+    @include responsive(m) {
+        width: 100px;
+    }
+    @include responsive(l) {
+        width: 150px;
+    }
+    @include responsive(xl) {
+        width: 160px;
+    }
+}
+
+.projects-logo {
+    width: 100%;
+    @include responsive(s) {}
+    @include responsive(m) {}
+    @include responsive(l) {
+        width: 75%;
+    }
+    @include responsive(xl) {
+        width: 80%;
+    }
+}
+
+.ks-logo__container {
+    margin: 0 auto;
+    width: 120px;
+    @include responsive(s) {
+        width: 150px;
+    }
+    @include responsive(m) {
+        width: 120px;
+    }
+    @include responsive(l) {
+        width: 150px;
+    }
+    @include responsive(xl) {
+        margin-top: 10px;
+        width: 160px;
+    }
+}
+
+.ks-logo {
+    width: 100%;
+    @include responsive(s) {
+        width: 80%;
+    }
+    @include responsive(m) {}
+    @include responsive(l) {
+        width: 70%;
+    }
+    @include responsive(xl) {
+        width: 80%;
+    }
 }
 
 .logo--link {
@@ -104,25 +173,22 @@
 .services__background {
     background: linear-gradient(rgba($color: $black, $alpha: 0.8)), url('../img/backgrounds/6.jpg') no-repeat center;
     background-size: cover;
-    height: 1150px;
+    height: 1250px;
     @include responsive(s) {
-        height: 880px;
+        height: 960px;
     }
     @include responsive(m) {
-        height: 950px;
-    }
-    @include responsive(l) {
-        height: 925px;
+        height: 1000px;
     }
     @include responsive(xl) {
-        height: 825px;
+        height: 900px;
     }
 }
 
 .message__background {
     background: linear-gradient(rgba($color: $white, $alpha: 0.8)), url('../img/nosotros/personal.jpg') no-repeat center;
     background-size: cover;
-    height: 400px;
+    height: 420px;
     @include responsive(s) {
         height: 425px;
     }
@@ -157,4 +223,33 @@
 
 .footer__logo {
     width: 90%;
+}
+
+%promo__img {
+    width: 100%;
+    height: 220px;
+    background: {
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+    }
+    @include responsive(xl) {
+        height: 300px;
+    }
+}
+
+// SINALOA 
+.promo__img-one {
+    @extend %promo__img;
+    background-image: url('../img/promociones/architecture-brick-brick-wall-220680-min.jpg');
+}
+
+.promo__img-two {
+    @extend %promo__img;
+    background-image: url('../img/promociones/FamiliaAire.jpg');
+}
+
+.promo__img-three {
+    @extend %promo__img;
+    background-image: url('../img/promociones/niza-one-piece.png');
 }

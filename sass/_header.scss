@@ -6,12 +6,23 @@
 
 // ELEMENT
 .header__item {
-    padding: 12px 15px;
-    font: {
-        weight: bold;
-        size: 21px;
-    }
     transition: .2s ease;
+    font-weight: bold;
+    @include responsive(l) {
+        padding: 12px 10px;
+        font: {
+            size: 19px;
+        }
+    }
+    @include responsive(xl) {
+        padding: {
+            left: 15px;
+            right: 15px;
+        }
+        font: {
+            size: 21px;
+        }
+    }
 }
 
 .header__menu {

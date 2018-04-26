@@ -42,22 +42,40 @@
     }
 }
 
+.projects {
+    width: 100%;
+    align-items: center;
+    padding-bottom: 25px;
+    @include responsive(s) {
+        padding-bottom: 30px;
+    }
+    @include responsive(m) {
+        padding-bottom: 45px;
+    }
+    @include responsive(l) {
+        padding-bottom: 15px;
+    }
+    @include responsive(xl) {
+        padding-bottom: 25px;
+    }
+}
+
 .contact__message {
     width: 80%;
     line-height: 150%;
     font-size: 15px;
     margin: 0 auto;
-    padding: 25px 0;
+    padding-bottom: 10px;
     @include responsive(s) {
         font-size: 16px;
     }
     @include responsive(l) {
-        font-size: 17px;
+        width: 90%;
+        padding-bottom: 8px;
     }
     @include responsive(xl) {
-        padding: 0;
-        margin-top: 50px;
-        width: 60%;
+        width: 75%;
+        padding: 0 35px;
     }
 }
 
@@ -162,12 +180,6 @@
     color: rgba($color: $black, $alpha: .5);
 }
 
-// form li div span {
-//     width: 100%;
-//     @include responsive(xl) {
-//         width: 50%;
-//     }
-// }
 .marketplace__button {
     color: $red;
     font: {
@@ -217,6 +229,30 @@
     position: relative;
 }
 
+.terms {
+    font: {
+        size: 10px;
+        weight: 100;
+    }
+    padding: 35px 22px;
+    line-height: 150%;
+    @include responsive(s) {
+        font-size: 11px;
+    }
+    @include responsive(m) {
+        font-size: 13.5px;
+        padding: {
+            top: 35px;
+            bottom: 35px;
+            left: 50px;
+            right: 50px;
+        }
+    }
+    @include responsive(l) {
+        font-size: 14.5px;
+    }
+}
+
 .product-display {
     margin: 0 auto;
     padding: 35px 0;
@@ -245,19 +281,37 @@
 
 .button-register {
     @extend %button;
-    display: inline-flex;
     background-color: $red;
-    padding: 10px 35px;
-    margin-top: 12px;
-    @include responsive(m) {
-        margin-top: 35px;
+    padding: 8px 15px;
+    font-size: 18px;
+    margin-left: 35px;
+    display: inline-flex;
+    @include responsive(s) {
+        margin-left: 65px;
     }
-    @include responsive(l) {
-        margin-top: 12px;
+    @include responsive(m) {
+        // margin-top: 35px;
+        margin-left: 35px;
+    }
+    @include responsive(xl) {
+        // margin-left: 45px;
+        padding: 10px 35px;
+        font-size: 20px;
     }
 }
 
-.button-register:hover {
+.button-about {
+    @extend %button;
+    background-color: $red;
+    margin-top: 12px;
+    display: inline-flex;
+    padding: 10px 35px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.button-register:hover,
+.button-about:hover {
     @include responsive(l) {
         transition: 0.2s ease;
         background-color: $dark-red;
@@ -288,8 +342,7 @@
     }
     @include responsive(l) {
         width: 100%;
-        font-size: 20px;
-        padding-bottom: 15px;
+        font-size: 20px; // padding-bottom: 15px;
     }
 }
 
