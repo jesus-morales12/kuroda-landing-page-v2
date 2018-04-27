@@ -30,15 +30,17 @@
     <div id="my-page" class="promociones--theme">
 
         <!-- HEADER & NAVBAR RESPONSIVOS -->
-        <div id="my-header" class="mh-head Sticky --flex --space-between">
-            <a href="#" class="logo--link --vcentered">
+        <div id="my-header" class="mh-head Sticky --flex responsive-header">
+            <a href="index.html" class="logo--link --vcentered">
                 <img src="img/logo.png" alt="Kuroda" class="kuroda-logo">
             </a>
-            <a href="#" class="header__item --vcentered  header__item--theme big-header --no-decoration">AGUASCALIENTES</a>
-            <a href="#" class="header__item --vcentered  header__item--theme big-header --no-decoration">BAJA CALIFORNIA</a>
-            <a href="#" class="header__item --vcentered  header__item--theme big-header --no-decoration">SINALOA</a>
-            <a href="#" class="header__item --vcentered  header__item--theme big-header --no-decoration">SONORA</a>
-            <a href="sucursales.html" target="_blank" class="header__item --vcentered  header__item--theme big-header --no-decoration">SUCURSALES</a>
+            <a href="index.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">INICIO</a>
+            <a href="promociones.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">PROMOCIONES</a>
+            <a href="sucursales.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">SUCURSALES</a>
+            <a href="marcas.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">MARCAS</a>
+            <!-- <a href="promociones.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">PROMOCIONES</a> -->
+            <a href="nosotros.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">NOSOTROS</a>
+            <a href="contacto.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">CONTACTO</a>
 
             <div class="--flex --space-around big-header --vcentered social-network__container ">
                 <a href="https://www.facebook.com/KurodaMX/" target="_blank" class="social-network social-network__fb --no-decoration">
@@ -63,10 +65,26 @@
         </div>
 
         <div id="my-content">
-            <div class="--wrapper">
-                <div class="banner__container">
-                    <img src="img/promociones/Helvex-min.jpg" alt="Promociones Helvex" class="banner">
+            <div class="banner__container">
+                <div class="swiper-container bannerSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/promociones/Helvex900x1600px-min.jpg" alt="Promociones Helvex" class="banner --small-banner">
+                            <img src="img/promociones/Helvex-min.jpg" alt="Promociones Helvex" class="banner --big-banner">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/promociones/Helvex900x1600px-min.jpg" alt="Promociones Helvex" class="banner --small-banner">
+                            <img src="img/promociones/Corona-min.jpg" alt="Promociones Helvex" class="banner --big-banner">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination-black"></div>
+                    <div class="swiper-button-next "></div>
+                    <div class="swiper-button-prev "></div>
                 </div>
+            </div>
+
+            <div class="--wrapper">
+
                 <div class="promo__container">
                     <h1 class="promo__place-title">
                         SINALOA
@@ -77,13 +95,12 @@
                             <div class="swiper-slide">
                                 <div class="promo__box">
                                     <div class="promo__img-container">
-                                        <div class="promo__img-one"></div>
+                                        <div class="promo__img-sin-one"></div>
                                     </div>
                                     <h2 class="promo__title-list">PISOS Y AZULEJOS</h2>
                                     <ul class="promo__list">
                                         <li>Velvet, Falcon y Bolzano</li>
-                                        <li>Precios desde $79 MXN / m
-                                            <sup>2</sup>
+                                        <li>Precios desde $79 MXN / m²
                                         </li>
                                         <li style="color:#EE3233">Válido al 30 de abril 2018</li>
                                     </ul>
@@ -94,7 +111,7 @@
                             <div class="swiper-slide">
                                 <div class="promo__box">
                                     <div class="promo__img-container">
-                                        <div class="promo__img-two"></div>
+                                        <div class="promo__img-sin-two"></div>
                                     </div>
                                     <h2 class="promo__title-list">MINISPLITS</h2>
                                     <ul class="promo__list">
@@ -109,7 +126,7 @@
                             <div class="swiper-slide">
                                 <div class="promo__box">
                                     <div class="promo__img-container">
-                                        <div class="promo__img-three"></div>
+                                        <div class="promo__img-sin-three"></div>
                                     </div>
                                     <h2 class="promo__title-list">SANITARIO</h2>
                                     <ul class="promo__list">
@@ -127,44 +144,108 @@
                     </div>
                 </div>
 
-                <div class="banner__container">
-                    <img src="img/promociones/Corona-min.jpg" alt="Promociones Corona" class="banner">
+                <div class="promo__container">
+                    <h1 class="promo__place-title">
+                        SONORA
+                    </h1>
+                    <div class="swiper-container promoSwiper">
+                        <div class="swiper-wrapper">
+                            <!-- OFERTA UNO -->
+                            <div class="swiper-slide">
+                                <div class="promo__box">
+                                    <div class="promo__img-container">
+                                        <div class="promo__img-bc-one"></div>
+                                    </div>
+                                    <h2 class="promo__title-list">MINISPLITS</h2>
+                                    <ul class="promo__list">
+                                        <li>Rheem</li>
+                                        <li>Precios desde $4,539 MXN</li>
+                                        <li style="color:#EE3233">Hasta agotar existencias</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- OFERTA DOS -->
+                            <div class="swiper-slide">
+                                <div class="promo__box">
+                                    <div class="promo__img-container">
+                                        <div class="promo__img-bc-three"></div>
+                                    </div>
+                                    <h2 class="promo__title-list">GRIFERÍA</h2>
+                                    <ul class="promo__list">
+                                        <li>Helvex</li>
+                                        <li>40% desc sobre precio de lista</li>
+                                        <li style="color:#EE3233">Válido al 31 de mayo 2018</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <!-- OFERTA TRES -->
+
+                            <div class="swiper-slide">
+                                <div class="promo__box">
+                                    <div class="promo__img-container">
+                                        <div class="promo__img-bc-two"></div>
+                                    </div>
+                                    <h2 class="promo__title-list">TINAS</h2>
+                                    <ul class="promo__list">
+                                        <li>American Standard</li>
+                                        <li>Desde $12,923 MXN
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="--responsive-arrows">
+                            <div class="swiper-button-next swiper-button-black"></div>
+                            <div class="swiper-button-prev swiper-button-black"></div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
 
         <div id="my-footer" class="footer footer--theme --flex --space-between">
-            <!-- PROMOCIONES  -->
+            <!-- EXPLORA  -->
             <div class="footer__block">
-                <h4 class="footer__title">PROMOCIONES</h4>
+                <h4 class="footer__title">EXPLORA</h4>
                 <ul class="footer__options">
                     <li>
-                        <a href="#" class="--no-decoration footer__link" target="_blank">Aguascalientes</a>
+                        <a href="index.html" class="--no-decoration footer__link">Inicio</a>
                     </li>
                     <li>
-                        <a href="#" class="--no-decoration footer__link" target="_blank">Baja California</a>
+                        <a href="promociones.html" class="--no-decoration footer__link">Promociones</a>
                     </li>
                     <li>
-                        <a href="#" class="--no-decoration footer__link" target="_blank">Sinaloa</a>
+                        <a href="sucursales.html" class="--no-decoration footer__link">Sucursales</a>
                     </li>
                     <li>
-                        <a href="#" class="--no-decoration footer__link" target="_blank">Sonora</a>
+                        <a href="marcas.html" class="--no-decoration footer__link">Marcas</a>
                     </li>
                     <li>
-                        <a href="sucursales.html" class="--no-decoration footer__link" target="_blank">Sucursales</a>
+                        <a href="contacto.html" class="--no-decoration footer__link">Contacto</a>
                     </li>
+                    <li>
+                        <a href="nosotros.html" class="--no-decoration footer__link">Nosotros</a>
+                    </li>
+
                 </ul>
             </div>
 
-            <!-- DESCUBRE  -->
+            <!-- RADIO KURODA  -->
             <div class="footer__block">
-                <h4 class="footer__title">DESCUBRE</h4>
+                <h4 class="footer__title">RADIO KURODA</h4>
                 <ul class="footer__options">
                     <li>
-                        <a href="https://kuroda.com" class="--no-decoration footer__link" target="_blank">Sitio principal</a>
+                        <a href="radio-kuroda-culiacan.html" class="--no-decoration footer__link">Radio Sinaloa</a>
                     </li>
                     <li>
-                        <a href="https://www.dvsiap.org" class="--no-decoration footer__link" target="_blank">Desarrollo con Visión Social</a>
+                        <a href="radio-kuroda-sonora.html" class="--no-decoration footer__link">Radio Sonora</a>
+                    </li>
+                    <li>
+                        <a href="radio-kuroda-baja.html" class="--no-decoration footer__link">Radio Baja</a>
                     </li>
                 </ul>
             </div>
@@ -227,31 +308,6 @@
         <nav id="my-menu">
             <ul>
                 <li>
-                    <a href="#">PROMOCIONES</a>
-                    <ul>
-                        <li>
-                            <a href="#" class="--no-decoration">
-                                Aguascalientes
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="--no-decoration">
-                                Baja California
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="--no-decoration">
-                                Sinaloa
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="--no-decoration">
-                                Sonora
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
                     <a href="#">COMPRA EN LÍNEA</a>
                     <ul>
                         <li style="text-align: center">
@@ -274,13 +330,12 @@
                 </li>
 
                 <li>
-                    <a href="https://kuroda.com/sucursales.html" target="_blank">SUCURSALES</a>
+                    <a href="index.html">INICIO</a>
                 </li>
                 <li>
-                    <a href="index.html" target="_blank">VOLVER A KURODA</a>
+                    <a href="promociones.html">PROMOCIONES</a>
                 </li>
-
-                <!-- <li>
+                <li>
                     <a href="sucursales.html">SUCURSALES</a>
                 </li>
                 <li>
@@ -291,8 +346,27 @@
                 </li>
                 <li>
                     <a href="nosotros.html">NOSOTROS</a>
-                </li> -->
-
+                </li>
+                <li>
+                    <a href="#">RADIO KURODA</a>
+                    <ul>
+                        <li style="text-align: center">
+                            <a href="radio-kuroda-culiacan.html" class="--no-decoration">
+                                Radio Sinaloa
+                            </a>
+                        </li>
+                        <li style="text-align: center">
+                            <a href="radio-kuroda-sonora.html" class="--no-decoration">
+                                Radio Sonora
+                            </a>
+                        </li>
+                        <li style="text-align: center">
+                            <a href="radio-kuroda-baja.html" class="--no-decoration">
+                                Radio Baja
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>
@@ -323,6 +397,19 @@
                 scroll: {
                     hide: 1
                 }
+            });
+            var bannerSwiper = new Swiper('.bannerSwiper', {
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                effect: 'fade',
+                keyboard: {
+                    enabled: true,
+                },
             });
             var promoSwiper = new Swiper('.promoSwiper', {
                 slidesPerView: 3,

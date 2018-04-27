@@ -239,17 +239,33 @@
 }
 
 // SINALOA 
-.promo__img-one {
+.promo__img-sin-one {
     @extend %promo__img;
     background-image: url('../img/promociones/architecture-brick-brick-wall-220680-min.jpg');
 }
 
-.promo__img-two {
+.promo__img-sin-two {
     @extend %promo__img;
     background-image: url('../img/promociones/FamiliaAire.jpg');
 }
 
-.promo__img-three {
+.promo__img-sin-three {
     @extend %promo__img;
     background-image: url('../img/promociones/niza-one-piece.png');
+}
+
+// BAJA CALIFORNIA
+.promo__img-bc-one {
+    @extend %promo__img;
+    background-image: url('../img/promociones/FamiliaAire.jpg');
+}
+
+.promo__img-bc-two {
+    @extend %promo__img;
+    background-image: url('../img/promociones/hottub.jpg');
+}
+
+.promo__img-bc-three {
+    @extend %promo__img;
+    background-image: url('../img/promociones/faucet.jpg');
 }
