@@ -26,7 +26,10 @@
 
 .promo__place-title {
     @extend .product-display__title;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
+    @include responsive(l) {
+        padding-bottom: 12px;
+    }
 }
 
 .promo__container {
@@ -36,6 +39,7 @@
     text-align: center;
     @include responsive(l) {
         width: 100%;
+        padding: 20px 0;
     }
 }
 

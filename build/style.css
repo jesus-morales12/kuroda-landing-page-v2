@@ -321,33 +321,51 @@
 .footer__logo {
   width: 90%; }
 
-.promo__img-sin-one, .promo__img-sin-two, .promo__img-sin-three, .promo__img-bc-one, .promo__img-bc-two, .promo__img-bc-three {
+.promo__img-one, .promo__img-two, .promo__img-three, .promo__img-bc-one, .promo__img-bc-two, .promo__img-bc-three, .promo__img-sin-one, .promo__img-sin-two, .promo__img-sin-three, .promo__img-son-one, .promo__img-son-two {
   width: 100%;
   height: 220px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
   @media only screen and (min-width: 1400px) {
-    .promo__img-sin-one, .promo__img-sin-two, .promo__img-sin-three, .promo__img-bc-one, .promo__img-bc-two, .promo__img-bc-three {
+    .promo__img-one, .promo__img-two, .promo__img-three, .promo__img-bc-one, .promo__img-bc-two, .promo__img-bc-three, .promo__img-sin-one, .promo__img-sin-two, .promo__img-sin-three, .promo__img-son-one, .promo__img-son-two {
       height: 300px; } }
+
+.promo__img-one {
+  background-image: url("../img/promociones/FamiliaAire.jpg"); }
+
+.promo__img-two {
+  background-image: url("../img/promociones/hottub.jpg"); }
+
+.promo__img-three {
+  background-image: url("../img/promociones/faucet.jpg"); }
+
+.promo__img-bc-one {
+  background-image: url("../img/promociones/credit-card.jpg"); }
+
+.promo__img-bc-two {
+  background-image: url("../img/promociones/floor-tiles.jpg");
+  background-position: top; }
+
+.promo__img-bc-three {
+  background-image: url("../img/promociones/tiles.jpg");
+  background-position: top; }
 
 .promo__img-sin-one {
   background-image: url("../img/promociones/architecture-brick-brick-wall-220680-min.jpg"); }
 
 .promo__img-sin-two {
-  background-image: url("../img/promociones/FamiliaAire.jpg"); }
-
-.promo__img-sin-three {
   background-image: url("../img/promociones/niza-one-piece.png"); }
 
-.promo__img-bc-one {
-  background-image: url("../img/promociones/FamiliaAire.jpg"); }
+.promo__img-sin-three {
+  background-image: url("../img/promociones/aqdp60-1.png"); }
 
-.promo__img-bc-two {
-  background-image: url("../img/promociones/hottub.jpg"); }
+.promo__img-son-one {
+  background-image: url("../img/promociones/mainstream.jpg"); }
 
-.promo__img-bc-three {
-  background-image: url("../img/promociones/faucet.jpg"); }
+.promo__img-son-two {
+  background-image: url("../img/promociones/vitro-inter-beige.jpg");
+  background-position: bottom; }
 
 @media only screen and (min-width: 992px) {
   .social-network {
@@ -1448,7 +1466,10 @@
           justify-content: space-between; }
 
 .promo__place-title {
-  padding-bottom: 8px; }
+  padding-bottom: 10px; }
+  @media only screen and (min-width: 992px) {
+    .promo__place-title {
+      padding-bottom: 12px; } }
 
 .promo__container {
   margin: 0 auto;
@@ -1457,7 +1478,8 @@
   text-align: center; }
   @media only screen and (min-width: 992px) {
     .promo__container {
-      width: 100%; } }
+      width: 100%;
+      padding: 20px 0; } }
 
 .promo__img-container {
   width: 100%; }
