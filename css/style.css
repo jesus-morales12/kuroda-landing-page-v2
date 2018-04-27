@@ -1321,10 +1321,15 @@
   font-weight: 600; }
 
 .banner__container {
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
   @media only screen and (min-width: 992px) {
     .banner__container {
-      padding: 25px 0;
+      padding-top: 15px;
+      width: 850px; } }
+  @media only screen and (min-width: 1400px) {
+    .banner__container {
+      padding-top: 25px;
       width: 1000px; } }
 
 .banner {
@@ -1371,9 +1376,26 @@
     .promo__list li {
       font-size: 18px; } }
 
+.promo__more-information {
+  font-weight: normal;
+  font-size: 18px;
+  padding-top: 15px;
+  padding-bottom: 18px;
+  line-height: 150%;
+  color: #015418; }
+  .promo__more-information a {
+    color: #015418; }
+  @media only screen and (min-width: 576px) {
+    .promo__more-information {
+      font-size: 19px; } }
+  @media only screen and (min-width: 768px) {
+    .promo__more-information {
+      font-size: 20px; } }
+
 .--wrapper {
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
   @media only screen and (min-width: 992px) {
     .--wrapper {
       width: 85%; } }

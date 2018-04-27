@@ -1,8 +1,13 @@
 // BLOCK
 .banner__container {
     margin: 0 auto;
+    text-align: center;
     @include responsive(l) {
-        padding: 25px 0;
+        padding-top: 15px;
+        width: 850px;
+    }
+    @include responsive(xl) {
+        padding-top: 25px;
         width: 1000px;
     }
 }
@@ -61,10 +66,37 @@
     }
 }
 
+.promo__more-information {
+    font: {
+        weight: normal;
+        size: 18px;
+    }
+    padding: {
+        top: 15px;
+        bottom: 18px;
+    }
+    line-height: 150%;
+    color: $dark-green;
+    a {
+        color: $dark-green;
+    }
+    @include responsive(s) {
+        font-size: 19px;
+    }
+    @include responsive(m) {
+        font-size: 20px;
+    }
+    @include responsive(l) {}
+    @include responsive(xl) {
+        // padding-bottom: 45px;
+    }
+}
+
 // MOD
 .--wrapper {
     width: 100%;
     margin: 0 auto;
+    text-align: center;
     @include responsive(l) {
         width: 85%;
     }
@@ -82,6 +114,6 @@
 
 .--small-banner {
     @include responsive(s) {
-        display:none;
+        display: none;
     }
 }
