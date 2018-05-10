@@ -146,6 +146,21 @@
     filter: opacity(0.8);
 }
 
+.maintenance {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../img/work-coffee.jpg');
+    width: 100%;
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .fade-swiper__img {
     &-one {
         @extend %fade-swiper__img-height;
@@ -241,34 +256,34 @@
 // GENERALES
 .promo__img-one {
     @extend %promo__img;
-    background-image: url('../img/promociones/FamiliaAire.jpg');
+    background-image: url('../img/promociones/generales/FamiliaAire.jpg');
 }
 
 .promo__img-two {
     @extend %promo__img;
-    background-image: url('../img/promociones/hottub.jpg');
+    background-image: url('../img/promociones/generales/hottub.jpg');
 }
 
 .promo__img-three {
     @extend %promo__img;
-    background-image: url('../img/promociones/faucet.jpg');
+    background-image: url('../img/promociones/generales/faucet.jpg');
 }
 
 // BAJA CALIFORNIA
 .promo__img-bc-one {
     @extend %promo__img;
-    background-image: url('../img/promociones/credit-card.jpg');
+    background-image: url('../img/promociones/kno/sanitario-lavabo.jpg');
 }
 
 .promo__img-bc-two {
     @extend %promo__img;
-    background-image: url('../img/promociones/floor-tiles.jpg');
+    background-image: url('../img/promociones/kno/floor-tiles.jpg');
     background-position: top;
 }
 
 .promo__img-bc-three {
     @extend %promo__img;
-    background-image: url('../img/promociones/tiles.jpg');
+    background-image: url('../img/kno/promociones/kno/');
     background-position: top;
 }
 
@@ -276,28 +291,35 @@
 // SINALOA
 .promo__img-sin-one {
     @extend %promo__img;
-    background-image: url('../img/promociones/architecture-brick-brick-wall-220680-min.jpg');
+    background-image: url('../img/promociones/ksa/impercool.jpg');
 }
 
 .promo__img-sin-two {
     @extend %promo__img;
-    background-image: url('../img/promociones/niza-one-piece.png');
+    background-image: url('../img/promociones/ksa/niza-one-piece.png');
 }
 
 .promo__img-sin-three {
     @extend %promo__img;
-    background-image: url('../img/promociones/aqdp60-1.png');
+    background-image: url('../img/promociones/ksa/porcelanite-carrara.jpg');
+    background-position: left;
 }
 
 // SONORA
 .promo__img-son-one {
     @extend %promo__img;
-    background-image: url('../img/promociones/mainstream.jpg');
+    background-image: url('../img/promociones/ksc/impercrest.jpg');
 }
 
 .promo__img-son-two {
     @extend %promo__img;
-    background-image: url('../img/promociones/vitro-inter-beige.jpg');
+    background-image: url('../img/promociones/ksc/vitro-inter-beige.jpg');
+    background-position: bottom;
+}
+
+.promo__img-son-three {
+    @extend %promo__img;
+    background-image: url('../img/promociones/ksc/vitro-inter-beige.jpg');
     background-position: bottom;
 }
 

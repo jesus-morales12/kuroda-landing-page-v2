@@ -16,6 +16,26 @@
 }
 
 // BLOCK
+.maintenance__text {
+    width: 200px;
+    text-align: center;
+    font-size: 18px;
+    background-color: rgba($color: $white, $alpha: .4);
+    padding: 12px;
+    line-height: 150%;
+    @include responsive(s) {
+        font-size: 20px;
+    }
+    @include responsive(m) {
+        font-size: 22px;
+        width: 280px;
+    }
+    @include responsive(l) {
+        font-size: 24px;
+        width: 320px;
+    }
+}
+
 .contact {
     @include responsive(l) {
         padding: {
