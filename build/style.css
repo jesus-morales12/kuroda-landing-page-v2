@@ -41,6 +41,11 @@
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
+.--centered {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 .--vcentered {
   -ms-flex-item-align: center;
       align-self: center; }
@@ -55,11 +60,18 @@
   height: 60px; }
 
 .header__item {
-  padding: 12px 15px;
-  font-weight: bold;
-  font-size: 21px;
   -webkit-transition: .2s ease;
-  transition: .2s ease; }
+  transition: .2s ease;
+  font-weight: bold; }
+  @media only screen and (min-width: 992px) {
+    .header__item {
+      padding: 12px 10px;
+      font-size: 19px; } }
+  @media only screen and (min-width: 1400px) {
+    .header__item {
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 21px; } }
 
 .header__menu {
   font-size: 15px;
@@ -149,6 +161,69 @@
 .kuroda-logo {
   height: 42px;
   padding-left: 20px; }
+  @media only screen and (min-width: 992px) {
+    .kuroda-logo {
+      height: 38px;
+      padding-left: 8px; } }
+  @media only screen and (min-width: 1400px) {
+    .kuroda-logo {
+      height: 42px;
+      padding-left: 15px; } }
+
+.projects-logo__container {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100px; }
+  @media only screen and (min-width: 576px) {
+    .projects-logo__container {
+      width: 120px; } }
+  @media only screen and (min-width: 768px) {
+    .projects-logo__container {
+      width: 100px; } }
+  @media only screen and (min-width: 992px) {
+    .projects-logo__container {
+      width: 150px; } }
+  @media only screen and (min-width: 1400px) {
+    .projects-logo__container {
+      width: 160px; } }
+
+.projects-logo {
+  width: 100%; }
+  @media only screen and (min-width: 992px) {
+    .projects-logo {
+      width: 75%; } }
+  @media only screen and (min-width: 1400px) {
+    .projects-logo {
+      width: 80%; } }
+
+.ks-logo__container {
+  margin: 0 auto;
+  width: 120px; }
+  @media only screen and (min-width: 576px) {
+    .ks-logo__container {
+      width: 150px; } }
+  @media only screen and (min-width: 768px) {
+    .ks-logo__container {
+      width: 120px; } }
+  @media only screen and (min-width: 992px) {
+    .ks-logo__container {
+      width: 150px; } }
+  @media only screen and (min-width: 1400px) {
+    .ks-logo__container {
+      margin-top: 10px;
+      width: 160px; } }
+
+.ks-logo {
+  width: 100%; }
+  @media only screen and (min-width: 576px) {
+    .ks-logo {
+      width: 80%; } }
+  @media only screen and (min-width: 992px) {
+    .ks-logo {
+      width: 70%; } }
+  @media only screen and (min-width: 1400px) {
+    .ks-logo {
+      width: 80%; } }
 
 .logo--link {
   text-decoration: none;
@@ -188,6 +263,28 @@
   -webkit-filter: opacity(0.8);
           filter: opacity(0.8); }
 
+.maintenance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-image: url("../img/work-coffee.jpg");
+  width: 100%;
+  min-height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
 .fade-swiper__img-one {
   background-image: url("../img/backgrounds/modern-minimalist-bathroom-min.jpg");
   background-position: bottom; }
@@ -202,25 +299,22 @@
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 20, 0.8))), url("../img/backgrounds/6.jpg") no-repeat center;
   background: linear-gradient(rgba(20, 20, 20, 0.8)), url("../img/backgrounds/6.jpg") no-repeat center;
   background-size: cover;
-  height: 1150px; }
+  height: 1250px; }
   @media only screen and (min-width: 576px) {
     .services__background {
-      height: 880px; } }
+      height: 960px; } }
   @media only screen and (min-width: 768px) {
     .services__background {
-      height: 950px; } }
-  @media only screen and (min-width: 992px) {
-    .services__background {
-      height: 925px; } }
+      height: 1000px; } }
   @media only screen and (min-width: 1400px) {
     .services__background {
-      height: 825px; } }
+      height: 900px; } }
 
 .message__background {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8))), url("../img/nosotros/personal.jpg") no-repeat center;
   background: linear-gradient(rgba(255, 255, 255, 0.8)), url("../img/nosotros/personal.jpg") no-repeat center;
   background-size: cover;
-  height: 400px; }
+  height: 420px; }
   @media only screen and (min-width: 576px) {
     .message__background {
       height: 425px; } }
@@ -245,6 +339,56 @@
 
 .product-display__item {
   width: 100%; }
+
+.footer__logo {
+  width: 90%; }
+
+.promo__img-one, .promo__img-two, .promo__img-three, .promo__img-bc-one, .promo__img-bc-two, .promo__img-bc-three, .promo__img-sin-one, .promo__img-son-one, .promo__img-son-two {
+  width: 100%;
+  height: 220px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media only screen and (min-width: 1400px) {
+    .promo__img-one, .promo__img-two, .promo__img-three, .promo__img-bc-one, .promo__img-bc-two, .promo__img-bc-three, .promo__img-sin-one, .promo__img-son-one, .promo__img-son-two {
+      height: 300px; } }
+
+.promo__img-one {
+  background-image: url("http://productos.porcelanite.co/preview/normal/images/previews/product1507301667d0cd60ad65b16cc6ab77eb5087c9f881.jpg");
+  background-position: center;
+  background-size: contain; }
+
+.promo__img-two {
+  background-image: url("http://www.americanstandard.com.mx/assets/images/productImages/amstdmx/standard/9479.prd.s.020.jpg"); }
+
+.promo__img-three {
+  background-image: url("../img/promociones/generales/faucet.jpg"); }
+
+.promo__img-bc-one {
+  background-image: url("../img/promociones/kno/paquete_corona_instalacion.jpg");
+  background-position: center;
+  background-size: contain; }
+
+.promo__img-bc-two {
+  background-image: url("../img/promociones/kno/impercool-fibratado.png");
+  background-position: center;
+  background-size: contain; }
+
+.promo__img-bc-three {
+  background-image: url("../img/kno/promociones/kno/");
+  background-position: top; }
+
+.promo__img-sin-one {
+  background-image: url("../img/promociones/ksa/minisplit-rheem.png");
+  background-size: cover; }
+
+.promo__img-son-one {
+  background-image: url("../img/promociones/ksc/american-std-wc.jpg");
+  background-size: contain; }
+
+.promo__img-son-two {
+  background-image: url("../img/promociones/ksc/crest-ImperBasic.png");
+  background-size: contain; }
 
 @media only screen and (min-width: 992px) {
   .social-network {
@@ -344,13 +488,33 @@
       font-size: 25px;
       max-width: 400px; } }
 
-/* BRAND SWIPER */
+/* PROMOS SWIPER */
+.promoSwiper .swiper-container, .bannerSwiper .swiper-container {
+  width: 100%;
+  height: 100%; }
+
+.promoSwiper .swiper-slide, .bannerSwiper .swiper-slide {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+@media only screen and (min-width: 992px) {
+  .--responsive-arrows {
+    display: none; } }
+
 .online-shopping__description, .product-display__description, .service__description {
   line-height: 150%;
   text-align: center;
   margin: 0 auto; }
 
-.button-buy, .button-register {
+.button-buy, .button-register, .button-about {
   color: #FFFFFF;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
@@ -358,8 +522,27 @@
   font-weight: bold;
   display: block; }
   @media only screen and (min-width: 576px) {
-    .button-buy, .button-register {
+    .button-buy, .button-register, .button-about {
       border-radius: 2px; } }
+
+.maintenance__text {
+  width: 200px;
+  text-align: center;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 12px;
+  line-height: 150%; }
+  @media only screen and (min-width: 576px) {
+    .maintenance__text {
+      font-size: 20px; } }
+  @media only screen and (min-width: 768px) {
+    .maintenance__text {
+      font-size: 22px;
+      width: 280px; } }
+  @media only screen and (min-width: 992px) {
+    .maintenance__text {
+      font-size: 24px;
+      width: 320px; } }
 
 @media only screen and (min-width: 992px) {
   .contact {
@@ -378,23 +561,42 @@
     .marketplace {
       width: 100%; } }
 
+.projects {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 25px; }
+  @media only screen and (min-width: 576px) {
+    .projects {
+      padding-bottom: 30px; } }
+  @media only screen and (min-width: 768px) {
+    .projects {
+      padding-bottom: 45px; } }
+  @media only screen and (min-width: 992px) {
+    .projects {
+      padding-bottom: 15px; } }
+  @media only screen and (min-width: 1400px) {
+    .projects {
+      padding-bottom: 25px; } }
+
 .contact__message {
   width: 80%;
   line-height: 150%;
   font-size: 15px;
   margin: 0 auto;
-  padding: 25px 0; }
+  padding-bottom: 10px; }
   @media only screen and (min-width: 576px) {
     .contact__message {
       font-size: 16px; } }
   @media only screen and (min-width: 992px) {
     .contact__message {
-      font-size: 17px; } }
+      width: 90%;
+      padding-bottom: 8px; } }
   @media only screen and (min-width: 1400px) {
     .contact__message {
-      padding: 0;
-      margin-top: 50px;
-      width: 60%; } }
+      width: 75%;
+      padding: 0 35px; } }
 
 .contact-form__container {
   width: 80%;
@@ -540,6 +742,46 @@
 .services {
   position: relative; }
 
+.terms {
+  font-size: 10px;
+  font-weight: 100;
+  padding: 35px 22px;
+  line-height: 150%; }
+  @media only screen and (min-width: 576px) {
+    .terms {
+      font-size: 11px; } }
+  @media only screen and (min-width: 768px) {
+    .terms {
+      font-size: 13.5px;
+      padding-top: 35px;
+      padding-bottom: 35px;
+      padding-left: 50px;
+      padding-right: 50px; } }
+  @media only screen and (min-width: 992px) {
+    .terms {
+      font-size: 14.5px; } }
+
+.conditions-container {
+  width: 100%;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  padding-top: 15px;
+  text-align: justify; }
+
+.conditions__list {
+  font-size: 20px;
+  margin-left: 1em;
+  padding-top: 10px; }
+
+.conditions__sublist {
+  margin-left: 1.5em; }
+
+.conditions__list > li {
+  padding: 5px 0; }
+
+.conditions__sublist > li {
+  padding: 3px 0; }
+
 .product-display {
   margin: 0 auto;
   padding: 35px 0;
@@ -564,21 +806,37 @@
   background-color: #02A12E; }
 
 .button-register {
+  background-color: #EE3233;
+  padding: 8px 15px;
+  font-size: 18px;
+  margin-left: 35px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+  @media only screen and (min-width: 576px) {
+    .button-register {
+      margin-left: 65px; } }
+  @media only screen and (min-width: 768px) {
+    .button-register {
+      margin-left: 35px; } }
+  @media only screen and (min-width: 1400px) {
+    .button-register {
+      padding: 10px 35px;
+      font-size: 20px; } }
+
+.button-about {
+  background-color: #EE3233;
+  margin-top: 12px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  background-color: #EE3233;
   padding: 10px 35px;
-  margin-top: 12px; }
-  @media only screen and (min-width: 768px) {
-    .button-register {
-      margin-top: 35px; } }
-  @media only screen and (min-width: 992px) {
-    .button-register {
-      margin-top: 12px; } }
+  font-size: 20px;
+  text-align: center; }
 
 @media only screen and (min-width: 992px) {
-  .button-register:hover {
+  .button-register:hover,
+  .button-about:hover {
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
     background-color: #A11213; } }
@@ -609,8 +867,7 @@
   @media only screen and (min-width: 992px) {
     .online-shopping__description {
       width: 100%;
-      font-size: 20px;
-      padding-bottom: 15px; } }
+      font-size: 20px; } }
 
 .online-shopping__title {
   font-weight: 100;
@@ -639,7 +896,7 @@
       margin-bottom: 60px;
       width: 1000px; } }
 
-.privacy-container hr {
+hr {
   margin-top: 20px;
   margin-bottom: -20px;
   border-color: rgba(20, 20, 20, 0.1); }
@@ -731,11 +988,11 @@
     .service__icon {
       font-size: 90px; } }
 
-.product-display__title, .service__title {
+.product-display__title, .service__title, .promo__place-title {
   font-weight: 100;
   font-size: 40px; }
   @media only screen and (min-width: 992px) {
-    .product-display__title, .service__title {
+    .product-display__title, .service__title, .promo__place-title {
       font-size: 60px;
       padding-bottom: 30px; } }
 
@@ -946,7 +1203,9 @@
   width: 100%;
   text-align: center;
   color: #FFFFFF;
-  padding: 15px 0; }
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 100; }
   @media only screen and (min-width: 1400px) {
     .copyright {
       padding-top: 8px;
@@ -1240,6 +1499,110 @@
   padding: 8px 0;
   border-radius: 2px;
   font-weight: 600; }
+
+.banner__container {
+  margin: 0 auto;
+  text-align: center; }
+  @media only screen and (min-width: 992px) {
+    .banner__container {
+      padding-top: 15px;
+      width: 850px; } }
+  @media only screen and (min-width: 1400px) {
+    .banner__container {
+      padding-top: 25px;
+      width: 1000px; } }
+
+.banner {
+  width: 100%; }
+
+.promo__box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.promo__place-title {
+  padding-bottom: 10px; }
+  @media only screen and (min-width: 992px) {
+    .promo__place-title {
+      padding-bottom: 12px; } }
+
+.promo__container {
+  margin: 0 auto;
+  width: 95%;
+  padding: 15px 0;
+  text-align: center; }
+  @media only screen and (min-width: 992px) {
+    .promo__container {
+      width: 100%;
+      padding: 20px 0; } }
+
+.promo__img-container {
+  width: 100%; }
+
+.promo__title-list {
+  padding-top: 15px;
+  padding-bottom: 8px; }
+  @media only screen and (min-width: 992px) {
+    .promo__title-list {
+      font-size: 25px; } }
+
+.promo__list {
+  list-style: none; }
+
+.promo__list li {
+  padding: 2px 0;
+  font-size: 15px; }
+  @media only screen and (min-width: 576px) {
+    .promo__list li {
+      font-size: 17px; } }
+  @media only screen and (min-width: 768px) {
+    .promo__list li {
+      font-size: 18px; } }
+
+.promo__more-information {
+  font-weight: normal;
+  font-size: 18px;
+  padding-top: 15px;
+  padding-bottom: 18px;
+  line-height: 150%;
+  color: #015418; }
+  .promo__more-information a {
+    color: #015418; }
+  @media only screen and (min-width: 576px) {
+    .promo__more-information {
+      font-size: 19px; } }
+  @media only screen and (min-width: 768px) {
+    .promo__more-information {
+      font-size: 20px; } }
+
+.--wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+  @media only screen and (min-width: 992px) {
+    .--wrapper {
+      width: 85%; } }
+  @media only screen and (min-width: 1400px) {
+    .--wrapper {
+      width: 1300px; } }
+
+.--big-banner {
+  display: none; }
+  @media only screen and (min-width: 576px) {
+    .--big-banner {
+      display: block; } }
+
+@media only screen and (min-width: 576px) {
+  .--small-banner {
+    display: none; } }
 
 * {
   padding: 0;

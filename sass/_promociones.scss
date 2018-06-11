@@ -1,0 +1,123 @@
+// BLOCK
+.banner__container {
+    margin: 0 auto;
+    text-align: center;
+    @include responsive(l) {
+        padding-top: 15px;
+        width: 850px;
+    }
+    @include responsive(xl) {
+        padding-top: 25px;
+        width: 1000px;
+    }
+}
+
+.banner {
+    width: 100%;
+}
+
+// ELEMENT
+.promo__box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.promo__place-title {
+    @extend .product-display__title;
+    padding-bottom: 10px;
+    @include responsive(l) {
+        padding-bottom: 12px;
+    }
+}
+
+.promo__container {
+    margin: 0 auto;
+    width: 95%;
+    padding: 15px 0;
+    text-align: center;
+    @include responsive(l) {
+        width: 100%;
+        padding: 20px 0;
+    }
+}
+
+.promo__img-container {
+    width: 100%;
+}
+
+.promo__title-list {
+    padding-top: 15px;
+    padding-bottom: 8px;
+    @include responsive(l) {
+        font-size: 25px;
+    }
+}
+
+.promo__list {
+    list-style: none;
+}
+
+.promo__list li {
+    padding: 2px 0;
+    font-size: 15px;
+    @include responsive(s) {
+        font-size: 17px;
+    }
+    @include responsive(m) {
+        font-size: 18px;
+    }
+}
+
+.promo__more-information {
+    font: {
+        weight: normal;
+        size: 18px;
+    }
+    padding: {
+        top: 15px;
+        bottom: 18px;
+    }
+    line-height: 150%;
+    color: $dark-green;
+    a {
+        color: $dark-green;
+    }
+    @include responsive(s) {
+        font-size: 19px;
+    }
+    @include responsive(m) {
+        font-size: 20px;
+    }
+    @include responsive(l) {}
+    @include responsive(xl) {
+        // padding-bottom: 45px;
+    }
+}
+
+// MOD
+.--wrapper {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    @include responsive(l) {
+        width: 85%;
+    }
+    @include responsive(xl) {
+        width: 1300px;
+    }
+}
+
+.--big-banner {
+    display: none;
+    @include responsive(s) {
+        display: block;
+    }
+}
+
+.--small-banner {
+    @include responsive(s) {
+        display: none;
+    }
+}

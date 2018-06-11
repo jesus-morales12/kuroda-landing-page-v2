@@ -81,21 +81,22 @@
     }
 }
 
-/* BRAND SWIPER */
+/* PROMOS SWIPER */
 
-// .swiper-container {
-//     width: 100%;
-//     height: 100%;
-// }
+.promoSwiper .swiper-container, .bannerSwiper .swiper-container {
+    width: 100%;
+    height: 100%;
+}
 
-// .swiper-slide {
-//     text-align: center;
-//     font-size: 18px;
-//     height: 794px;
-//     background: #fff;
-//     /* Center slide text vertically */
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     border: 2px solid black;
-// }
+.promoSwiper .swiper-slide, .bannerSwiper .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.--responsive-arrows {
+    @include responsive(l) {
+        display:none;
+    }
+}

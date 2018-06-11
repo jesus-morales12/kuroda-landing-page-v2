@@ -14,6 +14,8 @@
     <meta name="keywords" content="contacto, bolsa de trabajo, empleo, corporativo, culiacan, sinaloa, correo electronico, telefono">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather" rel="stylesheet">
     <link rel="stylesheet" href="build/style.css">
     <link href="css/structure.css" rel="stylesheet">
@@ -54,12 +56,14 @@
                 <img src="img/logo.png" alt="Kuroda" class="kuroda-logo">
             </a>
             <a href="index.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">INICIO</a>
+            <a href="promociones.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">PROMOCIONES</a>
             <a href="sucursales.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">SUCURSALES</a>
             <a href="marcas.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">MARCAS</a>
+            <!-- <a href="promociones.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">PROMOCIONES</a> -->
             <a href="nosotros.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">NOSOTROS</a>
             <a href="contacto.html" class="header__item --vcentered  header__item--theme big-header --no-decoration">CONTACTO</a>
 
-            <div class="--flex --space-between big-header --vcentered ">
+            <div class="--flex --space-around big-header --vcentered social-network__container ">
                 <a href="https://www.facebook.com/KurodaMX/" target="_blank" class="social-network social-network__fb --no-decoration">
                     <i class="fab fa-facebook-square --no-decoration"></i>
                 </a>
@@ -228,6 +232,9 @@
                         <a href="index.html" class="--no-decoration footer__link">Inicio</a>
                     </li>
                     <li>
+                        <a href="promociones.html" class="--no-decoration footer__link">Promociones</a>
+                    </li>
+                    <li>
                         <a href="sucursales.html" class="--no-decoration footer__link">Sucursales</a>
                     </li>
                     <li>
@@ -239,6 +246,7 @@
                     <li>
                         <a href="nosotros.html" class="--no-decoration footer__link">Nosotros</a>
                     </li>
+
                 </ul>
             </div>
 
@@ -279,16 +287,16 @@
                 <h4 class="footer__title">SÍGUENOS</h4>
                 <ul class="footer__options">
                     <li>
-                        <a href="https://www.facebook.com/KurodaMX/" class="--no-decoration footer__link">Facebook</a>
+                        <a href="https://www.facebook.com/KurodaMX/" class="--no-decoration footer__link" target="_blank">Facebook</a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/kurodamx" class="--no-decoration footer__link">Twitter</a>
+                        <a href="https://twitter.com/kurodamx" class="--no-decoration footer__link" target="_blank">Twitter</a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/channel/UCtETojrCXZ0DHKA1rpmE4pQ" class="--no-decoration footer__link">YouTube</a>
+                        <a href="https://www.youtube.com/channel/UCtETojrCXZ0DHKA1rpmE4pQ" class="--no-decoration footer__link" target="_blank">YouTube</a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/kurodamx/" class="--no-decoration footer__link">Instagram</a>
+                        <a href="https://www.instagram.com/kurodamx/" class="--no-decoration footer__link" target="_blank">Instagram</a>
                     </li>
                 </ul>
             </div>
@@ -300,10 +308,18 @@
                     <li>
                         <a href="privacidad.html" class="--no-decoration footer__link">Aviso de privacidad</a>
                     </li>
+                    <li>
+                        <a href="terminos.html" class="--no-decoration footer__link">Términos y condiciones</a>
+                    </li>
+                </ul>
+                <ul class="footer__options">
+                    <li>
+                        <img src="img/logos/ESR-logo-min.png" alt="Empresa Socialmente Responsable" class="footer__logo">
+                    </li>
                 </ul>
             </div>
-            <div class=" copyright">
-                <i class="far fa-copyright"></i> 2016 Grupo Kuroda.
+            <div class="copyright">
+                <i class="far fa-copyright"></i> 2018 Grupo Kuroda.
                 <br/>Todos los derechos reservados.
             </div>
         </div>
@@ -311,29 +327,10 @@
         <nav id="my-menu">
             <ul>
                 <li>
-                    <a href="#">COMPRA EN LÍNEA</a>
-                    <ul>
-                        <li style="text-align: center">
-                            <a href="https://eshops.mercadolibre.com.mx/e-kuroda" class="--no-decoration">
-                                <img src="img/marketplace/mercado-libre.png" class="marketplace__store--menu" alt="Mercado Libre!">
-                            </a>
-                        </li>
-                        <li style="text-align: center">
-                            <a href="http://kuroda.mercadoshops.com.mx" class="--no-decoration">
-                                <img src="img/marketplace/mercado-shop.png" class="marketplace__store--menu" alt="Mercado Shops">
-                            </a>
-                        </li>
-                        <li style="text-align: center">
-                            <a href="https://www.amazon.com.mx/s?marketplaceID=A1AM78C64UM0Y8&me=A2N0U7Y1U99AE6&merchant=A2N0U7Y1U99AE6&redirect=true"
-                                class="--no-decoration">
-                                <img src="img/marketplace/amazon.png" class="marketplace__store--menu" alt="Amazon!">
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
                     <a href="index.html">INICIO</a>
+                </li>
+                <li>
+                    <a href="promociones.html">PROMOCIONES</a>
                 </li>
                 <li>
                     <a href="sucursales.html">SUCURSALES</a>
@@ -346,6 +343,27 @@
                 </li>
                 <li>
                     <a href="nosotros.html">NOSOTROS</a>
+                </li>
+                <li>
+                    <a href="#">COMPRA EN LÍNEA</a>
+                    <ul>
+                        <li style="text-align: center">
+                            <a href="https://eshops.mercadolibre.com.mx/e-kuroda" class="--no-decoration" target="_blank">
+                                <img src="img/marketplace/mercado-libre.png" class="marketplace__store--menu" alt="Mercado Libre!">
+                            </a>
+                        </li>
+                        <li style="text-align: center">
+                            <a href="http://kuroda.mercadoshops.com.mx" class="--no-decoration" target="_blank">
+                                <img src="img/marketplace/mercado-shop.png" class="marketplace__store--menu" alt="Mercado Shops">
+                            </a>
+                        </li>
+                        <li style="text-align: center">
+                            <a href="https://www.amazon.com.mx/s?marketplaceID=A1AM78C64UM0Y8&me=A2N0U7Y1U99AE6&merchant=A2N0U7Y1U99AE6&redirect=true"
+                                class="--no-decoration" target="_blank">
+                                <img src="img/marketplace/amazon.png" class="marketplace__store--menu" alt="Amazon!">
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="#">RADIO KURODA</a>
@@ -414,7 +432,7 @@
         })();
     </script>
     <!--End of Tawk.to Script-->
-    <script src="js/fontawesome.js"></script>
+
 </body>
 
 </html>

@@ -29,6 +29,75 @@
 .kuroda-logo {
     height: 42px;
     padding-left: 20px;
+    @include responsive(l) {
+        height: 38px;
+        padding-left: 8px;
+    }
+    @include responsive(xl) {
+        height: 42px;
+        padding-left: 15px;
+    }
+}
+
+.projects-logo__container {
+    align-self: center;
+    width: 100px;
+    @include responsive(s) {
+        width: 120px;
+    }
+    @include responsive(m) {
+        width: 100px;
+    }
+    @include responsive(l) {
+        width: 150px;
+    }
+    @include responsive(xl) {
+        width: 160px;
+    }
+}
+
+.projects-logo {
+    width: 100%;
+    @include responsive(s) {}
+    @include responsive(m) {}
+    @include responsive(l) {
+        width: 75%;
+    }
+    @include responsive(xl) {
+        width: 80%;
+    }
+}
+
+.ks-logo__container {
+    margin: 0 auto;
+    width: 120px;
+    @include responsive(s) {
+        width: 150px;
+    }
+    @include responsive(m) {
+        width: 120px;
+    }
+    @include responsive(l) {
+        width: 150px;
+    }
+    @include responsive(xl) {
+        margin-top: 10px;
+        width: 160px;
+    }
+}
+
+.ks-logo {
+    width: 100%;
+    @include responsive(s) {
+        width: 80%;
+    }
+    @include responsive(m) {}
+    @include responsive(l) {
+        width: 70%;
+    }
+    @include responsive(xl) {
+        width: 80%;
+    }
 }
 
 .logo--link {
@@ -77,6 +146,21 @@
     filter: opacity(0.8);
 }
 
+.maintenance {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../img/work-coffee.jpg');
+    width: 100%;
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .fade-swiper__img {
     &-one {
         @extend %fade-swiper__img-height;
@@ -104,25 +188,22 @@
 .services__background {
     background: linear-gradient(rgba($color: $black, $alpha: 0.8)), url('../img/backgrounds/6.jpg') no-repeat center;
     background-size: cover;
-    height: 1150px;
+    height: 1250px;
     @include responsive(s) {
-        height: 880px;
+        height: 960px;
     }
     @include responsive(m) {
-        height: 950px;
-    }
-    @include responsive(l) {
-        height: 925px;
+        height: 1000px;
     }
     @include responsive(xl) {
-        height: 825px;
+        height: 900px;
     }
 }
 
 .message__background {
     background: linear-gradient(rgba($color: $white, $alpha: 0.8)), url('../img/nosotros/personal.jpg') no-repeat center;
     background-size: cover;
-    height: 400px;
+    height: 420px;
     @include responsive(s) {
         height: 425px;
     }
@@ -154,3 +235,110 @@
 .product-display__item {
     width: 100%;
 }
+
+.footer__logo {
+    width: 90%;
+}
+
+%promo__img {
+    width: 100%;
+    height: 220px;
+    background: {
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+    }
+    @include responsive(xl) {
+        height: 300px;
+    }
+}
+
+// GENERALES
+.promo__img-one {
+    @extend %promo__img;
+    background: {
+        image: url('http://productos.porcelanite.co/preview/normal/images/previews/product1507301667d0cd60ad65b16cc6ab77eb5087c9f881.jpg');
+        position: center;
+        size: contain;
+    }
+}
+
+.promo__img-two {
+    @extend %promo__img;
+    background-image: url('http://www.americanstandard.com.mx/assets/images/productImages/amstdmx/standard/9479.prd.s.020.jpg');
+}
+
+.promo__img-three {
+    @extend %promo__img;
+    background-image: url('../img/promociones/generales/faucet.jpg');
+}
+
+// BAJA CALIFORNIA
+.promo__img-bc-one {
+    @extend %promo__img;
+    background: {
+        image: url('../img/promociones/kno/paquete_corona_instalacion.jpg');
+        position: center;
+        size: contain;
+    }
+}
+
+.promo__img-bc-two {
+    @extend %promo__img;
+    background: {
+        image: url('../img/promociones/kno/impercool-fibratado.png');
+        position: center;
+        size: contain;
+    }
+}
+
+.promo__img-bc-three {
+    @extend %promo__img;
+    background-image: url('../img/kno/promociones/kno/');
+    background-position: top;
+}
+
+// SINALOA
+.promo__img-sin-one {
+    @extend %promo__img;
+    background: {
+        image: url('../img/promociones/ksa/minisplit-rheem.png');
+        size: cover;
+    } 
+}
+
+// .promo__img-sin-two {
+//     @extend %promo__img;
+//     background: {
+//         image: url('../img/promociones/ksa/niza-one-piece.png');
+//         size: contain;
+//         position: center;
+//     }
+// }
+// .promo__img-sin-three {
+//     @extend %promo__img;
+//     background-image: url('../img/promociones/ksa/porcelanite-carrara.jpg');
+//     background-position: left;
+// }
+// SONORA
+.promo__img-son-one {
+    @extend %promo__img;
+    background: {
+        image: url('../img/promociones/ksc/american-std-wc.jpg');
+        size: contain;
+    }
+}
+
+.promo__img-son-two {
+    @extend %promo__img;
+    background: {
+        image: url('../img/promociones/ksc/crest-ImperBasic.png');
+        size: contain;
+    }
+}
+
+// .promo__img-son-three {
+//     @extend %promo__img;
+//     background-image: url('../img/promociones/ksc/vitro-inter-beige.jpg');
+//     background-position: bottom;
+// }
