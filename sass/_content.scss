@@ -45,6 +45,53 @@
     }
 }
 
+.program__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 350px;
+}
+
+.program__bg {
+    width: 100%;
+    height: 22vh;
+    background: black;
+}
+
+.program__description {
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+.program__name {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font: {
+        size: 30px;
+        weight: bold;
+    }
+    padding: {
+        top: 8px;
+        bottom: 5px;
+    }
+}
+
+.button-program {
+    @extend %button;
+    background: $red;
+    margin-top: 8px;
+    padding: 6px 0;
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+
+.button-program:hover {
+    transition: 0.2s ease;
+    background: $dark-red;
+}
+
 .marketplace {
     margin: 0 auto;
     width: 300px;
@@ -246,7 +293,16 @@
 }
 
 .services {
-    position: relative;
+    // height: 1250px;
+    // @include responsive(s) {
+    //     height: 960px;
+    // }
+    // @include responsive(m) {
+    //     height: auto;
+    // }
+    // @include responsive(xl) {
+    //     height: 900px;
+    // }
 }
 
 .terms {
@@ -462,9 +518,6 @@ hr {
 
 // ELEMENT
 .services__content {
-    position: absolute;
-    top: 0;
-    left: 0;
     color: $white;
     text-align: center;
     margin: 0 auto;

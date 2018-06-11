@@ -188,16 +188,6 @@
 .services__background {
     background: linear-gradient(rgba($color: $black, $alpha: 0.8)), url('../img/backgrounds/6.jpg') no-repeat center;
     background-size: cover;
-    height: 1250px;
-    @include responsive(s) {
-        height: 960px;
-    }
-    @include responsive(m) {
-        height: 1000px;
-    }
-    @include responsive(xl) {
-        height: 900px;
-    }
 }
 
 .message__background {
