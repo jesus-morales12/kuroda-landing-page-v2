@@ -1,7 +1,7 @@
 // BLOCK
 .social-network {
     @include responsive(l) {
-        font-size: 16px;
+        font-size: 14px;
         padding: 0 5px;
     }
     @include responsive (xl) {

@@ -133,7 +133,7 @@
   padding-left: 20px; }
   @media only screen and (min-width: 992px) {
     .kuroda-logo {
-      height: 38px;
+      height: 35px;
       padding-left: 8px; } }
   @media only screen and (min-width: 1400px) {
     .kuroda-logo {
@@ -338,7 +338,7 @@
 
 @media only screen and (min-width: 992px) {
   .social-network {
-    font-size: 16px;
+    font-size: 14px;
     padding: 0 5px; } }
 @media only screen and (min-width: 1400px) {
   .social-network {
@@ -453,14 +453,14 @@
   text-align: center;
   margin: 0 auto; }
 
-.button-program, .button-buy, .button-register, .button-about {
+.button-buy, .button-register, .button-about {
   color: #FFFFFF;
   transition: 0.2s ease;
   font-size: 20px;
   font-weight: bold;
   display: block; }
   @media only screen and (min-width: 576px) {
-    .button-program, .button-buy, .button-register, .button-about {
+    .button-buy, .button-register, .button-about {
       border-radius: 2px; } }
 
 .maintenance__text {
@@ -487,35 +487,96 @@
     padding-top: 10px;
     padding-bottom: 20px; } }
 
+.program-display {
+  margin: 20px 0; }
+
+.program-display__title {
+  text-align: center; }
+
 .program__container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-between;
-  width: 350px; }
+  padding: 15px 0;
+  width: 90%;
+  text-align: center; }
+  @media only screen and (min-width: 576px) {
+    .program__container {
+      width: 400px;
+      padding: 0;
+      margin-top: 10px; } }
+  @media only screen and (min-width: 768px) {
+    .program__container {
+      width: 400px; } }
+  @media only screen and (min-width: 1400px) {
+    .program__container {
+      width: 500px; } }
+
+.program__experiencias-bg, .program__valemas-bg {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20vh; }
+  @media only screen and (min-width: 576px) {
+    .program__experiencias-bg, .program__valemas-bg {
+      height: 35vh; } }
+  @media only screen and (min-width: 768px) {
+    .program__experiencias-bg, .program__valemas-bg {
+      height: 25vh; } }
+  @media only screen and (min-width: 992px) {
+    .program__experiencias-bg, .program__valemas-bg {
+      height: 30vh; } }
+  @media only screen and (min-width: 1400px) {
+    .program__experiencias-bg, .program__valemas-bg {
+      height: 32vh; } }
+
+.program__experiencias-bg {
+  background-image: url("../img/programas/TIKO.PNG");
+  background-size: contain;
+  background-position: center; }
+
+.program__valemas-bg {
+  background-image: url("../img/programas/kuroda-15.jpg");
+  background-position: bottom; }
+  @media only screen and (min-width: 1400px) {
+    .program__valemas-bg {
+      background-position: center; } }
 
 .program__bg {
   width: 100%;
-  height: 22vh;
   background: black; }
 
 .program__description {
-  font-size: 2.5vh;
-  text-align: center; }
+  font-size: 16px; }
+  @media only screen and (min-width: 768px) {
+    .program__description {
+      font-size: 18px; } }
+  @media only screen and (min-width: 992px) {
+    .program__description {
+      font-size: 20px; } }
+  @media only screen and (min-width: 1400px) {
+    .program__description {
+      font-size: 22px; } }
 
 .program__name {
   display: block;
   width: 100%;
   text-align: center;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold;
   padding-top: 8px;
   padding-bottom: 5px; }
+  @media only screen and (min-width: 1400px) {
+    .program__name {
+      font-size: 24px; } }
 
 .button-program {
+  color: #FFFFFF;
   background: #EE3233;
-  margin-top: 8px;
-  padding: 6px 0;
+  margin-top: 12px;
+  padding: 8px 0;
+  font-size: 20px;
+  font-weight: bold;
   transition: 0.2s ease;
   text-decoration: none; }
 
@@ -924,11 +985,11 @@ hr {
     .service__icon {
       font-size: 90px; } }
 
-.product-display__title, .service__title, .promo__place-title {
+.product-display__title, .program-display__title, .service__title, .promo__place-title {
   font-weight: 100;
   font-size: 40px; }
   @media only screen and (min-width: 992px) {
-    .product-display__title, .service__title, .promo__place-title {
+    .product-display__title, .program-display__title, .service__title, .promo__place-title {
       font-size: 60px;
       padding-bottom: 30px; } }
 
@@ -1514,12 +1575,14 @@ hr {
   padding: 0;
   margin: 0;
   font-family: 'Lato', sans-serif;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-appearance: none; }
 
 body {
   background-color: #FFFFFF;
   min-height: 100%;
-  position: relative; }
+  position: relative;
+  -webkit-text-size-adjust: 100%; }
 
 p {
   font-family: 'Merriweather', serif;

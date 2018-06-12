@@ -17,12 +17,14 @@
     margin: 0;
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
+    -webkit-appearance: none;
 }
 
 body {
     background-color: $white;
     min-height: 100%;
     position: relative;
+    -webkit-text-size-adjust: 100%;
 }
 
 p {
