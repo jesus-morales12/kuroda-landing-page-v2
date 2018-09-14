@@ -161,14 +161,19 @@
     background-position: center;
 }
 
+
 .fade-swiper__img {
     &-one {
+        display: hide;
         @extend %fade-swiper__img-height;
         background: {
-            image: url('../img/backgrounds/modern-minimalist-bathroom-min.jpg');
-            position: bottom;
+            image: url('../img/promociones/banners/moen_90.png');
+            position: center;
+            size: contain !important;
+            repeat: no-repeat;
         }
     }
+
     &-two {
         @extend %fade-swiper__img-height;
         background: {
@@ -183,11 +188,15 @@
             position: center;
         }
     }
+    
 }
 
 .services__background {
     background: linear-gradient(rgba($color: $black, $alpha: 0.8)), url('../img/backgrounds/6.jpg') no-repeat center;
     background-size: cover;
+    @include responsive(l) {
+        background-attachment: fixed;
+    }
 }
 
 .message__background {
@@ -242,93 +251,3 @@
         height: 300px;
     }
 }
-
-// GENERALES
-.promo__img-one {
-    @extend %promo__img;
-    background: {
-        image: url('http://productos.porcelanite.co/preview/normal/images/previews/product1507301667d0cd60ad65b16cc6ab77eb5087c9f881.jpg');
-        position: center;
-        size: contain;
-    }
-}
-
-.promo__img-two {
-    @extend %promo__img;
-    background-image: url('http://www.americanstandard.com.mx/assets/images/productImages/amstdmx/standard/9479.prd.s.020.jpg');
-}
-
-.promo__img-three {
-    @extend %promo__img;
-    background-image: url('../img/promociones/generales/faucet.jpg');
-}
-
-// BAJA CALIFORNIA
-.promo__img-bc-one {
-    @extend %promo__img;
-    background: {
-        image: url('../img/promociones/kno/paquete_corona_instalacion.jpg');
-        position: center;
-        size: contain;
-    }
-}
-
-.promo__img-bc-two {
-    @extend %promo__img;
-    background: {
-        image: url('../img/promociones/kno/impercool-fibratado.png');
-        position: center;
-        size: contain;
-    }
-}
-
-.promo__img-bc-three {
-    @extend %promo__img;
-    background-image: url('../img/kno/promociones/kno/');
-    background-position: top;
-}
-
-// SINALOA
-.promo__img-sin-one {
-    @extend %promo__img;
-    background: {
-        image: url('../img/promociones/ksa/minisplit-rheem.png');
-        size: cover;
-    } 
-}
-
-// .promo__img-sin-two {
-//     @extend %promo__img;
-//     background: {
-//         image: url('../img/promociones/ksa/niza-one-piece.png');
-//         size: contain;
-//         position: center;
-//     }
-// }
-// .promo__img-sin-three {
-//     @extend %promo__img;
-//     background-image: url('../img/promociones/ksa/porcelanite-carrara.jpg');
-//     background-position: left;
-// }
-// SONORA
-.promo__img-son-one {
-    @extend %promo__img;
-    background: {
-        image: url('../img/promociones/ksc/american-std-wc.jpg');
-        size: contain;
-    }
-}
-
-.promo__img-son-two {
-    @extend %promo__img;
-    background: {
-        image: url('../img/promociones/ksc/crest-ImperBasic.png');
-        size: contain;
-    }
-}
-
-// .promo__img-son-three {
-//     @extend %promo__img;
-//     background-image: url('../img/promociones/ksc/vitro-inter-beige.jpg');
-//     background-position: bottom;
-// }

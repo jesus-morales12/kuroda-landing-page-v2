@@ -2,6 +2,7 @@
     line-height: 150%;
     text-align: center;
     margin: 0 auto;
+    position: relative;
 }
 
 %button {
@@ -12,6 +13,18 @@
     display: block;
     @include responsive(s) {
         border-radius: 2px;
+    }
+}
+
+.button-download {
+    @extend %button;
+    margin: 8px auto;
+    padding: 8px 10px;
+    background: {
+        color: $light-green
+    }
+    text: {
+        decoration: none;
     }
 }
 
@@ -159,7 +172,6 @@
         top: 8px;
         bottom: 5px;
     }
-
     @include responsive(xl) {
         font-size: 24px;
     }
@@ -450,6 +462,24 @@
     padding: 3px 0;
 }
 
+.experiencias__percentage-table {
+    border: 1px solid $black;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 5px 0;
+    * {
+        border: 1px solid $black;
+        padding: 5px 8px;
+    }
+    th {
+        background-color: #b20000;
+        color: $white;
+    }
+    td {
+        width: 50%;
+    }
+}
+
 .product-display {
     margin: 0 auto;
     padding: 35px 0;
@@ -624,7 +654,7 @@ hr {
     }
     @include responsive(l) {
         padding: 0 30px;
-        flex: 25%;
+        flex: 20%;
     }
 }
 
@@ -644,8 +674,11 @@ hr {
 .product-display__description {
     @extend %description;
     font-size: 12px;
+    @include responsive(m) {
+        font-size: 14px;
+    }
     @include responsive(l) {
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 
@@ -712,6 +745,7 @@ hr {
         background-color: $dark-green;
     }
 }
+
 
 /* The Modal (background) */
 
@@ -792,6 +826,7 @@ hr {
     }
 }
 
+
 /* Modal Content/Box */
 
 .modal-content {
@@ -832,6 +867,7 @@ hr {
         font-size: 20px;
     }
 }
+
 
 /* The Close Button */
 
@@ -908,6 +944,7 @@ hr {
     }
 }
 
+
 /* MARKET PLACE - CSS BUTTONS */
 
 // .walmart--button {
@@ -918,3 +955,27 @@ hr {
 //     font-size: 28px;
 //     border-radius: 2px;
 // }
+.promo {
+    position: absolute;
+    bottom: 105%;
+    right: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: $red;
+    color: $white;
+    font: {
+        size: 15px;
+        weight: bolder !important;
+    }
+    padding: 20px;
+    border: {
+        radius: 50%;
+    }
+    box-shadow: 0 0 4px 1px rgba(0,
+    0,
+    0,
+    0.3);
+    height: 32px;
+    width: 32px;
+}

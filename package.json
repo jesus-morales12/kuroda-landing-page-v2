@@ -1,0 +1,27 @@
+{
+  "name": "kuroda-landing-page-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "jquery-touch-events": "^1.0.7",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesus-morales12/kuroda-landing-page-v2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesus-morales12/kuroda-landing-page-v2/issues"
+  },
+  "homepage": "https://github.com/jesus-morales12/kuroda-landing-page-v2#readme"
+}

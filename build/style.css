@@ -286,8 +286,11 @@
   background-position: center; }
 
 .fade-swiper__img-one {
-  background-image: url("../img/backgrounds/modern-minimalist-bathroom-min.jpg");
-  background-position: bottom; }
+  display: hide;
+  background-image: url("../img/promociones/banners/moen_90.png");
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat; }
 .fade-swiper__img-two {
   background-image: url("../img/backgrounds/kitchen-bg-min.jpg");
   background-position: bottom; }
@@ -299,6 +302,9 @@
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 20, 0.8))), url("../img/backgrounds/6.jpg") no-repeat center;
   background: linear-gradient(rgba(20, 20, 20, 0.8)), url("../img/backgrounds/6.jpg") no-repeat center;
   background-size: cover; }
+  @media only screen and (min-width: 992px) {
+    .services__background {
+      background-attachment: fixed; } }
 
 .message__background {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8))), url("../img/nosotros/personal.jpg") no-repeat center;
@@ -332,53 +338,6 @@
 
 .footer__logo {
   width: 90%; }
-
-.promo__img-one, .promo__img-two, .promo__img-three, .promo__img-bc-one, .promo__img-bc-two, .promo__img-bc-three, .promo__img-sin-one, .promo__img-son-one, .promo__img-son-two {
-  width: 100%;
-  height: 220px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-  @media only screen and (min-width: 1400px) {
-    .promo__img-one, .promo__img-two, .promo__img-three, .promo__img-bc-one, .promo__img-bc-two, .promo__img-bc-three, .promo__img-sin-one, .promo__img-son-one, .promo__img-son-two {
-      height: 300px; } }
-
-.promo__img-one {
-  background-image: url("http://productos.porcelanite.co/preview/normal/images/previews/product1507301667d0cd60ad65b16cc6ab77eb5087c9f881.jpg");
-  background-position: center;
-  background-size: contain; }
-
-.promo__img-two {
-  background-image: url("http://www.americanstandard.com.mx/assets/images/productImages/amstdmx/standard/9479.prd.s.020.jpg"); }
-
-.promo__img-three {
-  background-image: url("../img/promociones/generales/faucet.jpg"); }
-
-.promo__img-bc-one {
-  background-image: url("../img/promociones/kno/paquete_corona_instalacion.jpg");
-  background-position: center;
-  background-size: contain; }
-
-.promo__img-bc-two {
-  background-image: url("../img/promociones/kno/impercool-fibratado.png");
-  background-position: center;
-  background-size: contain; }
-
-.promo__img-bc-three {
-  background-image: url("../img/kno/promociones/kno/");
-  background-position: top; }
-
-.promo__img-sin-one {
-  background-image: url("../img/promociones/ksa/minisplit-rheem.png");
-  background-size: cover; }
-
-.promo__img-son-one {
-  background-image: url("../img/promociones/ksc/american-std-wc.jpg");
-  background-size: contain; }
-
-.promo__img-son-two {
-  background-image: url("../img/promociones/ksc/crest-ImperBasic.png");
-  background-size: contain; }
 
 @media only screen and (min-width: 992px) {
   .social-network {
@@ -502,9 +461,10 @@
 .online-shopping__description, .product-display__description, .service__description {
   line-height: 150%;
   text-align: center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
-.button-buy, .button-register, .button-about {
+.button-download, .button-buy, .button-register, .button-about {
   color: #FFFFFF;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
@@ -512,8 +472,14 @@
   font-weight: bold;
   display: block; }
   @media only screen and (min-width: 576px) {
-    .button-buy, .button-register, .button-about {
+    .button-download, .button-buy, .button-register, .button-about {
       border-radius: 2px; } }
+
+.button-download {
+  margin: 8px auto;
+  padding: 8px 10px;
+  background-color: #02A12E;
+  text-decoration: none; }
 
 .maintenance__text {
   width: 200px;
@@ -875,6 +841,20 @@
 .conditions__sublist > li {
   padding: 3px 0; }
 
+.experiencias__percentage-table {
+  border: 1px solid #141414;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 5px 0; }
+  .experiencias__percentage-table * {
+    border: 1px solid #141414;
+    padding: 5px 8px; }
+  .experiencias__percentage-table th {
+    background-color: #b20000;
+    color: #FFFFFF; }
+  .experiencias__percentage-table td {
+    width: 50%; }
+
 .product-display {
   margin: 0 auto;
   padding: 35px 0;
@@ -1032,9 +1012,9 @@ hr {
   @media only screen and (min-width: 992px) {
     .service__item {
       padding: 0 30px;
-      -webkit-box-flex: 25%;
-          -ms-flex: 25%;
-              flex: 25%; } }
+      -webkit-box-flex: 20%;
+          -ms-flex: 20%;
+              flex: 20%; } }
 
 .service__title {
   color: #FFFFFF; }
@@ -1046,9 +1026,12 @@ hr {
 
 .product-display__description {
   font-size: 12px; }
+  @media only screen and (min-width: 768px) {
+    .product-display__description {
+      font-size: 14px; } }
   @media only screen and (min-width: 992px) {
     .product-display__description {
-      font-size: 12px; } }
+      font-size: 15px; } }
 
 .service__description {
   font-size: 15px;
@@ -1283,6 +1266,30 @@ hr {
       font-size: 22px; } }
 
 /* MARKET PLACE - CSS BUTTONS */
+.promo {
+  position: absolute;
+  bottom: 105%;
+  right: 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #EE3233;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: bolder !important;
+  padding: 20px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  height: 32px;
+  width: 32px; }
+
 .footer {
   width: 100%;
   margin: 0 auto;
